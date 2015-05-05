@@ -104,6 +104,58 @@ $$  \\
 %\newpage
 %============================================================================================================================
 \section{Сравнение средств обработки русского и английского языка} \label{sect2_3}
-Средства обработки естественного языка принято относить в большому классу средств NLP – Natural Language Processing. Для английского языка существует множество открытых средств обработки естественного языка, для русского языка найти их гораздо сложнее. Рассмотрим архитектуру средств обработки естественного языка на примере OpenCog RelEx
+Средства обработки естественного языка принято относить в большому классу средств NLP – Natural Language Processing. Для английского языка существует множество открытых средств обработки естественного языка, для русского языка найти их гораздо сложнее. Рассмотрим архитектуру средств обработки естественного языка на примере OpenCog RelEx. \\
+OpenCog RelEx использует результаты обработки Link Grammar \cite{linkgrammar}. Link Grammar поддерживает множество языков: английский, русский, турецкий, немецкий и т.д.  RelEx использует вывод LG и преобразует его в формат связей.
+\textbf{Пример 1}. User is unable to start KDP web, please reinstall Java.\\
+\textbf{Результат} 
+\begin{verbatim}
+		_obj(start, KBP)
+pos(start, verb)
+inflection-TAG(start, .v)
+tense(start, present)
+pos([web], WORD)
+noun_number(KBP, singular)
+definite-FLAG(KBP, T)
+pos(KBP, noun)
+_advmod(reinstall, please)
+pos(reinstall, verb)
+inflection-TAG(reinstall, .v)
+tense(reinstall, present)
+pos(please, adv)
+inflection-TAG(please, .e)
+noun_number(Java, singular)
+definite-FLAG(Java, T)
+pos(Java, noun)
+pos(., punctuation)
+_obj(,, Java)
+pos(,, verb)
+tense(,, infinitive)
+HYP(,, T)
+_to-do(unable, ,)
+pos(unable, adj)
+inflection-TAG(unable, .a)
+tense(unable, present)
+pos(to, prep)
+inflection-TAG(to, .r)
+pos(be, verb)
+inflection-TAG(be, .v)
+_predadj(User, unable)
+noun_number(User, singular)
+definite-FLAG(User, T)
+pos(User, noun)
 
+\end{verbatim}
+
+
+
+Возьмем разбор слова start. В результате мы получаем несколько отношений:
+\begin{itemize}
+	\item pos(start, verb) - start глагол
+	\item tense(start, present) - время настоящее
+	\item inflection-TAG(start, .v) -  метод обозначения на схеме (индекс)
+\end{itemize}
+
+На их основе можно формализовать приложение на естественном языке. Остальные парсера пока не поддерживают русский язык. Существуют открытые проекты, но они еще недостаточно развиты.
+\section{Вывод по главе} \label{sect2_4}
+В данный главе был выполнен основной анализ обработчиков естественного языка. Ввиду развитости и доступности было решено использовать OpenCog RelEx.
 \clearpage
