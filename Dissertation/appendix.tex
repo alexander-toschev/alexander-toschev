@@ -1,7 +1,49 @@
 \appendix
-\chapter{Название первого приложения} \label{AppendixA}
+\chapter{Приложение А. Интерфейсная модель} \label{AppendixA}
 
-Некоторый текст.
+Интерфейсная модель содержит классы и интерфейсы для взаимодействия с пользователем.
+
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.8,angle=90, origin=c] {interface-model}
+  \caption{Диаграмма классов интерфейсной модели} 
+  \label{img:interface-model}  
+\end{figure}
+
+\emph{RefObject}
+
+Представляет собой общий объект, который сохраняется в Базе Знаний. (Базовый класс для всех остальных классов и объектов)
+\begin{itemize}
+	\item ObjectID- уникальный в пределах класса ключ
+	\item Reference- уникальный в пределах всех баз знаний ключ
+	\item Name-имя объекта
+\end{itemize}
+
+\emph{Request}
+
+Объект для хранения запроса пользователя.
+\begin{itemize}
+	\item SubscriptionID - идентификатор подписки
+	\item RequestText - запрос пользователя в виде текста
+	\item Solution - ссылка на решение запроса
+	\item State - статус запроса (например, Поиск Решения)
+	\item FormalizedRequest - ссылка на формализованный запрос
+\end{itemize}
+
+
+\emph{Subscription}
+
+Информация о подписке пользователя на события
+\begin{itemize}
+	\item Endpoints - списко UserEndpoint, которые будут использоваться для обратной связи с пользователем
+\end{itemize}
+
+\emph{UserEndpoint}
+\begin{itemize}
+	\item Type - тип точки связи с пользователем (например, веб-сервис)
+	\item Address - адрес точки связи с пользователем
+\end{itemize}
+
 
 \chapter{Очень длинное название второго приложения, в котором продемонстрирована работа с длинными таблицами} \label{AppendixB}
 
