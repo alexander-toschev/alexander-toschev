@@ -103,7 +103,7 @@
 	\item Система сохраняет запрос в Базу Знаний и начинает его обработку
 	\item Когда изменяется статус запрос request.state система оповещает подписчиков на этот запрос
 \end{enumerate}
-\section{Компонент CoreService.ThinkingLifeCycle}
+\subsection{Компонент CoreService.ThinkingLifeCycle}
 Это основной компонент системы, ответственный непосредственно за выполнение запросов. Данный компонент управляет потоками, событиями приложения. Он запускает исполнение Критиков, Селекторов, Путей мышления, осуществляет обмен данных между компонентами. Компонент построен на фреймворке Akka Concurrency, который позволяет разрабатывать приложения, которые могут работать параллельно \cite{AkkaConcurrency}. \\
 В данном компоненте реализовано шесть уровней мышления.
 \begin{enumerate}
@@ -158,8 +158,8 @@
 Данный метод запускает обработку действий. Все действия разделяются на Critic (триггеры действий, которые в итоге должны перейти в WayToThink через Selector) и WayToThink (пути мышления, непосредственно обработчики данных, классы, которые производят изменения данных) На рисунке \ref{img:thinkinglifecycleapplyactionsListActionTransFrame} представлена диаграмма действий для этого метода.
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=1.0] {thinkinglifecycleapplyactionsListActionTransFrame}
-  \caption{Диаграмма действий sendMessage} 
+  \includegraphics [scale=0.7] {thinkinglifecycleapplyactionsListActionTransFrame}
+  \caption{Диаграмма действий apply} 
   \label{img:thinkinglifecycleapplyactionsListActionTransFrame}  
 \end{figure}
 
@@ -168,7 +168,7 @@
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {thinkinglifecycleprocessWay2ThinkcontextContext}
-  \caption{Диаграмма действий sendMessage} 
+  \caption{Диаграмма действий processWay2Think} 
   \label{img:thinkinglifecycleprocessWay2ThinkcontextContext}  
 \end{figure}
 
@@ -177,10 +177,75 @@
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {thinkinglifecycleactivityprocessCriticcontextContext}
-  \caption{Диаграмма действий sendMessage} 
+  \caption{Диаграмма действий processCritic} 
   \label{img:thinkinglifecycleactivityprocessCriticcontextContext}  
 \end{figure}
 
+\emph{init(): Boolean} \\
+Данный метод инициализирует экземпляр класса ThinkingLifeCycle. Во время инициализации происходит Базы Знаний \ref{Glossary}, подключения к Шине данных. На рисунке \ref{img:thinkinglifecycleinitBoolean} представлена диаграмма действий для этого метода.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=1.0] {thinkinglifecycleinitBoolean}
+  \caption{Диаграмма действий init} 
+  \label{img:thinkinglifecycleinitBoolean}  
+\end{figure}
+
+\emph{start(): Boolean} \\
+Данный метод является оберткой для поддержки Akka Concurrency. Он вызывает метод init. 
+
+\emph{stop(): Boolean} \\
+Данный метод является оберткой для поддержки Akka Concurrency. Он останавливает работу экземпляра класса: останавливается сессия к шине данных, останавливается подключение к Базе Знаний. 
+
+\emph{registerProcess(process : Process,level : Level) : Process} \\
+Данный метод регистрирует процесс в пуле. В качестве параметра принимается Level (уровень приоритета процесса). 
+
+\emph{stop(processLevel : Level) : List[Process]} \\
+Данный метод регистрирует останавливает процесс. В качестве параметра принимается ссылка на процесс. На рисунке \ref{img:thinkinglifecyclestopprocessLevelLevelListProcess} представлена диаграмма действий для этого метода.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=1.0] {thinkinglifecyclestopprocessLevelLevelListProcess}
+  \caption{Диаграмма действий stop} 
+  \label{img:thinkinglifecyclestopprocessLevelLevelListProcess}  
+\end{figure}
+
+\subsubsection{Описание работы компонента}
+\emph{Запуск и остановка} \\
+\begin{enumerate}
+	\item Когда приложение стартует оно инициализирует ThinkingLifeCycle, который активирует набор критиков, базируясь на текущей цели системы. Например, цель-классифицировать инцидент, активируется набор критиков: разобрать, проверить, найти категорию.
+	\item Когда приложение останавливается - оно останавливает все объекты класса и подклассов Actions (Critics, WayToThink), Selectors и ThinkingLifeCycle.
+\end{enumerate}
+Коммуникация происходит посредством сообщений, отправленных через MessageBus (Шину Данных) \ref{Glossary} JMS \cite{JMS}.
+\emph{Взаимодействие компонента с другими компонентами} \\
+\begin{enumerate}
+	\item Критик возвращает список Селекторов (SelectorRequestRule)
+	\begin{enumerate}
+	\item ThinkingLifeCycle запускает обработку компонента Selector
+	\item Selector возвращает список Action \ref{AppendixB} из базы знаний
+	\item ThinkingLifecycle параллельно запускает возвращенные Action
+	\begin{enumerate}
+	\item Если Action это Critic
+	\item ThinkingLifeCycle создает InputContext (входной контекст приложения) и копирует туда все данные из Context (контекста) инцидента
+	\item Если Action это Critic с ссылками ReturnToSameSelector ThinkingLifeCycle ждет результаты и отправляет список SelectorRequestRule, возвращенные Critic новому Selector. Иными словами Critic может вернуть новый Selector. В данном случае нам нужно провести операцию Join для всех потоков \cite{JavaConcurrency}. В иных же случаях все Action запускаются в параллельных потоках.
+	\end{enumerate} 
+	\begin{enumerate}
+	\item Если Action это WayToThink
+	\item ThinkingLifeCycle создает InputContext (входной контекст приложения) и копирует туда все данные из Context (контекста) возвращенный Selector
+	\item TLC \ref{Glossary} запускает WayToThink
+	\item TLC сохраняет параметры в OutputContext
+	\item TLC сохраняет итоговый результат работы и возвращает его 
+	\end{enumerate} 
+	\end{enumerate}
+\end{enumerate}
+\subsection{Компонент CoreService.Selector}
+Selector это компонент, который ответственен за получение списка действий из Базы знаний, согласно входным параметрам.
+\bold{Входной критерий}. TLC запускает Selector c параметрами. \\
+\bold{Выходной критерий}. Selector получает список Action: WayToThink или Critic. \\
+ 
+\subsection{Компонент CoreService.Critics}
+\subsection{Компонент CoreService.Way2Think}
+\subsection{Компонент CoreService.PreliminaryAnnotator}
+\subsection{Компонент CoreService.KnowledgeBaseAnnotator}
+\subsection{Компонент CoreService.Link parser}
 \section{Прототип}
 \section{Испытание прототипа}
 \section{Выводы по главе}
