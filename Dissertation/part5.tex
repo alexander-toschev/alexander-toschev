@@ -103,7 +103,8 @@
 	\item Система сохраняет запрос в Базу Знаний и начинает его обработку
 	\item Когда изменяется статус запрос request.state система оповещает подписчиков на этот запрос
 \end{enumerate}
-\subsection{Компонент CoreService.ThinkingLifeCycle}
+\clearpage
+\subsection{Компонент CoreService.ThinkingLifeCycle} \label{ThinkingLifeCycle}
 Это основной компонент системы, ответственный непосредственно за выполнение запросов. Данный компонент управляет потоками, событиями приложения. Он запускает исполнение Критиков, Селекторов, Путей мышления, осуществляет обмен данных между компонентами. Компонент построен на фреймворке Akka Concurrency, который позволяет разрабатывать приложения, которые могут работать параллельно \cite{AkkaConcurrency}. \\
 В данном компоненте реализовано шесть уровней мышления.
 \begin{enumerate}
@@ -236,16 +237,83 @@
 	\end{enumerate} 
 	\end{enumerate}
 \end{enumerate}
-\subsection{Компонент CoreService.Selector}
+\clearpage
+\subsection{Компонент CoreService.Selector} \label{Selector}
 Selector это компонент, который ответственен за получение списка действий из Базы знаний, согласно входным параметрам.
-\bold{Входной критерий}. TLC запускает Selector c параметрами. \\
-\bold{Выходной критерий}. Selector получает список Action: WayToThink или Critic. \\
- 
-\subsection{Компонент CoreService.Critics}
-\subsection{Компонент CoreService.Way2Think}
-\subsection{Компонент CoreService.PreliminaryAnnotator}
-\subsection{Компонент CoreService.KnowledgeBaseAnnotator}
-\subsection{Компонент CoreService.Link parser}
+\textbf{Входной критерий}. TLC запускает Selector c параметрами. 
+\textbf{Выходной критерий}. Selector получает список Action: WayToThink или Critic. \\
+\subsubsection{Описание методов класса}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=1.0] {SelectorInterface}
+  \caption{Интерфейс компонента Selector} 
+  \label{img:SelectorInterface}  
+\end{figure}
+На Рисунке \ref{img:SelectorInterface} показан интерфейс компонента. \\
+
+\emph{apply(request : Request) : Action} \\
+Данный метод на основе запроса пользователя получает из Базы знаний необходимые Critic \ref{Critic}. На рисунке \ref{img:applyrequestRequestActionActivity} представлена диаграмма действий для этого метода.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=1.0] {applyrequestRequestActionActivity}
+  \caption{Диаграмма действий Selector.apply} 
+  \label{img:applyrequestRequestActionActivity}  
+\end{figure}
+
+\emph{apply(goal: Goal): Action} \\
+Данный метод на основе цели системы получает из Базы знаний необходимые Critic \ref{Critic}. На рисунке \ref{img:applygoalGoalActionActivity} представлена диаграмма действий для этого метода.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=1.0] {applygoalGoalActionActivity}
+  \caption{Диаграмма действий Selector.apply} 
+  \label{img:applygoalGoalActionActivity}  
+\end{figure}
+
+\emph{apply(criticResult : ActionProbabilityRule) : Action} \\
+Данный метод на основе работы Critic получает из Базы знаний необходимые Action \ref{Action}. На рисунке \ref{img:applycriticResultActionProbabilityRulePairActionActivity} представлена диаграмма действий для этого метода.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=1.0] {applycriticResultActionProbabilityRulePairActionActivity}
+  \caption{Диаграмма действий Selector.apply} 
+  \label{img:applycriticResultActionProbabilityRulePairActionActivity}  
+\end{figure}
+
+\subsubsection{Описание работы компонента}
+\textbf{Действия при классификации инцидента}
+\begin{enumerate}
+	\item TLC \ref{ThinkingLifeCycle} запускает входящие Critic \ref{Critic} параллельно 
+	\item Когда Critic возвращает результат работы в виде ActionProbabilityRuleTriple, TLC запускает Selector с этим параметром
+	\item Selector запускает GetMostProbableWay2Think, который возвращает наиболее вероятный WayToThink
+	\item В некоторых случаях Selector может вернуть менее вероятный вариант, если на Refelective уровне мышления сработал Critic, который посчитал, что данное решение некорректно или же пользователь признал его таким
+\end{enumerate}
+На Рисунке \ref{img:startRequestProcessingActivity} представлена диаграмма действий выбора наиболее вероятного WayToThink.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.5] {startRequestProcessingActivity}
+  \caption{Диаграмма действий выбора WayToThink} 
+  \label{img:startRequestProcessingActivity}  
+\end{figure}
+На Рисунке \ref{img:classifyIncidentActivity} представлена диаграмма действий классификации инцидента. TLC \ref{ThinkingLifeCycle} получает цель Классифицировать инцидент, затем Selector по этой цели возвращает необходимые Critic. Затем TLC запускает обработку Critic в разных потоках (параллельно). В данном случае рассматривает 3 Critic.
+\begin{itemize}
+	\item DirectInstruction - прямые инструкции, данный Critic возвращает WayToThink Simulate \ref{WayToThink}, который ищет связь между концепциями в запросе и концепциями в Базе Знаний.
+	\item ProblemWithDesiredState - проблема с ожидаемым результатом, данный Critic возвращает Simulate+Reformulate WayToThink, которые ищут сопоставление концепциями в Базе Знаний и пытается преобразовать запрос к DirectInstruction запросу (прямым инструкциям).
+	\item ProblemWithoutDesiredState - проблема без ожидаемого резульата. Данный Critic возвращает Simulate+Reformulate+InferDesiredState, который пытается преобразовать проблему к ProblemWithDesiredState.
+\end{itemize}
+Затем TLC собирает результаты выполнения всех Critic и запускает их по новой, пока не будет достигнута изначальная цель.\\
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {classifyIncidentActivity}
+  \caption{Диаграмма действий классификации инцидента} 
+  \label{img:classifyIncidentActivity}  
+\end{figure}
+
+\subsection{Компонент CoreService.Critics} \label{Critic}
+
+
+\subsection{Компонент CoreService.WayToThink} \label{WayToThink}
+\subsection{Компонент CoreService.PreliminaryAnnotator} \label{PreliminaryAnnotator}
+\subsection{Компонент CoreService.KnowledgeBaseAnnotator} \label{KnowledgeBaseAnnotator}
+\subsection{Компонент CoreService.Link parser} \label{Link parser}
 \section{Прототип}
 \section{Испытание прототипа}
 \section{Выводы по главе}
