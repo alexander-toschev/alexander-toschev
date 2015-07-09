@@ -308,7 +308,11 @@ Selector это компонент, который ответственен за
 \end{figure}
 
 \subsection{Компонент CoreService.Critics} \label{Critic}
-
+Critic является основным компонентом для анализа в триплете Critic->Selector->WayToTHink. Critic используется для классификации входной информации, рефлексии, само-анализа и т.д. и служит своеобразным триггером.
+\textbf{Входной критерий}
+TLC \ref{ThinkingLifeCycle} запускает Critic согласно Goal \ref{AppendixC} (Цель) или Request. 
+\textbf{Выходной критерий}
+Critic генерирует SelectorRequest \ref{Selector}. 
 
 \subsection{Компонент CoreService.WayToThink} \label{WayToThink}
 \subsection{Компонент CoreService.PreliminaryAnnotator} \label{PreliminaryAnnotator}

@@ -43,6 +43,7 @@
 	\item Type - тип точки связи с пользователем (например, веб-сервис)
 	\item Address - адрес точки связи с пользователем
 \end{itemize}
+\clearpage
 
 \chapter{Приложение B. Action} \label{AppendixB}
 Action является базовым классом для WayToThink или Critic.
@@ -53,6 +54,36 @@ Action является базовым классом для WayToThink или C
   \label{img:ActionClass}  
 \end{figure}
 
+
+\chapter{Приложение C. Цели} \label{AppendixC}
+Goal (Цель) является набором вероятностных предикатов и последовательностью How-To необходимых для того, чтобы достичь цель. Goal и How-To тесно связаны. На Рисунке \ref{img:goal} показан состав Goal. Goal состоит из:
+\begin{enumerate}
+	\item Parameters - параметры, которые используются предикатами для выполнения
+	\item Precondition - условия, которые должны быть выполнены до выполнения проверок цели
+	\item Entry criteria - входной критерий, предикат, который определяет, что цель активировалась
+	\item Exite criteria - условия, когда цель считается выполненной
+	\item PostCondition - дополнительные условия для выхода
+	\item HowTo - набор решения. Список путей решения
+\end{enumerate}
+
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=1.0, origin=c] {goal}
+  \caption{Диаграмма классов Goal} 
+  \label{img:goal}  
+\end{figure}
+
+\textbf{Типы предикатов} \\
+В решение используется 3 типа логических предикатов: and, or, not. Представление Goal в SemanticNetwork показано на диаграмме \ref{img:2_0_GoalHowToConcept}.
+
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=1.0, origin=c] {2_0_GoalHowToConcept}
+  \caption{Диаграмма места Goal в SemanticNetwork (Семантической сети)} 
+  \label{img:2_0_GoalHowToConcept}  
+\end{figure}
+
+Иерархия целей имеет высшую цель: Помочь пользователю. Далее вниз по иерархии идут подцели: Решить инцидент, Понять тип инцидента, Найти решение инцидента и т.д.
 
 
 \chapter{Очень длинное название второго приложения, в котором продемонстрирована работа с длинными таблицами} \label{AppendixBX}
