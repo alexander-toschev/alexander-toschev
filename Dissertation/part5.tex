@@ -1,4 +1,5 @@
 \chapter{Результаты работы}
+В качестве результатов работы была произведен Теоретико-множественный и теоретико-информационный анализ сложных систем в данном случае система поддержки инфраструктуры. Была разработана проблемно-ориентированных систем управления, принятия решений и оптимизации технических объектов в области обслуживания IT. В данной главе представлена модель разработанной системы, архитектура и реализация.
 \section{Архитектура системы}
 Архитектура системы представляет собой модульную систему. Основными компонентами системы являются:
 \begin{enumerate}
@@ -308,10 +309,10 @@ Selector это компонент, который ответственен за
 \end{figure}
 
 \subsection{Компонент CoreService.Critics} \label{Critic}
-Critic является основным компонентом для анализа в триплете Critic->Selector->WayToTHink. Critic используется для классификации входной информации, рефлексии, само-анализа и т.д. и служит своеобразным триггером.
-\textbf{Входной критерий}
-TLC \ref{ThinkingLifeCycle} запускает Critic согласно Goal \ref{AppendixC} (Цель) или Request. 
-\textbf{Выходной критерий}
+Critic является основным компонентом для анализа в триплете Critic->Selector->WayToTHink. Critic используется для классификации входной информации, рефлексии, само-анализа и т.д. и служит своеобразным триггером.\\
+\textbf{Входной критерий}\\
+TLC \ref{ThinkingLifeCycle} запускает Critic согласно Goal \ref{AppendixC} (Цель) или Request. \\
+\textbf{Выходной критерий}\\
 Critic генерирует SelectorRequest \ref{Selector}. 
 На входе Critic принимает 
 \begin{itemize}
@@ -347,7 +348,7 @@ Critic генерирует SelectorRequest \ref{Selector}.
 	\end{enumerate}
 	\item Уровень рассуждений
 	\begin{enumerate}
-		\item Выбор наиболее вероятного Selector по Rule. Данный Critic после проверки правил, выбирает из них правило с большей веростностью
+		\item Выбор наиболее вероятного Selector по Rule. Данный Critic после проверки правил, выбирает из них правило с большей вероятностью
 	\end{enumerate}
 	\item Рефлексивный уровень
 	\begin{enumerate}
@@ -365,11 +366,134 @@ Critic генерирует SelectorRequest \ref{Selector}.
 	\end{enumerate} 
 \end{enumerate}
 \subsection{Компонент CoreService.WayToThink} \label{WayToThink}
+WayToThink является основным операционным компонентом триплета Critic->Selector->WayToThink. Основными задачами данного компонента являются: обновление, преобразование, сохранение данных и коммуникация с пользователем. \\
+\textbf{Входной критерий}\\
+Запуска из компонента ThinkingLufeCycle \ref{ThinkingLifeCycle}. Входными данными является InputContext, который содержит параметры WayToThink.\\
+\textbf{Выходной критерий}\\
+WayToThink завершил работу. На выходе возвращается измененные данные в ходе работе.\\
+На Рисунке \ref{img:Way2ThinkInterface} представлен интерфейс компонента. \\
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {Way2ThinkInterface}
+  \caption{Интерфейс компонента WayToThink} 
+  \label{img:Way2ThinkInterface}  
+\end{figure}
+В общем виде компонент описывает последовательность действий. В системе используется два больших класса WaytToThink простой и составной (сложный). Простые WayToThink являются встроенными в систему, остальные являются комбинацией компонентов: Critic \ref{Critic}, Selector \ref{Selector}, WayToThink \ref{WayToThink}.\\
+Встроенные типы:
+\begin{enumerate}
+	\item Создать контекст
+	\item Установить общий статус системы
+	\item Установить цель системы
+	\item Разделить фразу на слова и предложения
+	\item Найти связи между входной информацией и базой знаний
+	\item Извлечь связи
+	\item Установить контакт с пользователями
+	\item Сохранить наиболее вероятное решение
+	\item Перефразировать (Reformulate)
+	\item Смоделировать (Simulate)
+	\item Найти решение
+	\item Остановить работу
+\end{enumerate}
+WayToThink также используется как Решение (HowTo) \ref{AppendixDHowTo} , то есть описывает последовательность действий, необходимых для решения проблемы. 
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {way2thinkHowToActivity}
+  \caption{Работа компонента WayToThink в режиме HowTo} 
+  \label{img:way2thinkHowToActivity}  
+\end{figure}
+
 \subsection{Компонент CoreService.PreliminaryAnnotator} \label{PreliminaryAnnotator}
+Данный компонент проводит предварительную подготовку текста: грамматическую и орфографическую коррекцию текста, а также разделение на предложения. На Рисунке \ref{img:PrelimenaryAnnotatorInterface} представлен интерфейс компонента. 
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {PrelimenaryAnnotatorInterface}
+  \caption{Интерфейс компонента PrelimenaryAnnotator} 
+  \label{img:PrelimenaryAnnotatorInterface}  
+\end{figure}
+
 \subsection{Компонент CoreService.KnowledgeBaseAnnotator} \label{KnowledgeBaseAnnotator}
-\subsection{Компонент CoreService.Link parser} \label{Link parser}
+Данный компонент устанавливает связи между терминами во входной фразе и базой знаний.  \\
+\textbf{Входными критериями} является список фраз. \\
+\textbf{Выходными критериями} является список ссылок на внутренние термины. \\
+Поток действий:
+\begin{enumerate}
+	\item Получен Термин
+	\item Поиск в локальной базе знаний
+	\item Если совпадение не найдено идет запрос во внешнюю базу знаний
+	\item Внешняя база возвращает список синонимов
+	\item Компонент ищет по синонимам во внутренний базе знаний
+	\item Если поиск успешен, то создается связь между входящем термином, синонимом и концепцией в базе знаний
+\end{enumerate}
+Например, входящий запрос содержит термин 'program', База знаний содержит термин 'computer software'. Идет запрос во внешние базы знаний, найдено computer software, program. Будет добавлена аналогия в база знаний program->computer software. 
+
+
+\subsection{Компонент DataService} \label{data service}
+Данный компонент отвечает за хранение данных в системе. База знаний построена на графах. На Рисунке \ref{img:KnowledgeBaseServer} представлен интерфейс компонента. В базе знаний используется два типа объектов Object - объект базы знаний, BusiessObject - объект для Web Service (User, Request). BusinessObject является кортежем для интеграции с внешними системами. У объекта есть ID, который уникально удостоверяет его в рамках системы.\\
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {KnowledgeBaseServer}
+  \caption{Интерфейс компонента KnowledgeBaseServer} 
+  \label{img:KnowledgeBaseServer}  
+\end{figure}
+Список методов:
+\begin{enumerate}
+	\item save(obj:Resource):Resource - сохранить ресурс в базу знаний
+	\item remove(obj:Resource) - удалить объект
+	\item select(obj:Resource):Resource - выбрать объект
+	\item link(obj:List<Resource>,linkName:String) - сделать ссылку между 2-мя объектами
+	\item selectLinkedObject(obj:Resource,linkName:String):Link<Resource> - выбрать все объекты, которые имеют связь под названием linkName с объектом obj.
+	\item addLinkedObject(parent:Resource,toLink:Resource,linkName:String) - создать ссылку linkName с объектом
+	\item saveRequest(obj:Request) - сохранить запрос в базу
+	\item selectRequest(obj:RefObject) - получить запрос из Базы Знаний
+	\item saveBusinessObject(obj:RefObject):RefObject - сохранить объект в базу	
+	\item selectBusinessObject(obj:RefObject):RefObject - полуить объект из базы знаний
+\end{enumerate}
+\subsection{Компонент ClientAgent} \label{client agent}
+Данный компонент предназначен для выполнения решений на конечной машине. Данный компонент должен поддерживать обработку \ref{AppendixDHowTo}. В случае проблем компонент также должен обращаться за помощью к специалисту.
+\clearpage
 \section{Прототип}
+В прототипе были реализованы 4 уровня мышления. Основной рабочий поток приложения описан следующим алгоритмом:
+\begin{enumerate}
+	\item Поступает запрос от пользователя \\
+	User had received wrong application.
+User has ordered Wordfinder Business Economical.
+However she received wrong version, she received Wordfinder Tehcnical instead of Business Economical. Please assist.
+	\item GoalManger устанавливает цель системы HelpUser
+	\item Активируется набор Critic, привязанный к данной цели
+	\item PreliminaryAnnorator разбирает фразу
+	\item KnowledgeBaseAnnotator создает семантическую сеть и ссылки на нее
+	\item Critic на Рефликсивном уровне запускает WayToThink ProblemSolving с целью: ResolveIncident
+	\item Critic на Рефликсивном уровне выбирает WayToThink KnowingHow
+	\begin{enumerate}
+	\item Запускаются параллельно все Critic, которые привязаны к IncidentClassification Critic, который привязан к ResolveIncident цели, в данном случае это DirectInstruction, ProblemWithDesiredState, ProblemWithoutDesiredState \ref{ThinkingLifeCycle}
+	\item Selector выбирает наиболее вероятный результат работы среди всех результатов компонентов. В данном случае будет результат работы Problem Description with desired state.
+	\item KnowingHow сохраняет варианты выбора Selector.
+	\item Simulation WayToThink с параметрами Создать модель текущий ситуации создает модель CurrentSituation. User, Software
+	\item Reformulation WayToThink, используя результаты предыдущего шага синтезирует артефакты, которых не хватает, чтобы получить CurrentState и DesiredState. DesiredState не указан явно. WayToThink запускает Critic размышления, чтобы найти корень проблемы. Critic размышления находит CurrentState- Wordfinder Tehcnical, DesiredState-Wordfinder Business Economical
+	\item Рефлексивные Critic оценивают состояние системы - на каком шаге она находится, и если цель не достигнута, то запускают другой WayToThink, который был возвращен, например, DirectInstruction. 
+	\item Critic генерации решения запускает KnowingHow \ref{AppendixDHowTo} WayToThink, ExtensiveSearch.
+	\item Selector выбирает наиболее вероятный путь мышления. В данном случае ExtensiveSearch, который будет находить решения, позволяющие привести систему в необходимое состояние (DesiredState). Если он не сможет, то он иницирует коммуникацию с пользователем. 
+	
+
+	 \end{enumerate}
+	 \item Рефлексивный Critic проверяет состояние системы. Если Цель достигнута, то пользователю посылается ответ.
+	 \item Само Сознательные Critic активируется на данном шаге и сохраняют информацию о затратах на решение.
+
+\end{enumerate}
+\subsection{UML диаграмма действий приложения} \label{LifecycleActivity}
+На Рисунке \ref{img:LifecycleActivity} представлена UML диаграма действий системы.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.18] {LifecycleActivity}
+  \caption{Диаграмма действий LifecycleActivity} 
+  \label{img:LifecycleActivity}  
+\end{figure}
+\subsection{Технологии прототипа} \label{PrototypeTechnology}
+Прототип был написан на языке Scala, с применением технологии Akka - параллельного исполнения на множестве ядер. В качестве базы используется Neo4j графовая база данных. 
+\clearpage
 \section{Испытание прототипа}
+\subsection{Экспериментальные данные}
+
 \section{Выводы по главе}
 %\newpage
 %============================================================================================================================
