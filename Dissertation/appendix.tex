@@ -54,7 +54,7 @@ Action является базовым классом для WayToThink или C
   \label{img:ActionClass}  
 \end{figure}
 
-
+\clearpage
 \chapter{Приложение C. Цели} \label{AppendixC}
 Goal (Цель) является набором вероятностных предикатов и последовательностью How-To необходимых для того, чтобы достичь цель. Goal и How-To тесно связаны. На Рисунке \ref{img:goal} показан состав Goal. Goal состоит из:
 \begin{enumerate}
@@ -85,7 +85,7 @@ Goal (Цель) является набором вероятностных пр�
 
 Иерархия целей имеет высшую цель: Помочь пользователю. Далее вниз по иерархии идут подцели: Решить инцидент, Понять тип инцидента, Найти решение инцидента и т.д.
 
-
+\clearpage
 \chapter{Приложение D. Рецепты решений} \label{AppendixDHowTo}
 Рецепты решений представляют собой последовательность действий выполняемых для решения проблемы, описанной в инциденте. 
 Было разработано два типа HowTo: ValueHowTo-содержит в себе простое значение; FunctionalHowTo- содержит в себе функцию. \\
@@ -108,10 +108,7 @@ FunctionalHowTo состоит из следующих частей:
 \end{itemize}
 Преобразованный в формат HowTo данный рецепт решения будет выглядеть как
 \begin{lstlisting}
-	
-\end{lstlisting}
-
-login:howto{
+	login:howto{
   Parameters:[
 
     {Key:'ScriptName',
@@ -154,160 +151,133 @@ launch:howto{
 
   ]
 }
-\chapter{test}
- \section{Подраздел приложения}\label{AppendixB1}
-Вот размещается длинная таблица:
-\fontsize{10pt}{10pt}\selectfont
-\begin{longtable}[c]{|l|c|l|l|}
-% \caption{Описание входных файлов модели}\label{Namelists} 
-%\\ 
- \hline
- %\multicolumn{4}{|c|}{\textbf{Файл puma\_namelist}}        \\ \hline
- Параметр & Умолч. & Тип & Описание               \\ \hline
-                                              \endfirsthead   \hline
- \multicolumn{4}{|c|}{\small\slshape (продолжение)}        \\ \hline
- Параметр & Умолч. & Тип & Описание               \\ \hline
-                                              \endhead        \hline
- \multicolumn{4}{|r|}{\small\slshape продолжение следует}  \\ \hline
-                                              \endfoot        \hline
-                                              \endlastfoot
- \multicolumn{4}{|l|}{\&INP}        \\ \hline 
- kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
- kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
- \hline
-  %& & & $\:$ \\ 
- \multicolumn{4}{|l|}{\&SURFPAR}        \\ \hline
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\
-kick & 1 & int & 0: инициализация без шума ($p_s = const$) \\
-      &   &     & 1: генерация белого шума                  \\
-      &   &     & 2: генерация белого шума симметрично относительно \\
-  & & & экватора    \\
- mars & 0 & int & 1: инициализация модели для планеты Марс     \\ 
- \hline 
-\end{longtable}
+\end{lstlisting}
 
-\fontsize{14pt}{15pt}\selectfont
-\section{Ещё один подраздел приложения} \label{AppendixB2}
-
-Нужно больше подразделов приложения!
-
-\section{Очередной подраздел приложения} \label{AppendixB3}
-
-Нужно больше подразделов приложения!
-
-\section{И ещё один подраздел приложения} \label{AppendixB4}
-
-Нужно больше подразделов приложения!
-
+\clearpage
+\chapter{Приложение E. Экспериментальные данные}\label{AppendixE}
+\begin{lstlisting}
+	
+Часть экспериментальных данных (Общая длина файла примерно 10000 инцидентов)
+EUROPE DOMAIN NEW SERVER Request Form
+*(M)* unable to connect remotely to other machine \\
+Quota limit on the personal file store exceeded Europemuk176 \\
+TCP/IP Address Management Request \\
+Quota limit exceeded \\
+EUROPED007 caiW2kOs:w2kLVolInst C: is now Critical at 03:16:10\\
+EUROPEM116 caiW2kOs:w2kProcInst DRWTSN32,*,* is now Critical at 11:51:03
+2011-04-29 20:16:50 EUROPEM239 LogWatcher BABBACKUP \\
+2011-04-30 06:05:55 EUROPEMUK212 LogWatcher NetBDBMgr File SYSTEM_LOG 
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at 
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a \\
+CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached CRITICAL utilisation at \\
+CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume D: has reached CRITICAL utilisation at \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at \\
+CSAPP01 Possible hardware problem detected - Please investigate with HP Insight Manager \\
+CSAPP02 Possible hardware problem detected - Please investigate with HP Insight Manager \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at\\
+EUROPEM218 CA Backup - Backup_Operation_Failed at 23:20, 30/04/11
+FMSDTS02 The NSM/TNG Win2k System Agent reports Logical Volume D: has reached CRITICAL utilisation\\
+FMSDTS02 The NSM/TNG Win2k System Agent reports Logical Volume D: has reached WARNING state at 23:4\\
+EUROPEVUK140 caiW2kOs:w2kMemPhys Physical Memory is now Warning at 00:05:25
+2011-05-01 00:27:37 EUROPEMUK236 LogWatcher CA_Backup_F Backup_Operation_Failed File \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at\\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a\\
+2011-05-01 00:51:37 EUROPEMUK236 LogWatcher CA_Backup_F Backup_Operation_Failed File \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at \\
+2011-05-01 01:33:37 EUROPEMUK236 LogWatcher CA_Backup_W Check_Device_Group File \\
+EUROPEVUK232 WinA3_CPUTotal:TotalLoad CPUTotal is now Critical at 01:50:42 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at 
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at 
+FLETCHER The NSM/TNG Win2k System Agent reports Logical Volume C: has reached WARNING state at 02:4 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEVUK232 WinA3_CPUTotal:TotalLoad CPUTotal is now Warning at 04:56:43 \\ 
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Critical a
+EUROPEMUK521 WinA3_NetInst Intel[R] 82567LF-3 Gigabit Network Connection is now Critical at 05:40:5 
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 09:46:20 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a
+EUROPEVUK216 caiW2kOs:w2kNetTotal Net Total is now Critical at 11:02:05 \\
+EUROPEM218 CA Backup - Backup_Operation_Failed at 11:54, 01/05/11 \\
+EUROPEVUK140 caiW2kOs:w2kMemPhys Physical Memory is now Warning at 12:35:25 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network  \\Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\Connection is now Warning at
+EUROPEMUK541 caiLogA2 caiLogA2 is now DOWN at 13:49:20 \\
+EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 13:49:31 \\
+UKM145 caiW2kOs:w2kCpuInst CPU 0 is now Warning at 14:53:24 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 17:47:51 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\Connection is now Warning at
+EUROPEVUK232 WinA3_CPUTotal:TotalLoad CPUTotal is now Critical at 18:52:43 \\
+EUROPEVUK039 Mib-II:IP_Interface 172.19.12.218 is now Broken at 19:06:42 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\Connection is now Warning at
+EUROPEVUK039 caiW2kOs:w2kSrvcInst CASUniversalAgent is now Critical at 19:24:53 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\Connection is now Critical a
+EUROPEVUK050A Mib-II:IP_Interface 172.19.244.7 is now Broken at 19:52:07 \\
+EDISON Mib-II:IP_Interface 172.19.244.76 is now Broken at 19:54:02 \\
+EUROPEVUK053A Mib-II:IP_Interface 172.19.244.8 is now Broken at 19:54:59 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached \\ CRITICAL utilisation at
+2011-05-01 22:05:36 EUROPEMUK236 LogWatcher CA_Backup_F Unable_To_Find_Any_Media File  \\
+2011-05-01 22:05:36 EUROPEMUK236 LogWatcher CA_Backup_F   Backup_Operation_Failed File \\
+2011-05-01 22:07:36 EUROPEMUK236 LogWatcher CA_Backup_F Backup_Operation_Failed File \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at \\
+CSAPP02 Possible hardware problem detected - Please investigate with HP Insight Manager \\
+CSAPP01 Possible hardware problem detected - Please investigate with HP Insight Manager \\
+EUROPEVUK232 WinA3_CPUTotal:TotalLoad CPUTotal is now Warning at 00:32:44 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Critical a
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Critical a
+EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 01:50:22
+EUROPEMUK541 caiLogA2 caiLogA2 is now DOWN at 01:50:24 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEM116 caiW2kOs:w2kCpuInst CPU 0 is now Warning at 03:25:03
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EDISON Mib-II:IP_Interface 172.19.244.76 is now Broken at 19:54:02 \\
+2011-05-02 05:01:47 EUROPEMUK212 LogWatcher NetBDBMgr File SYSTEM_LOGapplication MatchPattern FILE \\
+2011-05-02 05:13:47 EUROPEMUK212 LogWatcher NetBDBMgr File SYSTEM_LOGapplication MatchPattern FILE \\
+EUROPEM116 caiW2kOs:w2kCpuInst CPU 0 is now Warning at 05:25:03
+CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached WARNING state at 05:26, \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a
+EUROPEMUK529 WinA3_NetInst:InBytes Intel[R] 82578DM Gigabit Network Connection is now Warning at 05 \\
+EUROPEMUK521 WinA3_NetInst Intel[R] 82567LF-3 Gigabit Network Connection is now Critical at 05:40:5 \\
+EUROPEMUK541 caiLogA2 caiLogA2 is now DOWN at 05:48:16 \\
+EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 05:48:52 \\
+CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached WARNING state at 06:08, \\
+UKM145 caiW2kOs:w2kCpuInst CPU 0 is now Warning at 06:57:22 \\
+UKM145 caiW2kOs:w2kCpuInst CPU 1 is now Warning at 06:57:22 \\
+2011-05-02 07:01:17 UKM205 LogWatcher BABBACKUP is now Critical \\
+2011-05-02 07:39:36 EUROPEMUK236 LogWatcher CA_Backup_I Media_Error File D:Program Files CABright \\
+EUROPEVUK053A caiW2kOs:w2kProcInst DRWTSN32,*,* is now Critical at 09:44:01 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Critical a
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EDISON Mib-II:IP_Interface 172.19.244.76 is now Broken at 19:54:02 \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
+LUCAS caiW2kOs:w2kCpuInst CPU 0 is now Critical at 14:27:59 \\
+LUCAS caiW2kOs:w2kCpuTotal CPU Total is now Critical at 14:27:59 \\
+UKM145 caiW2kOs:w2kCpuInst CPU 0 is now Warning at 14:55:21 \\
+UKM145 caiW2kOs:w2kCpuInst CPU 1 is now Warning at 14:57:21 \\
+2011-05-02 15:01:17 UKM205 LogWatcher BABBACKUP is now Critical \\
+2011-05-02 17:01:59 EUROPEMUK268 LogWatcher BABbackup File\\ 
+2011-05-02 17:06:50 EUROPEMUK176 LogWatcher BABBACKUP File \\ 
+2011-05-02 20:17:01 EUROPEM239 LogWatcher BABBACKUP File \\ 
+ caiLogA2 caiLogA2 is now DOWN at 21:48:52 \\
+CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached \\ CRITICAL utilisation at
+CSAPP01 Possible hardware problem detected - Please investigate with HP  \\ Insight Manager
+CSAPP02 Possible hardware problem detected - Please investigate with HP \\ Insight Manager
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Critical a
+2011-05-02 23:32:02 EUROPEMUK177 LogWatcher BABBACKUP File \\
+EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at2011-05-03 05:01:46 EUROPEMUK212 LogWatcher NetBDBMgr File SYSTEM_LOG\application MatchPattern FILE2011-05-03 05:13:46 EUROPEMUK212 LogWatcher NetBDBMgr File SYSTEM_LOG\application MatchPattern FILEEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atCSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached WARNING state at 05:30,EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical aEUROPEMUK521 WinA3_NetInst Intel[R] 82567LF-3 Gigabit Network Connection is now Critical at 05:40:5EUROPEMUK541 caiLogA2 caiLogA2 is now DOWN at 05:50:00EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 05:50:082011-05-03 06:23:35 EUROPEMUK236 LogWatcher CA_Backup_I Media_Error File D:\Program Files\CA\Bright2011-05-03 06:31:35 EUROPEMUK236 LogWatcher CA_Backup_I Media_Error File D:\Program Files\CA\BrightEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical aEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atFLETCHER The NSM/TNG Win2k System Agent reports Logical Volume C: has reached WARNING state at 07:5EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical aEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a2011-05-03 09:02:02 EUROPEMUK177 LogWatcher BABBACKUP File C:\Program Files\CA\ARCserve Backup\LOG\ D: drive on Europemde011 is in warning state.EUROPE DOMAIN NEW SERVER Request Form Submitted via 7799 Web Site drive on Europemde011 is in warning state.EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical aLUCAS caiW2kOs:w2kCpuInst CPU 0 is now Critical at 14:27:59LUCAS caiW2kOs:w2kCpuTotal CPU Total is now Critical at 14:27:59EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPE DOMAIN NEW SERVEREUROPE DOMAIN NEW SERVEREUROPE DOMAIN NEW SERVEREUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK529 WinA3_NetInst:OutPkts Intel[R] 82578DM Gigabit Network Connection is now Warning at 13EUROPEMUK529 WinA3_NetInst:OutPkts Intel[R] 82578DM Gigabit Network Connection is now Warning at 13EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEVUK083 caiW2kOs:w2kCpuInst CPU 0 is now Critical at 13:25:27EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at2011-05-03 14:26:27 EUROPEM240 LogWatcher BABHOLD File C:\Program Files\CA\ARCserve Backup\LOG\Back2011-05-03 14:28:02 EUROPEMUK177 LogWatcher BABHOLD File C:\Program Files\CA\ARCserve Backup\LOG\Ba2011-05-03 14:28:50 EUROPEMUK176 LogWatcher BABHOLD File C:\Program Files\CA\ARCserve Backup\LOG\Ba2011-05-03 14:30:14 EUROPEMUK178 LogWatcher BABHOLD File C:\Program Files\CA\ARCserve Backup\LOG\Ba2011-05-03 14:47:47 EUROPEMUK177 LogWatcher BABHOLD is now Critical2011-05-03 14:56:27 EUROPEM240 LogWatcher BABHOLD File C:\Program Files\CA\ARCserve Backup\LOG\BackEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atTCP/IP Address Management Request FormEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a2011-05-03 19:10:50 EUROPEMUK176 LogWatcher BABBACKUP File C:\Program Files\CA\ARCserve Backup\LOG\2011-05-03 20:02:02 EUROPEMUK177 LogWatcher BABBACKUP File C:\Program Files\CA\ARCserve Backup\LOG\2011-05-04 02:18:08 EUROPEMUK298 LogWatcher SERVIEW-Critical File SYSTEM_LOG\application MatchPatteEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK221 caiW2kOs:w2kCpuInst CPU 5 is now Critical at 03:17:05EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEVUK232 WinA3_CPUTotal:TotalLoad CPUTotal is now Warning at 03:59:33CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached WARNING state at 05:28,EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical aEUROPEMUK521 WinA3_NetInst Intel[R] 82567LF-3 Gigabit Network Connection is now Critical at 05:40:5EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning atEUROPEM117 caiW2kOs:w2kProcInst DRWTSN32,*,* is now Critical at 07:06:17EUROPEM218 The NSM/TNG Win2k System Agent reports Logical Volume D: has reached WARNING state at 08EUROPEVUK003 caiW2kOs caiW2kOs is now DOWN at 08:19:43EUROPEMUK521 WinA3_NetInst:InPkts Intel[R] 82567LF-3 Gigabit Network Connection is now Critical atEUROPEMUK521 WinA3_NetInst:OutPkts Intel[R] 82567LF-3 Gigabit Network Connection is now Critical atEUROPEMUK521 WinA3_SrvcInst RpcSs is now Critical at 09:14:25EUROPEMUK521 WinA3_SrvcInst slsvc is now Critical at 09:14:25EUROPEMUK521 WinA3_SrvcInst:Exist SamSs is now Critical at 09:14:25EUROPEMUK521 WinA3_SrvcInst SamSs is now Critical at 09:14:25EUROPEMUK521 WinA3_SrvcInst DIA_DNA is now Critical at 09:14:25EUROPEMUK521 WinA3_SrvcInst Dnscache is now Critical at 09:14:28EUROPEMUK521 WinA3_SrvcInst EventLog is now Critical at 09:14:29EUROPEMUK521 WinA3_SrvcInst Netlogon is now Critical at 09:14:29EUROPEMUK521 WinA3_SrvcInst Schedule is now Critical at 09:14:29EUROPEMUK521 WinA3_SrvcInst WDSServer is now Critical at 09:14:29EUROPEMUK521 WinA3_SrvcInst LanmanServer is now Critical at 09:14:29EUROPEMUK521 WinA3_ProcInst:Inst MSDTC is now Warning at 09:20:09Email: TCP/IP Address Management Request Form Submitted via 7799 Web SiteEmail: Email submitted from the 7799 WebsiteEUROPE DOMAIN NEW SERVER Request FormEmail: TCP/IP Address Management Request Form Submitted via 7799 Web SiteFLETCHER The NSM/TNG Win2k System Agent reports Logical Volume C: has reached CRITICAL utilisationEUROPE DOMAIN NEW SERVER Request Form Submitted via 7799 Web Site EUROPE DOMAIN NEW SERVER Request Form Submitted via 7799 Web SiteEUROPE DOMAIN NEW SERVER Request Form Submitted via 7799 Web Site EUROPE DOMAIN NEW SERVER Request Form Submitted via 7799 Web SiteEUROPE DOMAIN NEW SERVER Request Form Submitted via 7799 Web Site EUROPE DOMAIN NEW SERVER Request Form Submitted via 7799 Web Site2011-05-04 14:16:02 EUROPEMUK177 LogWatcher BABBACKUP File C:\Program Files\CA\ARCserve Backup\LOG\Email: TCP/IP Address Management Request Form Submitted via 7799 Web SiteEUROPEM112 caiW2kOs:w2kLVolInst C: is now Warning at 19:07:35EUROPEMUK384 caiW2kOs:w2kCpuInst CPU 2 is now Warning at 10:31:44my password for terminal server URMW2011-05-04 12:12:29 EUROPEM214 LogWatcher SEP-AV-Event is now CriticalTitle: OCS FederationEmail: lost link to new 207 server spaceEuropemuk097EUROPEMUK022 fscServerView:fscSVStatus Server Status is now degraded at 03:07:23EUROPEMUK022 fscServerView:fscSVSubsystInst MassStorage is now degraded at 03:07:58Set up a group to manage filesEUROPE DOMAIN NEW SERVER Request FormEUROPE DOMAIN NEW SERVER Request FormEUROPE DOMAIN NEW SERVER Request FormDHCP Reservation creation.EUROPEMUK521 WinA3_SrvcInst:Exist RpcSs is now Critical at 09:14:25EUROPEMUK521 WinA3_SrvcInst:Exist slsvc is now Critical at 09:14:25EUROPEMUK521 WinA3_SrvcInst:Exist Dnscache is now Critical at 09:14:25EUROPEMUK521 WinA3_SrvcInst:Exist EventLog is now Critical at 09:14:25EUROPEMUK521 WinA3_SrvcInst:Exist Netlogon is now Critical at 09:14:28EUROPEMUK521 WinA3_SrvcInst:Exist Schedule is now Critical at 09:14:29EUROPEMUK521 WinA3_SrvcInst:Exist WDSServer is now Critical at 09:14:29EUROPEMUK521 WinA3_SrvcInst:Exist LanmanServer is now Critical at 09:14:29EUROPEMUK521 WinA3_SrvcInst:Exist SamSs is now Critical at 09:14:25EUROPEMUK541 caiLogA2 caiLogA2 is now DOWN at 13:51:432011-05-04 20:50:50 EUROPEMUK176 LogWatcher BABBACKUP File C:\Program Files\CA\ARCserve Backup\LOG\EUROPEMUK218 caiW2kOs:w2kProcInst DRWTSN32,*,* is now Critical at 05:10:36CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached WARNING state at 05:24,EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 05:53:00FLETCHER The NSM/TNG Win2k System Agent reports Logical Volume C: has reached WARNING state at 08:5UKM193 caiLogA2 caiLogA2 is now DOWN at 09:25:13UKM193 Mib-II:IP_Interface 172.19.110.23 is now UnReachable at 09:27:00UKM193 caiW2kOs caiW2kOs is now DOWN at 09:27:26UKM195 Mib-II:IP_Interface 172.19.110.22 is now Broken at 09:36:38Title: TCP/IP issue**TLS**Server Reboot Europemuk030TCP/IP Address Management Request FormTCP/IP Address Management Request Form Submitted EUROPE DOMAIN NEW SERVER Request FormEUROPEVUK232 WinA3_CPUTotal:TotalLoad CPUTotal is now Critical at 14:54:49EUROPEVUK216 caiW2kOs:w2kNetTotal Net Total is now Warning at 15:06:12EUROPE DOMAIN NEW SERVER Request FormEUROPE DOMAIN NEW SERVER Request Form Submitted via 7799 Web Site
+\end{lstlisting}
