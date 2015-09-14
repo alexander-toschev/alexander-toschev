@@ -10,41 +10,74 @@
 	\item ClientAgent
 	\item MessageBus
 \end{enumerate}
-Система может работать в 2-х режимах: режим обучения и режим запроса. Вариант использования для режима обучения представлен на Рисунке \ref{img:train}. Главными действующими лицами является специалист технической поддержки (TSS), в общем случае это базовый класс Пользователь (User). Данный вариант использования имеет несколько ветвей:
-\begin{itemize}
-	\item communication:Train - обучение посредством коммуникации с системой специалиста технической поддержки. 
-	\item communication:ProvidesSolution - в случае коммуникации в режиме обучения специалист технической поддержки должен предоставить не только сам запрос, который будет формализован системой, но также решение данного запроса. Система формализует запрос, формализует решение и создаст между ними связи
-	\item communication:ProvideRequest - специалист технической поддержки вводит в систему запрос
-	\item communication:MonitorsSolution - специалист технической поддержки смотрит как применяется решение, если находится проблема, то решение корректируется в CorrectSystemSolutions
-\end{itemize}
+Система может работать в 2-х режимах: режим обучения и режим запроса. Вариант использования для режима обучения представлен на Рисунке \ref{img:train}. Главными действующими лицами является специалист технической поддержки (TSS), в общем случае это Пользователь (User). Данный вариант использования имеет несколько ветвей, которые представлены в Таблице \ref{TrainUseCaseTable}.
+
+\begin{table} [htbp]
+  \centering
+  \parbox{15cm}{\caption{Описание ветвей в Варианте использования "Режим обучения" }\label{TrainUseCaseTable}}
+%  \begin{center}
+  \begin{tabular}{| p{7cm} || p{7cm} |}
+  \hline
+  \hline
+Ветвь & Описание \\
+  \hline
+    \hline
+communication:Train	& Обучение посредством коммуникации с системой специалиста технической поддержки \\
+  \hlinecommunication:ProvidesSolution  & В случае коммуникации в режиме обучения специалист технической поддержки должен предоставить не только сам запрос, который будет формализован системой, но также решение данного запроса. Система формализует запрос, формализует решение и создаст между ними связи \\
+  \hlinecommunication:ProvideRequest & Специалист технической поддержки вводит в систему запрос \\
+  \hline
+communication:MonitorsSolution  & Специалист технической поддержки смотрит как применяется решение, если находится проблема, то решение корректируется в посредством запроса CorrectSystemSolutions \\
+  \hline
+  \hline
+  \end{tabular}
+%  \end{center}
+\end{table}
+
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.8, angle=90] {UseCaseTrain}
   \caption{Вариант использования. Обучение.} 
   \label{img:train}  
 \end{figure}
-Второй вариант использования это основной кейс. Главными действующими лицами системы является заказчик (Customer), в общем случае это базовый класс Пользователь (User). Он также имеет несколько ветвей:
-\begin{itemize}
-	\item ProvideRequest - заказчик вводит запрос в систему. Это может быть либо команда ProvideDirectInstruction, либо описание проблемы ProvideProblemDescription.
-	\item communication:ProvideClarificationResponse - в случае, если система не может формализовать запрос, либо нашлось множество решений, то система запрашивает пользователя детали
-	\item communication:ProvideConfirmationResponse - в случае, когда система нашла решение, она запрашивает пользователя подтверждение о том, что искомое решение решило его проблему
-\end{itemize}
+Второй вариант использования это основной кейс. Главными действующими лицами системы является заказчик (Customer), в общем случае это базовый класс Пользователь (User). Он также имеет несколько ветвей, представленных в Таблице \ref{ProductionUseCase}
+\begin{table} [htbp]
+  \centering
+  \parbox{15cm}{\caption{Описание ветвей в Варианте использования "Основной режим обучения" }\label{ProductionUseCase}}
+%  \begin{center}
+  \begin{tabular}{| p{7cm} || p{7cm} |}
+  \hline
+  \hline
+Ветвь & Описание \\
+  \hline
+    \hline
+ProvideRequest	& Заказчик вводит запрос в систему на естественном языке. Это может быть либо прямая команда (например, Install Firefox, please), либо описание проблемы  \\
+  \hlinecommunication:ProvideClarificationResponse  &  В случае, если система не может формализовать запрос, либо нашлось множество решений, то система запрашивает пользователя детали
+ \\
+  \hlinecommunication:ProvideConfirmationResponse & В случае, когда система нашла решение, она запрашивает пользователя подтверждение о том, что искомое решение решило его проблему
+ \\
+  \hline
+  \hline
+  \end{tabular}
+%  \end{center}
+\end{table}
+\clearpage
 \subsection{Компоненты системы}
 На Рисунке \ref{img:detailed_component_overview} представлена диаграмма компонентов системы. 
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.5, angle=90] {detailed_component_overview}
-  \caption{Диграмма компонентов} 
+  \caption{Диграма компонентов системы} 
   \label{img:detailed_component_overview}  
 \end{figure}
 Взаимодействие компонентов системы показано на рисунке \ref{img:main_components_collaboration}.
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.7] {main_components_collaboration}
-  \caption{Диграмма взаимодействия компонентов} 
+  \caption{Диграма взаимодействия компонентов} 
   \label{img:main_components_collaboration}  
 \end{figure}
-Пользователь взаимодействует с системой посредством компонента WebService \ref{WebService}. Взаимодействие происходит по следующем схеме:
+Пользователь взаимодействует с системой посредством компонента WebService \ref{WebService}. Взаимодействие происходит по следующей схеме.
+
 \begin{enumerate}
 	\item WebService получает запрос пользователя. Сохраняет запрос в Базу Знаний (Базу данных) \ref{Glossary}.
 	\item WebService отправляет сообщение типа Request с информацией о запросе в компонент MessageBus (шина).
@@ -53,9 +86,11 @@
 	\item WebService получает сообщение RequestCompleted c результатами выполнения запроса и уведомляет подписчиков (конечных пользователей)
 	\item Компонент ClientAgent получает сообщение ActionsToExecute со списком действий, которые необходимо исполнить на целевых машинах
 \end{enumerate}
+\clearpage
 \subsection{Компонент WebService} \label{WebService}
 Данный компонент обрабатывает запросы пользователей. Запрос пользователя представляется объектом Request, который содержит информацию о пользователя, а также ссылку на метод, который будет вызван, когда запрос будет обработан. Вся работа происходит в компоненте CoreService.
-На Рисунке \ref{img:web-service-interface} представлен интерфейс компонента.  
+На Рисунке \ref{img:web-service-interface} представлен интерфейс компонента.
+В Таблице \ref{WebServiceDescription} представлено описание методов.  
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {web-service-interface}
@@ -65,7 +100,7 @@
 
 \begin{table} [htbp]
    \centering
-   \parbox{15cm}{\caption{Описание методов}\label{Methods Description}}
+   \parbox{15cm}{\caption{Описание методов компонента WebService}\label{WebServiceDescription}}
 %  \begin{center}
   \begin{tabular}{| p{12cm} ||p{5cm} |}
   \hline
@@ -92,7 +127,6 @@
   removeUser(user:RefObject)     & Удаляет информацию о пользователе. \\ 
   \hline
   findRequest(request:RefObject):Request     & Возвращает запрос по ссылке. \\ 
-  
   \hline
   \hline
 \end{tabular}
@@ -106,7 +140,7 @@
 \end{enumerate}
 \clearpage
 \subsection{Компонент CoreService.ThinkingLifeCycle} \label{ThinkingLifeCycle}
-Это основной компонент системы, ответственный непосредственно за выполнение запросов. Данный компонент управляет потоками, событиями приложения. Он запускает исполнение Критиков, Селекторов, Путей мышления, осуществляет обмен данных между компонентами. Компонент построен на фреймворке Akka Concurrency, который позволяет разрабатывать приложения, которые могут работать параллельно \cite{AkkaConcurrency}. \\
+Это основной компонент системы, ответственный непосредственно за выполнение запросов. Данный компонент управляет потоками, событиями приложения. Он запускает исполнение Критиков (Critic), Селекторов (Selector), Путей мышления (WayToThink), осуществляет обмен данных между компонентами. Компонент построен на фреймворке Akka Concurrency, который позволяет разрабатывать приложения, которые могут работать параллельно \cite{AkkaConcurrency}. \\
 В данном компоненте реализовано шесть уровней мышления.
 \begin{enumerate}
 	\item Instinctive - Инстинктивный уровень
@@ -118,7 +152,7 @@
 \end{enumerate}
 
 На уровне Instinctive идет обработка сгенерированных по шаблону инцидентов.
-Объект, который используется для обработки использует паттерн Akka \cite{AkkaConcurrency}. На рисунке \ref{img:thinking-life-cycle-cd} представлена диграмма классов компонента. 
+Объект, который используется для обработки использует паттерн Akka \cite{AkkaConcurrency}. На рисунке \ref{img:thinking-life-cycle-cd} представлена диаграма классов компонента.  В таблице \ref{TLCCD} представлено описание методов компонента.
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0,angle=90] {thinking-life-cycle-cd}
@@ -126,90 +160,110 @@
   \label{img:thinking-life-cycle-cd}  
 \end{figure}
 
-\subsubsection{Описание методов класса}
-\emph{onMessage(message : Message)} \\
-Данный метод вызывается при получении сообщения от шины. После этого происходит обработка запроса, вычисляется список действий, которые нужно выполнить. После этого запускается исполнение этих действий. На рисунке \ref{img:thinking-life-cycle-on-message-ad} представлена диаграмма действий для этого метода.
+\begin{longtable}{|p{5cm}|p{10cm}|}
+ \caption[TLCCDTAB]{Описание методов класса (компонента) ThinkingLifeCycle}\label{TLCCD} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Метод}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Метод}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+  onMessage(message : Message) & Данный метод вызывается при получении сообщения от шины. После этого происходит обработка запроса, вычисляется список действий, которые нужно выполнить. После этого запускается исполнение этих действий. На рисунке \ref{img:thinking-life-cycle-on-message-ad} представлена диаграмма действий для этого метода. \\
+   \hline
+   apply(request : Request) : List[Action] & Данный метод используется для запуска обработки входящего запроса. Для запроса создается контекст, если такой уже не был создан. После этого вызывается следующий компонент системы Selector, который выбирает необходимые ресурсы из базы. На рисунке \ref{img:thinkinglifecycleapplyrequestRequestListAction} представлена диаграмма действий для этого метода.\\
+   \hline
+   apply(actions : List[Action]) : TransFrame & Данный метод запускает обработку действий. Все действия разделяются на Critic (триггеры действий, которые в итоге должны перейти в WayToThink через Selector) и WayToThink (пути мышления, непосредственно обработчики данных, классы, которые производят изменения данных) На рисунке \ref{img:thinkinglifecycleapplyactionsListActionTransFrame} представлена диаграмма действий для этого метода. \\
+   \hline
+   processWay2Think(inputContext: Context, outputContext: Context): TransFrame & Данный метод запускает обработку WayToThink \ref{Glossary}. Данный метод создает входной контекст (InputContext), заполняет его параметрами, создает выходной контекст OutputContext. Затем он запускает обработку данных во входном контексте. На рисунке \ref{img:thinkinglifecycleprocessWay2ThinkcontextContext} представлена диаграмма действий для этого метода. \\
+    \hline
+   processCritic(context: Context):List[SelectorRequestRulePair] & Данный метод запускает обработку Critic \ref{Glossary}. На рисунке \ref{img:thinkinglifecycleactivityprocessCriticcontextContext} представлена диаграмма действий для этого метода. \\
+   \hline
+   init(): Boolean & Данный метод инициализирует экземпляр класса ThinkingLifeCycle. Во время инициализации происходит Базы Знаний \ref{Glossary}, подключения к Шине данных. На рисунке \ref{img:thinkinglifecycleinitBoolean} представлена диаграмма действий для этого метода. \\
+    \hline
+   start(): Boolean & Данный метод является оберткой для поддержки Akka Concurrency. Он вызывает метод init. \\
+   \hline
+   stop(): Boolean & Данный метод является оберткой для поддержки Akka Concurrency. Он останавливает работу экземпляра класса: останавливается сессия к шине данных, останавливается подключение к Базе Знаний.  \\
+   \hline
+   registerProcess(process : Process,level : Level) : Process & Данный метод регистрирует процесс в пуле. В качестве параметра принимается Level (уровень приоритета процесса). \\
+   \hline
+   stop(processLevel : Level) : List[Process] & Данный метод регистрирует останавливает процесс. В качестве параметра принимается ссылка на процесс. На рисунке \ref{img:thinkinglifecyclestopprocessLevelLevelListProcess} представлена диаграмма действий для этого метода.  \\
+
+ 
+ \hline 
+\end{longtable}
+
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {thinking-life-cycle-on-message-ad}
-  \caption{Диаграмма действий nnMessage} 
+  \caption{Диаграмма действий метода onMessage компонента ThinkingLifeCycle} 
   \label{img:thinking-life-cycle-on-message-ad}  
 \end{figure}
 
-\emph{sendMessage(publisher: Publisher, message: Message): Boolean} \\
-Данный метод используется для создания и отправки сообщения в шину. На рисунке \ref{img:thinking-life-cycle-send-message-publisher-publisher-ad} представлена диаграмма действий для этого метода.
+
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.7] {thinking-life-cycle-send-message-publisher-publisher-ad}
-  \caption{Диаграмма действий sendMessage} 
+  \caption{Диаграмма действий метода sendMessage компонента ThinkingLifeCycle} 
   \label{img:thinking-life-cycle-send-message-publisher-publisher-ad}  
 \end{figure}
 
-\emph{apply(request : Request) : List[Action]} \\
-Данный метод используется для запуска обработки входящего запроса. Для запроса создается контекст, если такой уже не был создан. После этого вызывается следующий компонент системы Selector, который выбирает необходимые ресурсы из базы. На рисунке \ref{img:thinkinglifecycleapplyrequestRequestListAction} представлена диаграмма действий для этого метода.
+
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {thinkinglifecycleapplyrequestRequestListAction}
-  \caption{Диаграмма действий apply} 
+  \caption{Диаграмма действий метода apply компонента ThinkingLifeCycle} 
   \label{img:thinkinglifecycleapplyrequestRequestListAction}  
 \end{figure}
-Важно отметить, что метод apply является специальном методом в контексте функционального языка программирования Scala. По умолчанию при применение класса к параметрам исполняется функция apply \cite{ScalaProgrammingLanguage}.
 
 
-\emph{apply(actions : List[Action]) : TransFrame} \\
-Данный метод запускает обработку действий. Все действия разделяются на Critic (триггеры действий, которые в итоге должны перейти в WayToThink через Selector) и WayToThink (пути мышления, непосредственно обработчики данных, классы, которые производят изменения данных) На рисунке \ref{img:thinkinglifecycleapplyactionsListActionTransFrame} представлена диаграмма действий для этого метода.
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.7] {thinkinglifecycleapplyactionsListActionTransFrame}
-  \caption{Диаграмма действий apply} 
+  \caption{Диаграмма действий метода apply компонента ThinkingLifeCycle} 
   \label{img:thinkinglifecycleapplyactionsListActionTransFrame}  
 \end{figure}
 
-\emph{processWay2Think(inputContext: Context, outputContext: Context): TransFrame} \\
-Данный метод запускает обработку WayToThink \ref{Glossary}. Данный метод создает входной контекст (InputContext), заполняет его параметрами, создает выходной контекст OutputContext. Затем он запускает обработку данных во входном контексте. На рисунке \ref{img:thinkinglifecycleprocessWay2ThinkcontextContext} представлена диаграмма действий для этого метода.
+
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {thinkinglifecycleprocessWay2ThinkcontextContext}
-  \caption{Диаграмма действий processWay2Think} 
+  \caption{Диаграмма действий метода processWay2Think компонента ThinkingLifeCycle} 
   \label{img:thinkinglifecycleprocessWay2ThinkcontextContext}  
 \end{figure}
 
-\emph{processCritic(context: Context):List[SelectorRequestRulePair]} \\
-Данный метод запускает обработку Critic \ref{Glossary}. На рисунке \ref{img:thinkinglifecycleactivityprocessCriticcontextContext} представлена диаграмма действий для этого метода.
+
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {thinkinglifecycleactivityprocessCriticcontextContext}
-  \caption{Диаграмма действий processCritic} 
+  \caption{Диаграмма действий метода processCritic компонента ThinkingLifeCycle} 
   \label{img:thinkinglifecycleactivityprocessCriticcontextContext}  
 \end{figure}
 
-\emph{init(): Boolean} \\
-Данный метод инициализирует экземпляр класса ThinkingLifeCycle. Во время инициализации происходит Базы Знаний \ref{Glossary}, подключения к Шине данных. На рисунке \ref{img:thinkinglifecycleinitBoolean} представлена диаграмма действий для этого метода.
+
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {thinkinglifecycleinitBoolean}
-  \caption{Диаграмма действий init} 
+  \caption{Диаграмма действий метода init компонента ThinkingLifeCycle} 
   \label{img:thinkinglifecycleinitBoolean}  
 \end{figure}
 
-\emph{start(): Boolean} \\
-Данный метод является оберткой для поддержки Akka Concurrency. Он вызывает метод init. 
-
-\emph{stop(): Boolean} \\
-Данный метод является оберткой для поддержки Akka Concurrency. Он останавливает работу экземпляра класса: останавливается сессия к шине данных, останавливается подключение к Базе Знаний. 
-
-\emph{registerProcess(process : Process,level : Level) : Process} \\
-Данный метод регистрирует процесс в пуле. В качестве параметра принимается Level (уровень приоритета процесса). 
-
-\emph{stop(processLevel : Level) : List[Process]} \\
-Данный метод регистрирует останавливает процесс. В качестве параметра принимается ссылка на процесс. На рисунке \ref{img:thinkinglifecyclestopprocessLevelLevelListProcess} представлена диаграмма действий для этого метода.
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {thinkinglifecyclestopprocessLevelLevelListProcess}
-  \caption{Диаграмма действий stop} 
+  \caption{Диаграмма действий метода stop компонента ThinkingLifeCycle} 
   \label{img:thinkinglifecyclestopprocessLevelLevelListProcess}  
 \end{figure}
-
+\clearpage
 \subsubsection{Описание работы компонента}
 \emph{Запуск и остановка} \\
 \begin{enumerate}
