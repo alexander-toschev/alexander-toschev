@@ -160,8 +160,8 @@ ProvideRequest	& Заказчик вводит запрос в систему н
   \label{img:thinking-life-cycle-cd}  
 \end{figure}
 
-\begin{longtable}{|p{5cm}|p{10cm}|}
- \caption[TLCCDTAB]{Описание методов класса (компонента) ThinkingLifeCycle}\label{TLCCD} \\ 
+\begin{longtable}{|p{7cm}|p{8cm}|}
+ \caption[Описание методов класса (компонента) ThinkingLifeCycle]{Описание методов класса (компонента) ThinkingLifeCycle}\label{TLCCD} \\ 
  \hline
  
  \multicolumn{1}{|c|}{\textbf{Метод}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
@@ -265,7 +265,7 @@ ProvideRequest	& Заказчик вводит запрос в систему н
 \end{figure}
 \clearpage
 \subsubsection{Описание работы компонента}
-\emph{Запуск и остановка} \\
+\emph{Запуск и остановка} 
 \begin{enumerate}
 	\item Когда приложение стартует оно инициализирует ThinkingLifeCycle, который активирует набор критиков, базируясь на текущей цели системы. Например, цель-классифицировать инцидент, активируется набор критиков: разобрать, проверить, найти категорию.
 	\item Когда приложение останавливается - оно останавливает все объекты класса и подклассов Actions (Critics, WayToThink), Selectors и ThinkingLifeCycle.
@@ -293,43 +293,65 @@ ProvideRequest	& Заказчик вводит запрос в систему н
 	\end{enumerate}
 \end{enumerate}
 \clearpage
+%==============================
+%==========Selector============
+%==============================
 \subsection{Компонент CoreService.Selector} \label{Selector}
-Selector это компонент, который ответственен за получение списка действий из Базы знаний, согласно входным параметрам.
+Selector (Селектор) это компонент, который ответственен за получение списка действий из Базы знаний, согласно входным параметрам.
 \textbf{Входной критерий}. TLC запускает Selector c параметрами. 
 \textbf{Выходной критерий}. Selector получает список Action: WayToThink или Critic. \\
-\subsubsection{Описание методов класса}
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {SelectorInterface}
   \caption{Интерфейс компонента Selector} 
   \label{img:SelectorInterface}  
 \end{figure}
-На Рисунке \ref{img:SelectorInterface} показан интерфейс компонента. \\
+На Рисунке \ref{img:SelectorInterface} показан интерфейс компонента. В Таблице \ref{SelectorMethodsDescription} приведено описание методов компонента.\\
+\begin{longtable}{|p{7cm}|p{8cm}|}
+ \caption[Описание методов класса (компонента) Selector]{Описание методов класса (компонента) Selector}\label{SelectorMethodsDescription} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Метод}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Метод}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
 
-\emph{apply(request : Request) : Action} \\
-Данный метод на основе запроса пользователя получает из Базы знаний необходимые Critic \ref{Critic}. На рисунке \ref{img:applyrequestRequestActionActivity} представлена диаграмма действий для этого метода.
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+  apply(request : Request) : Action & Данный метод на основе запроса пользователя получает из Базы знаний необходимые Critic \ref{Critic}. На рисунке \ref{img:applyrequestRequestActionActivity} представлена диаграмма действий для этого метода. \\
+   \hline
+   apply(goal: Goal): Данный метод на основе цели системы получает из Базы знаний необходимые Critic \ref{Critic}. На рисунке \ref{img:applygoalGoalActionActivity} представлена диаграмма действий для этого метода.\\
+   \hline
+   apply(criticResult : ActionProbabilityRule) : Action & Данный метод на основе работы Critic получает из Базы знаний необходимые Action \ref{Action}. На рисунке \ref{img:applycriticResultActionProbabilityRulePairActionActivity} представлена диаграмма действий для этого метода. \\
+ \hline 
+\end{longtable}
+
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {applyrequestRequestActionActivity}
-  \caption{Диаграмма действий Selector.apply} 
+  \caption{Диаграмма действий метода Selector.apply компонента Selector} 
   \label{img:applyrequestRequestActionActivity}  
 \end{figure}
 
-\emph{apply(goal: Goal): Action} \\
-Данный метод на основе цели системы получает из Базы знаний необходимые Critic \ref{Critic}. На рисунке \ref{img:applygoalGoalActionActivity} представлена диаграмма действий для этого метода.
+
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {applygoalGoalActionActivity}
-  \caption{Диаграмма действий Selector.apply} 
+  \caption{Диаграмма действий метода Selector.apply компонента Selector} 
   \label{img:applygoalGoalActionActivity}  
 \end{figure}
 
-\emph{apply(criticResult : ActionProbabilityRule) : Action} \\
-Данный метод на основе работы Critic получает из Базы знаний необходимые Action \ref{Action}. На рисунке \ref{img:applycriticResultActionProbabilityRulePairActionActivity} представлена диаграмма действий для этого метода.
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {applycriticResultActionProbabilityRulePairActionActivity}
-  \caption{Диаграмма действий Selector.apply} 
+  \caption{Диаграмма действий метода Selector.apply компонента Selector} 
   \label{img:applycriticResultActionProbabilityRulePairActionActivity}  
 \end{figure}
 
@@ -361,14 +383,17 @@ Selector это компонент, который ответственен за
   \caption{Диаграмма действий классификации инцидента} 
   \label{img:classifyIncidentActivity}  
 \end{figure}
-
+\clearpage
+%============================================
+%===============Critic=======================
+%============================================
 \subsection{Компонент CoreService.Critics} \label{Critic}
-Critic является основным компонентом для анализа в триплете Critic->Selector->WayToTHink. Critic используется для классификации входной информации, рефлексии, само-анализа и т.д. и служит своеобразным триггером.\\
+Critic является основным компонентом для анализа в триплете Critic->Selector->WayToTHink. Critic используется для классификации входной информации, рефлексии, само-анализа и т.д. и служит определенным вероятностным триггером.\\
 \textbf{Входной критерий}\\
 TLC \ref{ThinkingLifeCycle} запускает Critic согласно Goal \ref{AppendixC} (Цель) или Request. \\
 \textbf{Выходной критерий}\\
 Critic генерирует SelectorRequest \ref{Selector}. 
-На входе Critic принимает 
+На входе Critic принимает: 
 \begin{itemize}
 	\item Загруженные из базы правила для работы Critic (CriticRules)
 	\item DomainModel:SemanticNetwork - доменная модель, представляющая собой семантическую сеть
@@ -379,20 +404,67 @@ Critic генерирует SelectorRequest \ref{Selector}.
 	\item SelectorRequest \ref{Selector} - запрос на выбор Selector из базы знаний
 	\item CriticRules - правило, которое сработало для активации. Данное правило является логическим предикатом
 \end{itemize}
-На Рисунку \ref{img:CriticApply} представлена диаграмма работы Critic.
+На Рисунку \ref{img:CriticApply} представлена диаграмма действий Critic. В Таблице \ref{CriticTypesRaw} приведено описание основных классов Critic. В Таблице \ref{CriticMethods} представлено описание методов компонента Critic.
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.6] {CriticApply}
-  \caption{Диаграмма действий работы Critic} 
+  \caption{Диаграмма действий компонента Critic} 
   \label{img:CriticApply}  
 \end{figure}
-Основные типы Critic
-\begin{enumerate}
-	\item Manager - простой тип критика, который работает как триггер Goal \ref{AppendixC}, чтобы запустить необходимый WayToThink.
-	\item Control - контролирующий Critic, который ждет определенного события (срабатывает на определенное событие). Например, заканчивается, отведенное на решение время.
-	\item Analyser - анализатор, обрабатывает и выявляет тип инцидента. Например, прямые инструкции, проблема с желаемым состоянием, наиболее вероятное действие
-\end{enumerate}
-Основные критики
+
+\begin{longtable}{|p{7cm}|p{8cm}|}
+ \caption[Описание основных классов Critic, используемых в системе]{Описание основных классов Critic, используемых в системе}\label{CriticTypesRaw} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Critic}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Critic}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+   Manager & Простой тип критика, который работает как триггер Goal \ref{AppendixC}, чтобы запустить необходимый WayToThink. \\
+   \hline
+   Control & контролирующий Critic, который ждет определенного события (срабатывает на определенное событие). Например, заканчивается, отведенное на решение время.\\
+   \hline
+   Analyser & Анализатор, обрабатывает и выявляет тип инцидента. Например, прямые инструкции, проблема с желаемым состоянием, наиболее вероятное действие. \\
+ \hline 
+\end{longtable}
+
+\begin{longtable}{|p{7cm}|p{8cm}|}
+ \caption[Описание методов класса Critic]{Описание методов компонента Critic}\label{CriticMethods} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Метод}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Метод}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+   exclude():List[CriticLink] & Данный метод возвращает список CriticLink, которые при срабатывание данного Critic будут игнорироваться с определенной вероятностью. После срабатывания Critic, будет посчитана суммарная вероятность активации. После чего система решит, какой Critic был в действительности активирован. \\
+   \hline
+   include():List[Critic] & Данный метод возвращает список CriticLink, которые при срабатывание данного Critic будут включаться с определенной вероятностью.\\
+   \hline
+   apply(currentSituation:SemanticNetwork, domainModel:SemanticNetwork): List[SelectorRequestRulePair] & Данный метод запускает Critic, после чего вернется список Selector \ref{Selector} с определенной веротяностью, после чего TLC \ref{ThinkingLifeCycle} их активирует. \\
+ \hline 
+\end{longtable}
+\clearpage
+Основные примеры Critic с привязкой к уровням мышления:
 \begin{enumerate}
 	\item Уровень обученных реакций
 	\begin{enumerate}
@@ -419,6 +491,10 @@ Critic генерирует SelectorRequest \ref{Selector}.
 		\item EmotionalStateManager - контроль общего состояния системы
 	\end{enumerate} 
 \end{enumerate}
+\clearpage
+%=================================
+%===========WayToThink============
+%=================================
 \subsection{Компонент CoreService.WayToThink} \label{WayToThink}
 WayToThink является основным операционным компонентом триплета Critic->Selector->WayToThink. Основными задачами данного компонента являются: обновление, преобразование, сохранение данных и коммуникация с пользователем. \\
 \textbf{Входной критерий}\\
@@ -432,30 +508,86 @@ WayToThink завершил работу. На выходе возвращает
   \caption{Интерфейс компонента WayToThink} 
   \label{img:Way2ThinkInterface}  
 \end{figure}
-В общем виде компонент описывает последовательность действий. В системе используется два больших класса WaytToThink простой и составной (сложный). Простые WayToThink являются встроенными в систему, остальные являются комбинацией компонентов: Critic \ref{Critic}, Selector \ref{Selector}, WayToThink \ref{WayToThink}.\\
-Встроенные типы:
-\begin{enumerate}
-	\item Создать контекст
-	\item Установить общий статус системы
-	\item Установить цель системы
-	\item Разделить фразу на слова и предложения
-	\item Найти связи между входной информацией и базой знаний
-	\item Извлечь связи
-	\item Установить контакт с пользователями
-	\item Сохранить наиболее вероятное решение
-	\item Перефразировать (Reformulate)
-	\item Смоделировать (Simulate)
-	\item Найти решение
-	\item Остановить работу
-\end{enumerate}
+В общем виде компонент описывает последовательность действий. В системе используется два больших класса WaytToThink простой и составной (сложный). Простые WayToThink являются встроенными в систему, остальные являются комбинацией компонентов: Critic \ref{Critic}, Selector \ref{Selector}, WayToThink \ref{WayToThink}. В Таблице \ref{WayToThinkList} приведено описание встроенных в систему WayToThink. В Таблице \ref{WayToThinkMethods} представлено описание методов WayToThink.  \\
+\begin{longtable}{|p{7cm}|p{8cm}|}
+ \caption[Описание встроенных в систему WayToThink]{Описание встроенныъ в систему WayToThink}\label{WayToThinkList} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{WayToThink}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{WayToThink}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+   Создать контекст & Данный WayToThink создает объект Context для аккумуляции данных запроса. \\
+   \hline
+   Установить общий статус системы & Данный WayToThink устанавливает состояние системы в глобальном контексте.\\
+   \hline
+   Установить цель системы & Данный WayToThink устанавливает цель запроса в текущем контексте  \ref{AppendixC}. \\
+    \hline
+   Разделить фразу на слова и предложения & Данный WayToThink разбивает фразу на слова и возвращает список слов.\\
+    \hline
+   Найти связи между входной информацией и базой знаний & Данный WayToThink ищет связь между входной информацией и базой знаний.\\ 
+   \hline
+   Извлечь связи & Данный WayToThink возвращает список связей из фразы.\\
+    \hline
+   Сохранить наиболее вероятное решение & Данный WayToThink сохраняет наиболее вероятное решение.\\
+    \hline
+   Перефразировать (Reformulate) & Данный WayToThink ищет связь между текущим контекстом и известными проблемами, если есть неизвестные концепции, то он пытается их переформулировать при помощи пользотеля.\\
+   \hline
+   Смоделировать (Simulate) & Данный WayToThink ищет связь между текущим контекстом и проблемами уже сохраненными в базе.\\
+   \hline
+   Найти решение & Данный WayToThink производит поиск решения, которое прикреплено к проблеме, которая была найдена при помощи моделирования и перефразирования.\\
+   \hline
+   Остановить работу & Данный WayToThink останавливает работу системы.\\
+ \hline 
+\end{longtable}
+
+\begin{longtable}{|p{7cm}|p{8cm}|}
+ \caption[Описание методов компонента WayToThink]{Описание методов компонента WayToThink}\label{WayToThinkMethods} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Метод}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Метод}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+   start() & Запустить обработку информации. \\
+   \hline
+   stop() & Остановить обработку, например, если выполнение идет слишком долго.\\
+   \hline
+   apply(inputContext:Context):Context & Применить WayToThink. Исполнение начнется только после вызова метода start. \\
+    \hline
+\end{longtable}
+
 WayToThink также используется как Решение (HowTo) \ref{AppendixDHowTo} , то есть описывает последовательность действий, необходимых для решения проблемы. 
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.6] {way2thinkHowToActivity}
-  \caption{Работа компонента WayToThink в режиме HowTo} 
+  \caption{Работа компонента WayToThink в режиме Рецепта решения (HowTo) } 
   \label{img:way2thinkHowToActivity}  
 \end{figure}
-
+%===================================
+%===========PreliminaryAnnotator====
+%===================================
+\clearpage
 \subsection{Компонент CoreService.PreliminaryAnnotator} \label{PreliminaryAnnotator}
 Данный компонент проводит предварительную подготовку текста: грамматическую и орфографическую коррекцию текста, а также разделение на предложения. На Рисунке \ref{img:PrelimenaryAnnotatorInterface} представлен интерфейс компонента. 
 \begin{figure} [h] 
