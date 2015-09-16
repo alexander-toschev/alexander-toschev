@@ -588,20 +588,44 @@ WayToThink также используется как Решение (HowTo) \re
 %===========PreliminaryAnnotator====
 %===================================
 \clearpage
-\subsection{Компонент CoreService.PreliminaryAnnotator} \label{PreliminaryAnnotator}
-Данный компонент проводит предварительную подготовку текста: грамматическую и орфографическую коррекцию текста, а также разделение на предложения. На Рисунке \ref{img:PrelimenaryAnnotatorInterface} представлен интерфейс компонента. 
+\subsection{Компонент CoreService.PrelimenaryAnnotator} \label{PreliminaryAnnotator}
+Данный компонент проводит предварительную подготовку текста: грамматическую и орфографическую коррекцию текста, а также разделение на предложения. На Рисунке \ref{img:PrelimenaryAnnotatorInterface} представлен интерфейс компонента. Компонент также является WayToThink, так как он производит модификацию данных контекста. В Таблице \ref{PrelimenaryAnnotatorMethods} приведено описание методов класса.
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.6] {PrelimenaryAnnotatorInterface}
   \caption{Интерфейс компонента PrelimenaryAnnotator} 
   \label{img:PrelimenaryAnnotatorInterface}  
 \end{figure}
+\begin{longtable}{|p{7cm}|p{8cm}|}
+ \caption[Описание методов компонента PrelimenaryAnnotator]{Описание методов компонента PrelimenaryAnnotator}\label{PrelimenaryAnnotatorMethods} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Метод}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Метод}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
 
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+   apply(incidentDescription:String):Narrative & Данный метод запускает обработку входного текста и его корректировку. \\
+   \hline
+  \end{longtable}
+\clearpage
+%===================================
+%===========KnowledgeBaseAnnotator==
+%===================================
 \subsection{Компонент CoreService.KnowledgeBaseAnnotator} \label{KnowledgeBaseAnnotator}
-Данный компонент устанавливает связи между терминами во входной фразе и базой знаний.  \\
+Данный компонент устанавливает связи между терминами во входной фразе и базой знаний. Данный компонент также является WayToThink \ref{WayToThink}.  \\
 \textbf{Входными критериями} является список фраз. \\
 \textbf{Выходными критериями} является список ссылок на внутренние термины. \\
-Поток действий:
+\textbf{Описание работы компонента:}
 \begin{enumerate}
 	\item Получен Термин
 	\item Поиск в локальной базе знаний
@@ -612,31 +636,141 @@ WayToThink также используется как Решение (HowTo) \re
 \end{enumerate}
 Например, входящий запрос содержит термин 'program', База знаний содержит термин 'computer software'. Идет запрос во внешние базы знаний, найдено computer software, program. Будет добавлена аналогия в база знаний program->computer software. 
 
-
+\clearpage
+%===================================
+%===========DataService==
+%===================================
 \subsection{Компонент DataService} \label{data service}
-Данный компонент отвечает за хранение данных в системе. База знаний построена на графах. На Рисунке \ref{img:KnowledgeBaseServer} представлен интерфейс компонента. В базе знаний используется два типа объектов Object - объект базы знаний, BusiessObject - объект для Web Service (User, Request). BusinessObject является кортежем для интеграции с внешними системами. У объекта есть ID, который уникально удостоверяет его в рамках системы.\\
+Данный компонент отвечает за хранение данных в системе. База знаний построена на графах. На Рисунке \ref{img:KnowledgeBaseServer} представлен интерфейс компонента. В базе знаний используется два типа объектов Object - объект базы знаний, BusiessObject - объект для Web Service (User, Request). BusinessObject является кортежем для интеграции с внешними системами. У объекта есть ID, который уникально удостоверяет его в рамках системы. В Таблице \ref{DataServiceMethods} приведено описание методов компонента. \\
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.6] {KnowledgeBaseServer}
   \caption{Интерфейс компонента KnowledgeBaseServer} 
   \label{img:KnowledgeBaseServer}  
 \end{figure}
-Список методов:
-\begin{enumerate}
-	\item save(obj:Resource):Resource - сохранить ресурс в базу знаний
-	\item remove(obj:Resource) - удалить объект
-	\item select(obj:Resource):Resource - выбрать объект
-	\item link(obj:List<Resource>,linkName:String) - сделать ссылку между 2-мя объектами
-	\item selectLinkedObject(obj:Resource,linkName:String):Link<Resource> - выбрать все объекты, которые имеют связь под названием linkName с объектом obj.
-	\item addLinkedObject(parent:Resource,toLink:Resource,linkName:String) - создать ссылку linkName с объектом
-	\item saveRequest(obj:Request) - сохранить запрос в базу
-	\item selectRequest(obj:RefObject) - получить запрос из Базы Знаний
-	\item saveBusinessObject(obj:RefObject):RefObject - сохранить объект в базу	
-	\item selectBusinessObject(obj:RefObject):RefObject - полуить объект из базы знаний
-\end{enumerate}
+\begin{longtable}{|p{7cm}|p{8cm}|}
+ \caption[Описание методов компонента DataService]{Описание методов компонента DataService}\label{DataServiceMethods} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Метод}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Метод}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+   save(obj:Resource): Resource  & Данный метод позволяет сохранить ресурс в базу знаний. \\
+   \hline
+   remove(obj:Resource)  & Данный метод позволяет удалить объект. \\
+   \hline
+   select(obj:Resource): Resource  & Данный метод позволяет выбрать объект. \\
+   \hline
+   link(obj:List<Resource>,linkName:String)  & Данный метод позволяет сделать ссылку между 2-мя объектами. \\
+   \hline
+   selectLinkedObject(obj:Resource, linkName:String): Link<Resource>  & Данный метод позволяет выбрать все объекты, которые имеют связь под названием linkName с объектом obj. \\
+   \hline
+   addLinkedObject(parent:Resource, toLink:Resource, linkName:String)  & Данный метод позволяет создать ссылку linkName с объектом. \\
+   \hline
+   saveRequest(obj:Request)  & Данный метод позволяет получить запрос из Базы Знаний. \\
+   \hline
+   selectRequest(obj:RefObject)  & Данный метод позволяет получить запрос из Базы Знаний. \\
+   \hline
+   saveBusinessObject(obj:RefObject): RefObject  & Данный метод позволяет сохранить объект в базу. \\
+   \hline
+   selectBusinessObject(obj:RefObject): RefObject  & Данный метод позволяет полуить объект из Базы Знаний. \\
+   \hline
+  \end{longtable}
+%=================================
+%===========ClientAgent===========
+%=================================
 \subsection{Компонент ClientAgent} \label{client agent}
-Данный компонент предназначен для выполнения решений на конечной машине. Данный компонент должен поддерживать обработку \ref{AppendixDHowTo}. В случае проблем компонент также должен обращаться за помощью к специалисту.
+Данный компонент предназначен для выполнения решений на конечной машине. Данный компонент должен поддерживать обработку (см. Приложение \ref{AppendixDHowTo}). В случае проблем компонент также должен обращаться за помощью к специалисту.
 \clearpage
+
+%=================================
+%===========Knowledge=============
+%=================================
+\section{Модель данных системы - TU Knowledge}
+Для работы системы была разработана уникальная схема данных - TU Knowledge, которая сочетает в себе OWL и графовую базу данных. Язык OWL, родившейся для структурирования информации Web \cite{OWL} обрел широкое использование во многих схемах данных, так как давал возможность дополнительного расширенного описания взаимосвязи между данными. На Рисунке \ref{img:KnowledgeClass} представлена схема данных TU Knowledge. В Таблице \ref{TUKnowledge} представлено описание схемы TU Knowledge.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.33] {KnowledgeClass}
+  \caption{Схема данных TU Knowledge в формате UML} 
+  \label{img:KnowledgeClass}  
+\end{figure}
+
+\begin{longtable}{|p{5cm}|p{10cm}|}
+ \caption[Описание классов TUKnowledge]{Описание классов TUKnowledge}\label{TUKnowledge} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Класс}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Класс}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+   Knowledge  & Базовый класс всех объектов модели. Содержит в себе URI, по которому уникально идентифицируется. Поддерживает версионность. Свойствами данного объекта обладают все объекты системы. Также содержит Probability (Вероятность) и Confidence (Уверенность) поля. Например, когда в результате работу WayToThink получается Knowledge он имеет Confidence 0, так как он только что был сгенерирован, когда его проверит Critic на его состоятельность при помощи определенных в Critic правил, то он поставит ему не 0 Confidence. \\
+   \hline
+   Narrative  & Список слов исходного запроса. \\
+   \hline
+   Rule  & Правило. Класс описывающий правила в системы. Например, правило по которому сработает Critic \ref{Critic}.  \\
+   \hline
+   AnnotatedNarrative  & Слова исходного запроса и их сопоставление на концепции в Базе Знаний \\
+   \hline
+   SemanticNetwork  & Граф из SemanticNetworkNode и SemanticNetworkLink. \\
+   \hline
+   SemanticNetworkNode  & Узел графа SemanticNetwork, содержит в себе ссылки на другие узлы, а также ссылку на Knowledge. \\
+   \hline
+   SemanticNetworkLink  & Ссылка в графе SemanticNetworkLink. \\
+   \hline
+   Frame  & Коллекция объектов Knowledge, с возможностью проставление специального тега для семантической группировки. \\
+   \hline
+   TransFrame  & Коллекция Frame, содержащая два состояния одного фрейма: до и после. \\
+   \hline
+   Goal  & Цель. Приложение \ref{AppendixC}. \\
+   \hline
+   Tag & Тоже что и цель, но использующиеся для меток. \\
+   \hline
+   Preliminary annotation  & SemanticNetwork входного запроса. \\
+   \hline
+   KnowledgeBase annotation  & SemanticNetwork с сопостовлением концепциям Базы Знаний. \\
+   \hline
+   Domain model  & SemanticNetwork доменной модели. \\
+   \hline
+   Situation model  & SemanticNetwork, часть DomainModel, созданной для обработки текущего запроса. Приложение \ref{AppendixB}. \\
+   \hline
+   Incident  & SemanticNetwork входного запроса к систему. \\
+   \hline
+   K-Line  & Связь между объектами. Например, когда в систему поступает запрос она создает K-Line между Conversation, Narrative. \\
+   \hline
+   Conversation  & SemanticNetwork, контекст инцидента. \\
+   \hline
+   InboundRequest  & SemanticNetwork входного запроса. \\
+   \hline
+   Training Request  & SemanticNetwork входного запроса для обучений. \\
+   \hline
+   
+  \end{longtable}
+
+\clearpage
+%=================================
+%===========Prototype=============
+%=================================
 \section{Прототип}
 В прототипе были реализованы 4 уровня мышления. Основной рабочий поток приложения описан следующим алгоритмом:
 \begin{enumerate}
@@ -686,15 +820,25 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
 	\item Action - действие. Базовая концепция для всех действий.
 \end{itemize} 
 В таблице \ref{Test data description} представлен список основных тренировочных данных.
-\begin{table} [htbp]
-   \centering
-   \parbox{15cm}{\caption{Описание экспериметальных данных}\label{Test data description}}
-%  \begin{center}
-  \begin{tabular}{| p{12cm} ||p{5cm} |}
-  \hline
-  \hline
-Входное предложение & Описание \\
-  \hline
+
+\begin{longtable}{|p{12cm}|p{5cm}|}
+ \caption[Описание эксперементальных данных]{Описание эксперементальных данных}\label{Test data description} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Входное предложение}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Входное предложение}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
   Tense is kind of concept. & Обучающий запрос. Создает связь между концепцией Tense и Concept. \\
   
   \hline
@@ -715,11 +859,11 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
   Outlook Web Access (CCC) - 403 - Forbidden: Access is denied & Запрос. Сложная проблема. \\ 
   \hline
   PP2C - Cisco IP communicator. Please see if you can fix the problem with the ip phone, it's stuck on configuring ip + sometimes Server error rejected: Security etc.     & Запрос. Сложная проблема. \\ 
-    \hline
-  \hline
-\end{tabular}
-Полный список информация об экспериментальных данных представлен в приложении  
-\end{table}
+   \hline
+  \end{longtable}
+
+Полный список информация об экспериментальных данных представлен в приложении \ref{AppendixE}
+\clearpage
 \subsection{Верификация}
 Для доказания жизнеспособности решения произвожилась верификация в 2 этапа:
 \begin{itemize}
