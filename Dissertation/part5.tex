@@ -1,15 +1,39 @@
 \chapter{РЕЗУЛЬТАТЫ РАБОТЫ}
-В качестве результатов работы была произведен теоретико-множественный и теоретико-информационный анализ сложных систем в области поддержки информационной инфраструктуры. Была разработана проблемно-ориентированная систем управления, принятия решений и оптимизации технических объектов в области обслуживания IT. В данной главе представлена модель разработанной системы, архитектура, реализация и результаты испытаний.
+В качестве результатов работы была произведен теоретико-множественный и теоретико-информационный анализ сложных систем в области поддержки информационной инфраструктуры. Была разработана проблемно-ориентированная систем управления, принятия решений и оптимизации технических объектов в области обслуживания IT. В данной главе представлена модель разработанной системы - ThinkingUnderstanding, архитектура, реализация и результаты испытаний.
 \section{Архитектура системы}
-Архитектура системы представляет собой модульную систему. Основными компонентами системы являются:
-\begin{enumerate}
-	\item TU webservice
-	\item CoreService
-	\item DataService
-	\item Reasoner
-	\item ClientAgent
-	\item MessageBus
-\end{enumerate}
+Архитектура системы представляет собой модульную систему. Основными компоненты системы описаны в Таблице \ref{MainComponents}.
+\begin{longtable}{|p{7cm}|p{8cm}|}
+ \caption[Основные компоненты системы ThinkingUnderstanding]{Основные компоненты системы ThinkingUnderstanding}\label{MainComponents} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Компонент}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Компонент}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
+
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+   TU Webservice & Основной компонент взаимодействия со внешними система, включая пользователя. \\
+   \hline
+   CoreService & Ядро системы, содержит основные классы.\\
+   \hline
+   DataService & Компонент работы с данными. \\
+   \hline 
+   Reasoner & Компонент вероятностной логики. \\
+   \hline 
+   ClientAgent & Компонент выполнения скриптов на целевой машине. \\
+   \hline 
+   MessageBus & Шина данных для системы. \\
+   \hline 
+\end{longtable}
+
 Система может работать в 2-х режимах: режим обучения и режим запроса. Вариант использования для режима обучения представлен на Рисунке \ref{img:train}. Главными действующими лицами является специалист технической поддержки (TSS), в общем случае это Пользователь (User). Данный вариант использования имеет несколько ветвей, которые представлены в Таблице \ref{TrainUseCaseTable}.
 
 \begin{table} [htbp]
@@ -327,7 +351,7 @@ Selector (Селектор) это компонент, который ответ
 \hline
   apply(request : Request) : Action & Данный метод на основе запроса пользователя получает из Базы знаний необходимые Critic \ref{Critic}. На рисунке \ref{img:applyrequestRequestActionActivity} представлена диаграмма действий для этого метода. \\
    \hline
-   apply(goal: Goal): Данный метод на основе цели системы получает из Базы знаний необходимые Critic \ref{Critic}. На рисунке \ref{img:applygoalGoalActionActivity} представлена диаграмма действий для этого метода.\\
+   apply(goal: Goal) : Action & Данный метод на основе цели системы получает из Базы знаний необходимые Critic \ref{Critic}. На рисунке \ref{img:applygoalGoalActionActivity} представлена диаграмма действий для этого метода.\\
    \hline
    apply(criticResult : ActionProbabilityRule) : Action & Данный метод на основе работы Critic получает из Базы знаний необходимые Action \ref{Action}. На рисунке \ref{img:applycriticResultActionProbabilityRulePairActionActivity} представлена диаграмма действий для этого метода. \\
  \hline 
@@ -336,7 +360,7 @@ Selector (Селектор) это компонент, который ответ
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {applyrequestRequestActionActivity}
-  \caption{Диаграмма действий метода Selector.apply компонента Selector} 
+  \caption{Диаграмма действий метода Selector.apply(request : Request) компонента Selector} 
   \label{img:applyrequestRequestActionActivity}  
 \end{figure}
 
@@ -344,14 +368,14 @@ Selector (Селектор) это компонент, который ответ
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {applygoalGoalActionActivity}
-  \caption{Диаграмма действий метода Selector.apply компонента Selector} 
+  \caption{Диаграмма действий метода Selector.apply(goal: Goal) компонента Selector} 
   \label{img:applygoalGoalActionActivity}  
 \end{figure}
 
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {applycriticResultActionProbabilityRulePairActionActivity}
-  \caption{Диаграмма действий метода Selector.apply компонента Selector} 
+  \caption{Диаграмма действий метода Selector.apply(criticResult : ActionProbabilityRule) компонента Selector} 
   \label{img:applycriticResultActionProbabilityRulePairActionActivity}  
 \end{figure}
 
@@ -693,7 +717,43 @@ WayToThink также используется как Решение (HowTo) \re
 \subsection{Компонент ClientAgent} \label{client agent}
 Данный компонент предназначен для выполнения решений на конечной машине. Данный компонент должен поддерживать обработку (см. Приложение \ref{AppendixDHowTo}). В случае проблем компонент также должен обращаться за помощью к специалисту.
 \clearpage
+%=================================
+%===========Reasoner===========
+%=================================
+\subsection{Компонент Reasoner} \label{Reasoner}
+Данный компонент осуществляет логические вычисления для системы, например, для обработки правил в компоненте Critic \ref{Critic}. На Рисунке \ref{img:ReasonerInterface} представлен интерфейс компонента. В Таблице \ref{ReasonerMethods} приведено описание методов компонента. 
+%ReasonerInterface.png 
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {ReasonerInterface}
+  \caption{Интерфейс компонента Reasoner} 
+  \label{img:ReasonerInterface}  
+\end{figure}
+\begin{longtable}{|p{7cm}|p{8cm}|}
+ \caption[Описание методов компонента Reasoner]{Описание методов компонента Reasoner}\label{ReasonerMethods} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Метод}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Метод}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
 
+\hline \multicolumn{2}{|r|}{{Продолжение следует}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+   apply(request : ReasonerRequestNode) : ReasonerRequestNode  & Данный метод проводит обработку правил и считает вероятность (Probability) и уверенность (Confidence). \\
+   \hline
+  
+  \end{longtable}
+На данный момент в качестве реализации в системе используется два движка логический вычисление PLN \cite{PLN} и NARS \cite{NARS}.
+  
+\clearpage
 %=================================
 %===========Knowledge=============
 %=================================
@@ -865,13 +925,15 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
 Полный список информация об экспериментальных данных представлен в приложении \ref{AppendixE}
 \clearpage
 \subsection{Верификация}
-Для доказания жизнеспособности решения произвожилась верификация в 2 этапа:
+Для верификации экспертной системы поддержки принятия решений TU была выбрана область поддержки информационной инфраструктуры предприятия, которая была в рамках работы исследована и смоделирована в Главе \ref{chapt1}. 
+Для доказания жизнеспособности решения производилась верификация в 2 этапа:
 \begin{itemize}
 	\item Этап 1. Разбор входящего запроса на естественном языке и вычленение концепции
 	\item Этап 2. Обработка по разработанной архитектуре и реализации модели мышления  
 \end{itemize}
-Для Этапа 1 использовался отфильтрованная выгрузка инцидентов. Были выявлены уникальные инциденты - 1000. На данном этапе удалось добиться качества разбора на уровне 67\%. \\
-Для Этапа 2 использовалась часть инцидентов, которая представлена в предыдущий главе. На них запускался программный комплекс и анализировались результаты. Удалось добиться 95\%. \\
+Для Этапа 1 использовался отфильтрованная выгрузка инцидентов. Были выявлены уникальные инциденты - 1000. На данном этапе удалось добиться качества разбора на уровне 67\%. Успешным считался разбор, когда правильно были определены концепции, например существительное определялось как существительное, глагол как глагол. \\
+Для Этапа 2 использовалась часть инцидентов, которая представлена в предыдущий главе. На них запускался программный комплекс и анализировались результаты. Удалось добиться 95\%. Успешным считался инцидент, который был успешно сопоставлен концепциям в Базе Знаний.\\
+\clearpage
 \section{Выводы по главе}
 В данной главе были представлены основные результаты работы:
 \begin{itemize}
