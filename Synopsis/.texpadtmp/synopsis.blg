@@ -1,0 +1,46 @@
+This is 8-bit Big BibTeX version 0.99d
+Implementation:  C for Unix
+Release version: 3.71 (18 mar 2013)
+
+The 8-bit codepage and sorting file: 88591lat.csf
+The top-level auxiliary file: /Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.aux
+The style file: ../../BibTeX-Styles/utf8gost71u.bst
+Reallocated glb_str_ptr (elt_size=8) to 10 items from 0.
+Reallocated global_strs (elt_size=20001) to 10 items from 0.
+Reallocated glb_str_end (elt_size=8) to 10 items from 0.
+Database file #1: ../../biblio/biblio-all.bib
+You're missing a field name---line 11 of file ../../biblio/biblio-all.bib
+ :   
+ :   %note = {Режим доступа: http://vestnik.fa.ru/4(28)2003/4.html},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 60 of file ../../biblio/biblio-all.bib
+ :   
+ :   %volume       = {1297},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Too many commas in name 1 of "Toshchev, A., Talanov, M., Krehov, A., Khasianov, A." for entry WCIT-2012
+while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
+Too many commas in name 1 of "Toshchev, A., Talanov, M., Krehov, A., Khasianov, A." for entry WCIT-2012
+while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
+Too many commas in name 1 of "Toshchev, A., Talanov, M., Krehov, A., Khasianov, A." for entry WCIT-2012
+while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
+Too many commas in name 1 of "Toshchev, A., Talanov, M., Krehov, A., Khasianov, A." for entry WCIT-2012
+while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
+Too many commas in name 1 of "Toshchev, A., Talanov, M., Krehov, A., Khasianov, A." for entry WCIT-2012
+while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
+Too many commas in name 1 of "Toshchev, A., Talanov, M." for entry AINL-2013
+while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
+Too many commas in name 1 of "Toshchev, A., Talanov, M." for entry ISGZ
+while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
+Too many commas in name 1 of "Toshchev, A., Talanov, M." for entry AMSTA-2015
+while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
+
+Here's how much of BibTeX's memory you used:
+ Cites:                 6 out of 750
+ Fields:              152 out of 5000
+ Hash table:        29789 out of 30000
+ Strings:             682 out of 30000
+ Free string pool:   6895 out of 65000
+ Wizard functions:   2802 out of 3000
+(There were 10 error messages)

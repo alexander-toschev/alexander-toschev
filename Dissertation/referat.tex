@@ -1,26 +1,85 @@
 % Формат А4, 12pt (ГОСТ Р 7.0.11-2011, 5.3.6)
 \documentclass[a4paper,12pt]{report}
 
-\input{packages}        % Подключаемые пакеты
+%%% Проверка используемого TeX-движка %%%
+\usepackage{ifxetex}
+
+%%% Поля и разметка страницы %%%
+\usepackage{lscape}                                 % Для включения альбомных страниц
+\usepackage{geometry}                               % Для последующего задания полей
+
+%%% Математические пакеты %%%
+\usepackage{amsthm,amsfonts,amsmath,amssymb,amscd}  % Математические дополнения от AMS
+
+%%% Кодировки и шрифты %%%
+\ifxetex
+  \usepackage{polyglossia}                          % Поддержка многоязычности
+  \usepackage{fontspec}                             % TrueType-шрифты
+\else
+  \usepackage{cmap}                                 % Улучшенный поиск русских слов в полученном pdf-файле
+  \usepackage[T2A]{fontenc}                         % Поддержка русских букв
+  \usepackage[utf8]{inputenc}                       % Кодировка utf8
+  \usepackage[english, russian]{babel}              % Языки: русский, английский
+  \IfFileExists{pscyr.sty}{\usepackage{pscyr}}{}    % Красивые русские шрифты
+\fi
+
+%%% Оформление абзацев %%%
+\usepackage{indentfirst}                            % Красная строка
+
+%%% Цвета %%%
+\usepackage[usenames]{color}
+\usepackage{color}
+\usepackage{colortbl}
+
+%%% Таблицы %%%
+\usepackage{longtable}                              % Длинные таблицы
+\usepackage{multirow,makecell,array}                % Улучшенное форматирование таблиц
+
+%%% Общее форматирование
+\usepackage[singlelinecheck=off,center]{caption}    % Многострочные подписи
+\usepackage{soul}                                   % Поддержка переносоустойчивых подчёркиваний и зачёркиваний
+\usepackage{icomma}                                 % Запятая в десятичных дробях
+
+%%% Библиография %%%
+\usepackage[biblabel]{cite}                                 % Красивые ссылки на литературу
+
+
+%%% Изображения %%%
+\usepackage{graphicx}                               % Подключаем пакет работы с графикой
+
+%%% Оглавление %%%
+\usepackage{tocloft}
+
+%%% Интервалы %%%
+\usepackage{setspace}
+
+%%% Колонтитулы %%%
+\usepackage{fancyhdr}
+
+%%% Листинги %%%
+\usepackage{listings} 
+
+
+
 \input{styles}          % Пользовательские стили
 \input{data}            % Основные сведения
 
+ % load the package
+
 \begin{document}
+
 \lstset{language=Pascal} 
 \input{names}           % Переопределение именований
 
 % Структура диссертации (ГОСТ Р 7.0.11-2011, 4)
 \input{title}           % Титульный лист
-\input{contents}        % Оглавление
-\input{introduction}    % Введение
-\input{part1}           % Глава 1
-\input{part2}           % Глава 2
-\input{part3}           % Глава 3
-\input{part4}           % Глава 4
-\input{part5}           % Глава 5
-\input{conclusion}      % Заключение
-\input{references}      % Список литературы
-\input{lists}           % Списки таблиц и изображений (иллюстративный материал)
-\input{appendix}        % Приложения
 
+
+\clearpage
+\phantomsection
+\section{Статьи в журналах SCOPUS}	
+\begin{refsection} % refsection environment
+\nocite{RCDL-2014,AMSTA-2015} % collect citations
+\printbibliography[heading=subbibliography] % print section bibliography
+\end{refsection}
 \end{document}
