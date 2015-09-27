@@ -65,4 +65,12 @@
   Proceedings (Smart Innovation, Systems and Technologies)}. ---
 \newblock 2015.
 
+\bibitem{IJSE-1}
+\selectlanguageifdefined{russian}
+\BibEmph{Toshchev~A.~Talanov~M.} Computational emotional thinking and virtual
+  neurotransmitters~// \BibEmph{International Journal of Synthetic Emotions
+  (IJSE)}. ---
+\newblock 2014. ---
+\newblock Т. 06/2014.
+
 \end{thebibliography}
