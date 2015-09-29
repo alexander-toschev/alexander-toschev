@@ -3,3 +3,11 @@ Synopsis/.texpadtmp/*
 Synopsis/.texpadtmp/synopsis.aux
 
 Synopsis/.texpadtmp/synopsis.log
+
+*.aux
+
+*.aux
+
+*.log
+
+*.gz
