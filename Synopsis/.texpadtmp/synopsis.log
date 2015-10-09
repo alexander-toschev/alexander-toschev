@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  6 OCT 2015 16:06
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  7 OCT 2015 21:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1191,36 +1191,133 @@ Overfull \hbox (0.63196pt too wide) in paragraph at lines 70--89
 [] 
  []
 
-[2.2]) (./content.tex (../common/characteristic.tex [3.3]
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+[2.2]) (./content.tex (../common/characteristic.tex
+Underfull \hbox (badness 1448) in paragraph at lines 14--17
+\EU1/TimesNewRoman(1)/m/n/14.4 структуры предприятия) и построения ее модели. Акцент был сделан на
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
+[3.3]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 []\EU1/TimesNewRoman(1)/m/n/14.4 На основе выбранной модели мышления разработать модель
  []
 
 
-Underfull \hbox (badness 6608) in paragraph at lines 33--34
+Underfull \hbox (badness 6608) in paragraph at lines 34--35
 []\EU1/TimesNewRoman(1)/m/n/14.4 Теоретико-множественный и теоретико-информационный анализ
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 []\EU1/TimesNewRoman(1)/m/n/14.4 Прототип программной реализации модели проблемно-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 \EU1/TimesNewRoman(1)/m/n/14.4 ориентированной системы управления, принятия решений и
  []
 
 [4.4]
-Underfull \hbox (badness 10000) in paragraph at lines 48--51
-
+Underfull \hbox (badness 1226) in paragraph at lines 72--72
+\EU1/TimesNewRoman(1)/m/n/14.4 сти решения задач системного
  []
 
-)
+
+Underfull \hbox (badness 1259) in paragraph at lines 72--73
+\EU1/TimesNewRoman(1)/m/n/14.4 дель системы принятия решения и об-
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 72--73
+\EU1/TimesNewRoman(1)/m/n/14.4 запросов пользователя на естественном
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Разработка проблемно-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+\EU1/TimesNewRoman(1)/m/n/14.4 ориентированных систем
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+\EU1/TimesNewRoman(1)/m/n/14.4 и оптимизации технических
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 74--75
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 По модели, разработанной в предыду-
+ []
+
+
+Underfull \hbox (badness 3826) in paragraph at lines 74--75
+\EU1/TimesNewRoman(1)/m/n/14.4 щем пункте был разработан прототип
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+\EU1/TimesNewRoman(1)/m/n/14.4 системы принятия решения Thinking-
+ []
+
+
+Underfull \hbox (badness 2503) in paragraph at lines 76--76
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Методы получения, анализа и
+ []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 76--77
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 В рамках системы TU был разработан
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 78--78
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Разработка специального мате-
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 80--80
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Разработка специального мате-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Теоретико-множественный и
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\EU1/TimesNewRoman(1)/m/n/14.4 теоретико-информационный
+ []
+
+
+Underfull \hbox (badness 5274) in paragraph at lines 82--83
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 В рамках работы был проведен ком-
+ []
+
+
+Underfull \hbox (badness 6725) in paragraph at lines 86--86
+\EU1/TimesNewRoman(1)/m/n/14.4 анализ информации на осно-
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 88
+ []
+
+[5.5] [6.6])
 File: ../assets/ITSMTeamComposition.png Graphic file (type QTm)
- <use  "../assets/ITSMTeamComposition.png" > [5.5]
+ <use  "../assets/ITSMTeamComposition.png" >
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: ../assets/EngineerTasks.png Graphic file (type QTm)
- <use  "../assets/EngineerTasks.png" > [6.6]
+<use  "../assets/EngineerTasks.png" > [7.7] [8.8]
 Underfull \hbox (badness 10000) in paragraph at lines 58--59
 \EU1/TimesNewRoman(1)/m/n/14.4 где x- количество
  []
@@ -1261,13 +1358,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--75
  []
 
 File: ../assets/ParserCompare.png Graphic file (type QTm)
-<use  "../assets/ParserCompare.png" >
+<use  "../assets/ParserCompare.png" > [9.9
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7.7
-
-] [8.8]
+] [10.10]
 Overfull \hbox (1.98769pt too wide) in paragraph at lines 113--113
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
@@ -1441,9 +1534,9 @@ Overfull \hbox (8.85722pt too wide) in paragraph at lines 129--130
 Underfull \vbox (badness 10000) detected at line 133
  []
 
-[9.9
+[11.11
 
-] [10.10
+] [12.12
 
 ]
 File: ../assets/CSW.png Graphic file (type QTm)
@@ -1466,7 +1559,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--211
 
  []
 
-[11.11]
+[13.13]
 File: ../assets/CSW_EX.png Graphic file (type QTm)
  <use  "../assets/CSW_EX.png" >
 Overfull \hbox (31.92622pt too wide) in paragraph at lines 216--217
@@ -1501,7 +1594,7 @@ Underfull \hbox (badness 1292) in paragraph at lines 212--252
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12.12] [13.13] [14.14]
+[14.14] [15.15] [16.16]
 Underfull \hbox (badness 10000) in paragraph at lines 258--259
 []\EU1/TimesNewRoman(1)/m/n/14.4 Теоретико-множественный и теоретико-информационный анализ
  []
@@ -1525,13 +1618,9 @@ Underfull \hbox (badness 1715) in paragraph at lines 298--302
 \EU1/TimesNewRoman(1)/m/n/14.4 User had received wrong application. User has ordered Wordfinder
  []
 
-[15.15
+[17.17
 
 ]
-
-LaTeX Warning: Reference `ThinkingLifeCycle' on page 16 undefined on input line 309.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 309--310
 []\EU1/TimesNewRoman(1)/m/n/14.4 Запускаются параллельно все Critic, которые при-
  []
@@ -1552,128 +1641,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 309--310
  []
 
 
-LaTeX Warning: Reference `AppendixDHowTo' on page 16 undefined on input line 315.
-
-
-Underfull \hbox (badness 4120) in paragraph at lines 315--316
-[]\EU1/TimesNewRoman(1)/m/n/14.4 Critic генерации решения запускает KnowingHow []
- []
-
-[16.16] (../common/concl.tex
-Underfull \hbox (badness 6625) in paragraph at lines 322--4
-\EU1/TimesNewRoman(1)/m/n/14.4 В главе представлены методика и результаты верификации работы. В
+Underfull \hbox (badness 5345) in paragraph at lines 312--313
+[]\EU1/TimesNewRoman(1)/m/n/14.4 Simulation WayToThink с параметрами ”Создать мо-
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 33--33
-\EU1/TimesNewRoman(1)/m/n/14.4 сти решения задач системного
+Underfull \hbox (badness 1005) in paragraph at lines 312--313
+\EU1/TimesNewRoman(1)/m/n/14.4 дель текущий ситуации”создает: CurrentSituation, User,
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 33--34
-\EU1/TimesNewRoman(1)/m/n/14.4 дель системы принятия решения и об-
+Underfull \hbox (badness 1087) in paragraph at lines 313--314
+\EU1/TimesNewRoman(1)/m/n/14.4 дущего шага синтезирует артефакты, которых не хва-
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 33--34
-\EU1/TimesNewRoman(1)/m/n/14.4 запросов пользователя на естественном
+Underfull \hbox (badness 1331) in paragraph at lines 313--314
+\EU1/TimesNewRoman(1)/m/n/14.4 тает, чтобы получить из CurrentState DesiredState, так
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Разработка проблемно-
+Underfull \hbox (badness 3009) in paragraph at lines 313--314
+\EU1/TimesNewRoman(1)/m/n/14.4 как он не указан явно. WayToThink запускает Critic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
-\EU1/TimesNewRoman(1)/m/n/14.4 ориентированных систем
+Underfull \hbox (badness 1466) in paragraph at lines 313--314
+\EU1/TimesNewRoman(1)/m/n/14.4 размышления, чтобы найти корень проблемы. Он на-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
-\EU1/TimesNewRoman(1)/m/n/14.4 и оптимизации технических
+Underfull \hbox (badness 3029) in paragraph at lines 313--314
+\EU1/TimesNewRoman(1)/m/n/14.4 ходит CurrentState- Wordfinder Tehcnical, DesiredState-
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 35--36
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 По модели, разработанной в предыду-
+Underfull \hbox (badness 3271) in paragraph at lines 314--315
+[]\EU1/TimesNewRoman(1)/m/n/14.4 Рефлексивные Critic оценивают состояние системы -
  []
 
 
-Underfull \hbox (badness 3826) in paragraph at lines 35--36
-\EU1/TimesNewRoman(1)/m/n/14.4 щем пункте был разработан прототип
+Underfull \hbox (badness 4441) in paragraph at lines 314--315
+\EU1/TimesNewRoman(1)/m/n/14.4 на каком шаге она находится, и если цель не до-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
-\EU1/TimesNewRoman(1)/m/n/14.4 системы принятия решения Thinking-
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
+[]\EU1/TimesNewRoman(1)/m/n/14.4 Critic генерации решения запускает KnowingHow
  []
 
-
-Underfull \hbox (badness 2503) in paragraph at lines 37--37
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Методы получения, анализа и
- []
-
-
-Underfull \hbox (badness 1515) in paragraph at lines 37--38
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 В рамках системы TU был разработан
- []
-
-
-Underfull \hbox (badness 1158) in paragraph at lines 39--39
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Разработка специального мате-
- []
-
-
-Underfull \hbox (badness 1158) in paragraph at lines 41--41
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Разработка специального мате-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Теоретико-множественный и
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-\EU1/TimesNewRoman(1)/m/n/14.4 теоретико-информационный
- []
-
-
-Underfull \hbox (badness 5274) in paragraph at lines 43--44
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 В рамках работы был проведен ком-
- []
-
-
-Underfull \hbox (badness 6725) in paragraph at lines 47--47
-\EU1/TimesNewRoman(1)/m/n/14.4 анализ информации на осно-
- []
-
-
-Underfull \vbox (badness 10000) detected at line 49
- []
-
-[17.17] [18.18]
-Underfull \hbox (badness 10000) in paragraph at lines 51--54
-[]\EU1/TimesNewRoman(1)/m/n/14.4 Разработанная в рамках работы системы не является узко-
- []
-
-
-Underfull \hbox (badness 4242) in paragraph at lines 51--54
-\EU1/TimesNewRoman(1)/m/n/14.4 поддержка принятия решений. Например, при постановке медицинского
- []
-
-
-Underfull \hbox (badness 1881) in paragraph at lines 51--54
-\EU1/TimesNewRoman(1)/m/n/14.4 автомобиля, проблемам с ними связанными, признаками этих проблем и
- []
-
-)
+[18.18] (../common/concl.tex [19.19])
 Underfull \hbox (badness 2012) in paragraph at lines 329--330
 []\EU1/TimesNewRoman(1)/m/n/14.4 Работа над системой продолжается. Система принимает участия в
  []
 
-(/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.bbl [19.19]
+(/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.bbl
 Underfull \hbox (badness 2103) in paragraph at lines 25--33
 []\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. Krehov A. Khasianov A. \EU1/TimesNewRoman(1)/m/n/14.4 Thinking-Understanding
  []
@@ -1708,7 +1730,7 @@ Underfull \hbox (badness 1810) in paragraph at lines 51--58
 \EU1/TimesNewRoman(1)/m/n/14.4 INTELLECTUAL AGENT FOR AUTOMATIC INCIDENT PROCESSING
  []
 
-
+[20.20]
 Underfull \hbox (badness 7540) in paragraph at lines 70--75
 []\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. \EU1/TimesNewRoman(1)/m/n/14.4 Computational emotional thinking and virtual
  []
@@ -1718,24 +1740,20 @@ Underfull \hbox (badness 7540) in paragraph at lines 70--75
 Package caption Warning: Unused \captionsetup[subfigure] on input line 95.
 See the caption package documentation for explanation.
 
-[20.20]
+[21.21]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 19.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 19.
  (/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 19.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 19.
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 26636 strings out of 493706
- 487121 string characters out of 6145769
+ 26638 strings out of 493706
+ 487146 string characters out of 6145769
  555281 words of memory out of 5000000
- 29598 multiletter control sequences out of 15000+600000
+ 29600 multiletter control sequences out of 15000+600000
  7200 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,18n,92p,10482b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.pdf (20 pages).
+Output written on /Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.pdf (21 pages).

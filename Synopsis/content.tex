@@ -249,7 +249,7 @@ $$  \\
 \end{table}
 \clearpage
 %=================
-%===Fifth chapter
+%===4 chapter
 %=================
 В \underline{\textbf{Главе 4}} приведены основные результаты работы, которые заключаются в следующем:
 \begin{itemize}
@@ -298,16 +298,16 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
 	\item Активируется набор Critic, привязанный к данной цели
 	\item PreliminaryAnnorator разбирает фразу
 	\item KnowledgeBaseAnnotator создает семантическую сеть и ссылки на нее
-	\item Critic на Рефликсивном уровне запускает WayToThink ProblemSolving с целью: ResolveIncident
+	\item Critic, привязанный к цели HelpUser на Рефликсивном уровне запускает WayToThink ProblemSolving с целью: ResolveIncident
 	\item Critic на Рефликсивном уровне выбирает WayToThink KnowingHow
 	\begin{enumerate}
-	\item Запускаются параллельно все Critic, которые привязаны к IncidentClassification Critic, который привязан к ResolveIncident цели, в данном случае это DirectInstruction, ProblemWithDesiredState, ProblemWithoutDesiredState \ref{ThinkingLifeCycle}
+	\item Запускаются параллельно все Critic, которые привязаны к IncidentClassification Critic, который привязан к ResolveIncident цели, в данном случае это DirectInstruction, ProblemWithDesiredState, ProblemWithoutDesiredState
 	\item Selector выбирает наиболее вероятный результат работы среди всех результатов компонентов. В данном случае будет результат работы Problem Description with desired state.
 	\item KnowingHow сохраняет варианты выбора Selector.
-	\item Simulation WayToThink с параметрами Создать модель текущий ситуации создает модель CurrentSituation. User, Software
-	\item Reformulation WayToThink, используя результаты предыдущего шага синтезирует артефакты, которых не хватает, чтобы получить CurrentState и DesiredState. DesiredState не указан явно. WayToThink запускает Critic размышления, чтобы найти корень проблемы. Critic размышления находит CurrentState- Wordfinder Tehcnical, DesiredState-Wordfinder Business Economical
-	\item Рефлексивные Critic оценивают состояние системы - на каком шаге она находится, и если цель не достигнута, то запускают другой WayToThink, который был возвращен, например, DirectInstruction. 
-	\item Critic генерации решения запускает KnowingHow \ref{AppendixDHowTo} WayToThink, ExtensiveSearch.
+	\item Simulation WayToThink с параметрами "Создать модель текущий ситуации" создает: CurrentSituation, User, Software
+	\item Reformulation WayToThink, используя результаты предыдущего шага синтезирует артефакты, которых не хватает, чтобы получить из CurrentState DesiredState, так как он не указан явно. WayToThink запускает Critic размышления, чтобы найти корень проблемы. Он находит CurrentState- Wordfinder Tehcnical, DesiredState-Wordfinder Business Economical
+	\item Рефлексивные Critic оценивают состояние системы - на каком шаге она находится, и если цель не достигнута, то запускают другой WayToThink, например, DirectInstruction. 
+	\item Critic генерации решения запускает KnowingHow WayToThink, ExtensiveSearch.
 	\item Selector выбирает наиболее вероятный путь мышления. В данном случае ExtensiveSearch, который будет находить решения, позволяющие привести систему в необходимое состояние (DesiredState). Если он не сможет, то он иницирует коммуникацию с пользователем. 
  \end{enumerate}
 	 \item Рефлексивный Critic проверяет состояние системы. Если Цель достигнута, то пользователю посылается ответ.
@@ -318,7 +318,7 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
 %=================
 %===Conclusion
 %=================
-В \underline{\textbf{заключении}} приведены основные выводы по работе:
+В \underline{\textbf{заключении}} приведены основные выводы по работе.
 \input{../common/concl}
 
 Работа над системой продолжается. Система принимает участия в нескольких грантах. 
