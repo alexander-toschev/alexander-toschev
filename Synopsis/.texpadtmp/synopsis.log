@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  7 OCT 2015 21:26
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  10 OCT 2015 21:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1282,32 +1282,27 @@ Underfull \hbox (badness 1158) in paragraph at lines 78--78
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 80--80
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Разработка специального мате-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Теоретико-множественный и
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--82
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
 \EU1/TimesNewRoman(1)/m/n/14.4 теоретико-информационный
  []
 
 
-Underfull \hbox (badness 5274) in paragraph at lines 82--83
+Underfull \hbox (badness 5274) in paragraph at lines 80--81
 []|\EU1/TimesNewRoman(1)/m/n/14.4 В рамках работы был проведен ком-
  []
 
 
-Underfull \hbox (badness 6725) in paragraph at lines 86--86
+Underfull \hbox (badness 6725) in paragraph at lines 84--84
 \EU1/TimesNewRoman(1)/m/n/14.4 анализ информации на осно-
  []
 
 
-Underfull \vbox (badness 10000) detected at line 88
+Underfull \vbox (badness 10000) detected at line 86
  []
 
 [5.5] [6.6])
@@ -1317,7 +1312,11 @@ File: ../assets/ITSMTeamComposition.png Graphic file (type QTm)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: ../assets/EngineerTasks.png Graphic file (type QTm)
-<use  "../assets/EngineerTasks.png" > [7.7] [8.8]
+<use  "../assets/EngineerTasks.png" >
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7.7] [8.8]
 Underfull \hbox (badness 10000) in paragraph at lines 58--59
 \EU1/TimesNewRoman(1)/m/n/14.4 где x- количество
  []
@@ -1572,11 +1571,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--232
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 241--242
-\EU1/TimesNewRoman(1)/m/n/14.4 том анализа прошлых событий. Например, про-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 244--244
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Саморефлексивный
  []
@@ -1750,7 +1744,7 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 19.
 Here is how much of TeX's memory you used:
  26638 strings out of 493706
  487146 string characters out of 6145769
- 555281 words of memory out of 5000000
+ 553412 words of memory out of 5000000
  29600 multiletter control sequences out of 15000+600000
  7200 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
