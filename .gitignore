@@ -11,3 +11,9 @@ Synopsis/.texpadtmp/synopsis.log
 *.log
 
 *.gz
+
+common/~$graphs.xlsx
+
+Synopsis/.texpadtmp/synopsis.log
+
+Synopsis/.texpadtmp/synopsis.synctex.gz
