@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  10 OCT 2015 21:31
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  14 OCT 2015 18:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1192,6 +1192,11 @@ Overfull \hbox (0.63196pt too wide) in paragraph at lines 70--89
  []
 
 [2.2]) (./content.tex (../common/characteristic.tex
+Underfull \hbox (badness 3128) in paragraph at lines 14--17
+[]\EU1/TimesNewRoman(1)/m/n/14.4 На данный момент компании ведут разработку подобных систем.
+ []
+
+
 Underfull \hbox (badness 1448) in paragraph at lines 14--17
 \EU1/TimesNewRoman(1)/m/n/14.4 структуры предприятия) и построения ее модели. Акцент был сделан на
  []
@@ -1272,11 +1277,6 @@ Underfull \hbox (badness 2503) in paragraph at lines 76--76
  []
 
 
-Underfull \hbox (badness 1515) in paragraph at lines 76--77
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 В рамках системы TU был разработан
- []
-
-
 Underfull \hbox (badness 1158) in paragraph at lines 78--78
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Разработка специального мате-
  []
@@ -1317,220 +1317,204 @@ File: ../assets/EngineerTasks.png Graphic file (type QTm)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7.7] [8.8]
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
-\EU1/TimesNewRoman(1)/m/n/14.4 где x- количество
+Underfull \hbox (badness 6236) in paragraph at lines 58--59
+\EU1/TimesNewRoman(1)/m/n/14.4 где P - precision, tp
  []
 
 
-Underfull \hbox (badness 4543) in paragraph at lines 58--59
-\EU1/TimesNewRoman(1)/m/n/14.4 нераспознанныx слов,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
-\EU1/TimesNewRoman(1)/m/n/14.4 y количество распо-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Успешно обработан-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Успешно обработан-
+Underfull \hbox (badness 1442) in paragraph at lines 58--59
+\EU1/TimesNewRoman(1)/m/n/14.4 - успешно обработан-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 65--65
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Не успешно обрабо-
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 F-measure (результа-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--70
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Общая результатив-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Общая оценка обра-
+Underfull \hbox (badness 3386) in paragraph at lines 68--69
+\EU1/TimesNewRoman(1)/m/n/14.4 Где P - precision, R-
  []
 
 File: ../assets/ParserCompare.png Graphic file (type QTm)
-<use  "../assets/ParserCompare.png" > [9.9
+<use  "../assets/ParserCompare.png" >
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9.9
 
 ] [10.10]
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 113--113
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 102--102
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 113--113
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 102--102
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 113--114
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 102--103
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 115--115
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 104--104
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 115--115
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 104--104
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 115--116
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 104--105
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 117--117
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 106--106
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 117--117
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 106--106
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 117--118
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 106--107
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Underfull \hbox (badness 4492) in paragraph at lines 119--119
+Underfull \hbox (badness 4492) in paragraph at lines 108--108
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Создание цепи обработки
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 119--119
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 108--108
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 119--119
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 108--108
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 119--120
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 108--109
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Underfull \hbox (badness 6575) in paragraph at lines 121--121
+Underfull \hbox (badness 6575) in paragraph at lines 110--110
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Понимания и формализа-
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 121--121
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 110--110
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 121--121
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 110--110
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 121--122
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 110--111
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 123--123
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 112--112
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 123--123
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 112--112
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 123--124
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 112--113
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 125--125
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 114--114
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 125--125
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 114--114
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 125--126
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 114--115
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 127--127
+Underfull \hbox (badness 2726) in paragraph at lines 116--116
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Обучение решению инци-
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 127--127
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 116--116
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 127--127
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 116--116
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 127--128
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 116--117
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Умение проводить ло-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 \EU1/TimesNewRoman(1)/m/n/14.4 гические рассуждения:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 \EU1/TimesNewRoman(1)/m/n/14.4 генерализацию, специа-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
 \EU1/TimesNewRoman(1)/m/n/14.4 лизацию, синонимичный
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 129--129
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 118--118
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 129--129
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 118--118
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 129--130
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 118--119
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 133
+Underfull \vbox (badness 10000) detected at line 122
  []
 
 [11.11
@@ -1544,44 +1528,54 @@ File: ../assets/CSW.png Graphic file (type QTm)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 208--211
-[]$[]$ \EU1/TimesNewRoman(1)/m/n/14.4 представляет собой определенный триггер: внешние
+Underfull \hbox (badness 1281) in paragraph at lines 196--199
+\EU1/TimesNewRoman(1)/m/n/14.4 роваться несколько критиков. Например, человек решает сложную задачу.
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 208--211
-\EU1/TimesNewRoman(1)/m/n/14.4 может активироваться критик переработки, сообщающей о необходимости
+Underfull \hbox (badness 1460) in paragraph at lines 196--199
+\EU1/TimesNewRoman(1)/m/n/14.4 Идет активация множество критиков: считать, технические детали, кроме
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--211
+Underfull \hbox (badness 10000) in paragraph at lines 196--199
 
  []
 
 [13.13]
 File: ../assets/CSW_EX.png Graphic file (type QTm)
  <use  "../assets/CSW_EX.png" >
-Overfull \hbox (31.92622pt too wide) in paragraph at lines 216--217
+Overfull \hbox (31.92622pt too wide) in paragraph at lines 204--205
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Инстинктивный уро-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
+Underfull \hbox (badness 6893) in paragraph at lines 220--221
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 На данном уровне происходят инстинктивные
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 220--221
+\EU1/TimesNewRoman(1)/m/n/14.4 реакции (врожденные). Например, коленный ре-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Саморефлексивный
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--246
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Самосознательный
  []
 
 
-Underfull \hbox (badness 1292) in paragraph at lines 212--252
+Underfull \hbox (badness 1292) in paragraph at lines 200--240
 []\EU1/TimesNewRoman(1)/m/n/14.4 На рисунке [][]5[][] представления расширенная модель работы триплета
  []
 
@@ -1589,107 +1583,102 @@ Underfull \hbox (badness 1292) in paragraph at lines 212--252
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [14.14] [15.15] [16.16]
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 []\EU1/TimesNewRoman(1)/m/n/14.4 Теоретико-множественный и теоретико-информационный анализ
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Основной компонент взаимодей-
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 285--286
+Underfull \hbox (badness 1226) in paragraph at lines 273--274
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Ядро системы, содержит основные
  []
 
 
-Underfull \vbox (badness 10000) detected at line 295
+Underfull \vbox (badness 10000) detected at line 283
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 298--302
+Underfull \hbox (badness 1715) in paragraph at lines 286--290
 \EU1/TimesNewRoman(1)/m/n/14.4 User had received wrong application. User has ordered Wordfinder
  []
 
 [17.17
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
 []\EU1/TimesNewRoman(1)/m/n/14.4 Запускаются параллельно все Critic, которые при-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
 \EU1/TimesNewRoman(1)/m/n/14.4 вязаны к IncidentClassification Critic, который
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
 \EU1/TimesNewRoman(1)/m/n/14.4 привязан к ResolveIncident цели, в данном слу-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
 \EU1/TimesNewRoman(1)/m/n/14.4 чае это DirectInstruction, ProblemWithDesiredState,
  []
 
 
-Underfull \hbox (badness 5345) in paragraph at lines 312--313
+Underfull \hbox (badness 5345) in paragraph at lines 300--301
 []\EU1/TimesNewRoman(1)/m/n/14.4 Simulation WayToThink с параметрами ”Создать мо-
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 312--313
+Underfull \hbox (badness 1005) in paragraph at lines 300--301
 \EU1/TimesNewRoman(1)/m/n/14.4 дель текущий ситуации”создает: CurrentSituation, User,
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 313--314
+Underfull \hbox (badness 1087) in paragraph at lines 301--302
 \EU1/TimesNewRoman(1)/m/n/14.4 дущего шага синтезирует артефакты, которых не хва-
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 313--314
+Underfull \hbox (badness 1331) in paragraph at lines 301--302
 \EU1/TimesNewRoman(1)/m/n/14.4 тает, чтобы получить из CurrentState DesiredState, так
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 313--314
+Underfull \hbox (badness 3009) in paragraph at lines 301--302
 \EU1/TimesNewRoman(1)/m/n/14.4 как он не указан явно. WayToThink запускает Critic
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 313--314
+Underfull \hbox (badness 1466) in paragraph at lines 301--302
 \EU1/TimesNewRoman(1)/m/n/14.4 размышления, чтобы найти корень проблемы. Он на-
  []
 
 
-Underfull \hbox (badness 3029) in paragraph at lines 313--314
+Underfull \hbox (badness 3029) in paragraph at lines 301--302
 \EU1/TimesNewRoman(1)/m/n/14.4 ходит CurrentState- Wordfinder Tehcnical, DesiredState-
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 314--315
+Underfull \hbox (badness 3271) in paragraph at lines 302--303
 []\EU1/TimesNewRoman(1)/m/n/14.4 Рефлексивные Critic оценивают состояние системы -
  []
 
 
-Underfull \hbox (badness 4441) in paragraph at lines 314--315
+Underfull \hbox (badness 4441) in paragraph at lines 302--303
 \EU1/TimesNewRoman(1)/m/n/14.4 на каком шаге она находится, и если цель не до-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 []\EU1/TimesNewRoman(1)/m/n/14.4 Critic генерации решения запускает KnowingHow
  []
 
-[18.18] (../common/concl.tex [19.19])
-Underfull \hbox (badness 2012) in paragraph at lines 329--330
-[]\EU1/TimesNewRoman(1)/m/n/14.4 Работа над системой продолжается. Система принимает участия в
- []
-
-(/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.bbl
+[18.18] (../common/concl.tex [19.19]) (/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.bbl
 Underfull \hbox (badness 2103) in paragraph at lines 25--33
 []\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. Krehov A. Khasianov A. \EU1/TimesNewRoman(1)/m/n/14.4 Thinking-Understanding
  []
@@ -1742,10 +1731,10 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 19.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 19.
  ) 
 Here is how much of TeX's memory you used:
- 26638 strings out of 493706
- 487146 string characters out of 6145769
- 553412 words of memory out of 5000000
- 29600 multiletter control sequences out of 15000+600000
+ 26640 strings out of 493706
+ 487177 string characters out of 6145769
+ 553410 words of memory out of 5000000
+ 29602 multiletter control sequences out of 15000+600000
  7200 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,18n,92p,10482b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
