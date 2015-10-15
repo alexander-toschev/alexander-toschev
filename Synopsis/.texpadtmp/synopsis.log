@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  14 OCT 2015 18:43
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  15 OCT 2015 20:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1312,11 +1312,7 @@ File: ../assets/ITSMTeamComposition.png Graphic file (type QTm)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: ../assets/EngineerTasks.png Graphic file (type QTm)
-<use  "../assets/EngineerTasks.png" >
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7.7] [8.8]
+<use  "../assets/EngineerTasks.png" > [7.7] [8.8]
 Underfull \hbox (badness 6236) in paragraph at lines 58--59
 \EU1/TimesNewRoman(1)/m/n/14.4 где P - precision, tp
  []
@@ -1689,36 +1685,36 @@ Underfull \hbox (badness 1728) in paragraph at lines 25--33
  []
 
 
-Underfull \hbox (badness 3884) in paragraph at lines 43--48
+Underfull \hbox (badness 3884) in paragraph at lines 36--41
 []\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. \EU1/TimesNewRoman(1)/m/n/14.4 Thinking model and machine understanding of
  []
 
 
-Underfull \hbox (badness 5771) in paragraph at lines 43--48
+Underfull \hbox (badness 5771) in paragraph at lines 36--41
 \EU1/TimesNewRoman(1)/m/n/14.4 English primitive texts and it’s application in Infrastructure as Service
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 43--48
+Underfull \hbox (badness 2334) in paragraph at lines 36--41
 \EU1/TimesNewRoman(1)/m/n/14.4 domain // \EU1/TimesNewRoman(1)/m/it/14.4 Proceedings of AINL-2013\EU1/TimesNewRoman(1)/m/n/14.4 . —  2013. —  Режим доступа:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--58
+Underfull \hbox (badness 10000) in paragraph at lines 44--51
 []\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. \EU1/TimesNewRoman(1)/m/n/14.4 ARCHITECTURE AND REALIZATION OF
  []
 
 
-Underfull \hbox (badness 1810) in paragraph at lines 51--58
+Underfull \hbox (badness 1810) in paragraph at lines 44--51
 \EU1/TimesNewRoman(1)/m/n/14.4 INTELLECTUAL AGENT FOR AUTOMATIC INCIDENT PROCESSING
  []
 
-[20.20]
-Underfull \hbox (badness 7540) in paragraph at lines 70--75
+
+Underfull \hbox (badness 7540) in paragraph at lines 54--59
 []\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. \EU1/TimesNewRoman(1)/m/n/14.4 Computational emotional thinking and virtual
  []
 
-))
+[20.20]))
 
 Package caption Warning: Unused \captionsetup[subfigure] on input line 95.
 See the caption package documentation for explanation.
@@ -1731,10 +1727,10 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 19.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 19.
  ) 
 Here is how much of TeX's memory you used:
- 26640 strings out of 493706
- 487177 string characters out of 6145769
+ 26641 strings out of 493706
+ 487185 string characters out of 6145769
  553410 words of memory out of 5000000
- 29602 multiletter control sequences out of 15000+600000
+ 29603 multiletter control sequences out of 15000+600000
  7200 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,18n,92p,10482b,470s stack positions out of 5000i,500n,10000p,200000b,80000s

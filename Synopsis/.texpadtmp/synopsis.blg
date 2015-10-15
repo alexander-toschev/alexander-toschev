@@ -33,16 +33,18 @@ Too many commas in name 1 of "Toshchev, A., Talanov, M." for entry AINL-2013
 while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
 Too many commas in name 1 of "Toshchev, A., Talanov, M." for entry ISGZ
 while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
-Too many commas in name 1 of "Toshchev, A., Talanov, M." for entry AMSTA-2015
-while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
 Too many commas in name 1 of "Toshchev, A., Talanov, M." for entry IJSE-1
+while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
+Too many commas in name 1 of "Toshchev, A., Talanov, M." for entry IJSE-2
+while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
+Too many commas in name 1 of "Toshchev, A., Talanov, M." for entry AMSTA-2015
 while executing---line 1455 of file ../../BibTeX-Styles/utf8gost71u.bst
 
 Here's how much of BibTeX's memory you used:
- Cites:                 7 out of 750
- Fields:              182 out of 5000
+ Cites:                 8 out of 750
+ Fields:              212 out of 5000
  Hash table:        29788 out of 30000
- Strings:             687 out of 30000
- Free string pool:   7026 out of 65000
+ Strings:             691 out of 30000
+ Free string pool:   7130 out of 65000
  Wizard functions:   2802 out of 3000
-(There were 11 error messages)
+(There were 12 error messages)

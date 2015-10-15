@@ -31,13 +31,6 @@
 \newblock Режим доступа:
   http://www.world-education-center.org/index.php/P-ITCS/issue/view/96.
 
-\bibitem{RCDL-2014}
-\selectlanguageifdefined{russian}
-\BibEmph{Toshchev~A.} Thinking model and machine understanding in automated
-  user request processing~// \BibEmph{CEUR Workshop Proceedings}. ---
-\newblock 2014. ---
-\newblock Т. 1297.
-
 \bibitem{AINL-2013}
 \selectlanguageifdefined{russian}
 \BibEmph{Toshchev~A.~Talanov~M.} Thinking model and machine understanding of
@@ -56,6 +49,29 @@
 \newblock Т.~2. ---
 \newblock Режим доступа: hhttp://ainlconf.ru/material201303.
 
+\bibitem{IJSE-1}
+\selectlanguageifdefined{russian}
+\BibEmph{Toshchev~A.~Talanov~M.} Computational emotional thinking and virtual
+  neurotransmitters~// \BibEmph{International Journal of Synthetic Emotions
+  (IJSE)}. ---
+\newblock 2014. ---
+\newblock Т. 05/2014.
+
+\bibitem{IJSE-2}
+\selectlanguageifdefined{russian}
+\BibEmph{Toshchev~A.~Talanov~M.} Appraisal, Coping and High Level Emotions
+  Aspects of Computational Emotional Thinking~// \BibEmph{International Journal
+  of Synthetic Emotions (IJSE)}. ---
+\newblock 2015. ---
+\newblock Т. 06/2015.
+
+\bibitem{RCDL-2014}
+\selectlanguageifdefined{russian}
+\BibEmph{Toshchev~A.} Thinking model and machine understanding in automated
+  user request processing~// \BibEmph{CEUR Workshop Proceedings}. ---
+\newblock 2014. ---
+\newblock Т. 1297.
+
 \bibitem{AMSTA-2015}
 \selectlanguageifdefined{english}
 \BibEmph{Toshchev~A.~Talanov~M.} Thinking Lifecycle as an Implementation of
@@ -64,13 +80,5 @@
   KES International Conference, KES-AMSTA 2015 Sorrento, Italy, June 2015,
   Proceedings (Smart Innovation, Systems and Technologies)}. ---
 \newblock 2015.
-
-\bibitem{IJSE-1}
-\selectlanguageifdefined{russian}
-\BibEmph{Toshchev~A.~Talanov~M.} Computational emotional thinking and virtual
-  neurotransmitters~// \BibEmph{International Journal of Synthetic Emotions
-  (IJSE)}. ---
-\newblock 2014. ---
-\newblock Т. 06/2014.
 
 \end{thebibliography}
