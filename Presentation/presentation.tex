@@ -4,8 +4,8 @@
 \usepackage[english,russian]{babel}
 \usepackage{amssymb,amsfonts,amsmath,mathtext}
 \usepackage{cite,enumerate,float,indentfirst}
-
-\graphicspath{{images/}}
+\usepackage{longtable}  
+\graphicspath{{../assets/}{images/}} 
 
 \usetheme{Pittsburgh}
 \usecolortheme{whale}
@@ -15,10 +15,10 @@
   \leavevmode%
   \hbox{%
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{}%
-    И. О. Фамилия, Организация
+    А. С. Тощев, К(П)ФУ
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{}%
-    Город, 20XX
+    Казань, 2015
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{}%
   Стр. \insertframenumber{} из \inserttotalframenumber \hspace*{2ex}
@@ -28,16 +28,16 @@
 
 \newcommand{\itemi}{\item[\checkmark]}
 
-\title{\small{Название презентации}}
+\title{\small{Интеллектуальная система повышения эффективности IT службы предприятия}}
 \author{\small{%
-\emph{Выступающий:}~И.О.Фамилия\\%
-\emph{Руководитель:}~проф.,~к.ф.-м.н.~И.О.Фамилия}\\%
+\emph{Выступающий:} А.C. Тощев\\%
+\emph{Руководитель:} проф., д.ф.-м.н. А.М.Елизаров}\\%
 \vspace{30pt}%
-Полное название\\
-организации%
+Казанский (Приволжский)\\
+федеральный университет%
 \vspace{20pt}%
 }
-\date{\small{Город, 20XX}}
+\date{\small{Казань, 2015}}
 
 \begin{document}
 
@@ -46,167 +46,195 @@
 \begin{frame}
 \frametitle{Цели и задачи}
 \begin{itemize}
-  \item \textbf{Предмет исследования:} 
-  \item \textbf{Исследуемые характеристики:} 
-  \item \textbf{Цель исследования:} 
-  \item \textbf{Актуальность:} 
+  \item \textbf{Предмет исследования} процесс регистрации и устранения проблемных ситуаций, возникающих в IT-инфраструктуре предприятия 
+  \item \textbf{Цель исследования}  разработка интеллектуальной системы повышения эффективности деятельности IT-службы предприятия
+  \item \textbf{Актуальность} определяется потребностью предприятий IT-отрасли в интеллектуальных системах, повышающих эффективность служб, поддерживающих IT-инфраструктуру этих предприятий
+   \item \textbf{Область исследования} разработка методов и алгоритмов решения задач системного анализа, оптимизации, управления, принятия решений и обработки информации в IT-отрасли %сузить
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Проблемы}
+\frametitle{Определния}
 \begin{itemize}
-  \item Проблема 1
-  \item Проблема 2
-  \item Проблема 3    
+  \item Инцидент - проблемная ситуация на предприятие в ИТ сфере, например, "Мне нечем открыть PDF"	
+  \item 
+  \item   
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{План работ}
+\frametitle{Структура диссертации}
 \begin{enumerate}
-  \item \textbf{Задача 1}
+  \item \textbf{Глава 1. Постановка задачи}
   \begin{itemize}
-    \item Подзадача 1-1
-    \item Подзадача 1-2
+    \item Анализ и определение области исследования
+    \item Определения и методы, используемые в области
   \end{itemize}
-  \item \textbf{Задача 2}
+  \item \textbf{Глава 2. Анализ текущих решений}
   \begin{itemize}
-    \item Подзадача 2-1
-    \item Подзадача 2-2
-    \item Подзадача 2-3
+    \item Обзор решений
+    \item Сравнительный анализ решений
+    \item Сравнительный анализ средств NLP
   \end{itemize}
-  \item \textbf{Задача 3}
+  \item \textbf{Глава 3. Теоретическое обоснование}
   \begin{itemize}
-    \item Подзадача 3-1
-    \item Подзадача 3-2
-    \item Подзадача 3-3
+    \item Модели мышления
+    \item Модели данных
+    \item Модель системы TU
+  \end{itemize}
+  \item \textbf{Глава 4. Результаты работы}
+  \begin{itemize}
+    \item Архитектура
+    \item Модель данных TU Knowledge
+    \item Прототип
+    \item Тестирование
   \end{itemize}
 \end{enumerate}
 \end{frame}
 
 \begin{frame}
-\frametitle{Список обыкновенный}
-\begin{itemize}
-  \item Пункт 1
-  \item Пункт 2
-  \item Пункт 3
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Одиночное изображение}
-\begin{figure}[H]
+\frametitle{Анализ и определение области исследования}
+\begin{figure} [h] 
   \center
-  \includegraphics[width=0.8\linewidth]{latex}
+  \includegraphics [scale=0.7] {ITSMTeamComposition}
+  \caption{Диаграмма состава проектных групп ICL КПО ВС} 
+  \label{img:ITSMTeamComposition}  
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Категории инцидентов}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.7] {EngineerTasks}
+  \caption{Диаграмма соотношений типов проблем} 
+  \label{img:EngineerTasks}  
 \end{figure}
 \end{frame}
 
-\begin{frame}
-\frametitle{Формулы}
-$$
-\left\{
-  \begin{array}{rl}
-    \dot x = & \sigma (y-x) \\
-    \dot y = & x (r - z) - y \\
-    \dot z = & xy - bz
-  \end{array}
-\right.
-$$
-\end{frame}
 
 \begin{frame}
-\frametitle{Составное изображение}
-\begin{figure}[h]
-  \begin{minipage}[h]{0.49\linewidth}
-    \textbf{Составная \\ подпись 1}
-    \center{\includegraphics[width=1\linewidth]{knuth1}}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[h]{0.49\linewidth}
-    \textbf{Составная \\ подпись 2}
-    \center{\includegraphics[width=1\linewidth]{knuth2}}
-  \end{minipage}
-\end{figure}
-\end{frame}
+\frametitle{Глава 2. Анализ текущих решений}
+\begin{table}
+	
+\small
+\begin{tabular} {|p{5cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
 
-\begin{frame}
-\frametitle{Таблица}
-\begin{tabular}{|l|l|}
 \hline
-\textbf{Заголовок 1} & \textbf{Заголовок 2} \\
+\textbf{Пункт} & HP Open View & Service NOW & IBM Watson & TU\\
 \hline
-Сумма & $b+a$ \\
-\hline
-Разность & $a-b$ \\
-\hline
-Произведение & $a*b$ \\
-\hline
+   Мониторинг & Да & Да & Да & Нет \\
+   \hline
+   Регистрация инцидентов & Да & Да & Да & Нет\\
+   \hline
+   Управление системами & Да & Нет & Нет & Нет \\
+   \hline 
+   Создание цепи обработки & Да & Да & Нет & Да \\
+   \hline 
+   Запросы на естественном языке & Нет & Нет & Да & Да\\
+   \hline 
+   Поиск решений & Нет & Нет & Да & Да\\
+   \hline 
+   Применение решений & Нет & Нет & Нет & Да \\
+   \hline
+   Обучение & Нет & Нет & Нет & Да \\
+   \hline
+   Логические рассуждения & Нет & Нет & Нет & Да \\
+   \hline
+  
 \end{tabular}
+\end{table}
 \end{frame}
 
 \begin{frame}
-\frametitle{Большой многоуровневый список}
-\begin{itemize}
-  \item \textbf{Пункт 1}
-    \begin{itemize}
-      \itemi Подпункт 1-1
-      \itemi Подпункт 1-2
-    \end{itemize}
-  \item \textbf{Пункт 2}
-    \begin{itemize}
-      \itemi Подпункт 2-1
-    \end{itemize}
-  \item \textbf{Пункт 3}
-    \begin{itemize}
-      \itemi Подпункт 3-1
-      \itemi Подпункт 3-2
-    \end{itemize}
-  \item \textbf{Пункт 4}
-    \begin{itemize}
-      \itemi Подпункт 4-1
-    \end{itemize}
-  \item \textbf{Пункт 5}
-    \begin{itemize}
-      \itemi Подпункт 5-1
-      \itemi Подпункт 5-2
-      \itemi Подпункт 5-3
-    \end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Четыре изображения}
-\begin{figure}[H]
+\frametitle{Глава 3. Теоретическое обоснование}
+	\begin{itemize}
+		\item  Модель мышления 6-ти Марвина Мински.
+	\end{itemize}
+\begin{figure} [h] 
   \center
-    \includegraphics[width=0.4\linewidth]{latex}
-    \includegraphics[width=0.4\linewidth]{latex}\\
-    \includegraphics[width=0.4\linewidth]{latex}
-    \includegraphics[width=0.4\linewidth]{latex}
+  \includegraphics [scale=0.6] {thinkinglevels}
+  \caption{Иллюстрация концепции Уровней мышления} 
+  \label{img:thinkinglevels}  
 \end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Критик-Селектор-Образ мышления}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {CSW_EX}
+  \caption{Критик-Селектор-Путь мышления в разрезе ресурсов} 
+  \label{img:csw_ex}  
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Глава 4. Результаты работы}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {workflow}
+  \caption{} 
+  \label{img:workflow}  
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Результаты работы}
+\begin{table}
+	
+\small
+\begin{tabular} {|p{8cm}|p{1cm}|p{1cm}|}
+
+\hline
+\textbf{Запрос} & TSS1 & TU \\
+\hline
+  Tense is kind of concept. & 15000 & 385 \\
+  
+  \hline
+  Please install Firefox.  & 9000 & 859 \\
+  \hline
+  Browser is an object.   & 20000 & 400 \\
+  \hline
+  Firefox is a browser.   & 5000 & 659  \\
+  \hline
+  Install is an action.    & 8000 & 486 \\
+  \hline
+  User miss Internet Explorer 8.     & 10000 & 10589 \\
+  \hline
+  User needs document portal update.    & 15000 & 16543 \\
+  \hline
+  Add new alias Host name on host that alias is wanted to: hrportal.lalala.biz IP adress on host that alias is wanted to: 322.223.333.22 Wanted Alias:    webadviser.lalala.net    & 10000 & 18432  \\ 
+  \hline
+  PP2C - Cisco IP communicator. Please see if you can fix the problem with the <...> & 13000 & 12343 \\ 
+   \hline
+   \end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Результаты}
+\begin{itemize}
+	\item Целевой дамп 1000 инцидентов
+	\item 67\% успешный разбор
+	\item 93\% успешное решение модельных инцидентов
+\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Перспективы развития проекта}
 \begin{itemize}
-  \item Перспектива 1
-  \item Перспектива 2
-  \item Перспектива 3
-  \item Перспектива 4
-  \item Перспектива 5
+  \item Улучшить модель мышления для понимания
+  \item Исследование влияния эмоций на системы
+  \item Модель мозга Cortex3D
+  \item Проект Avatar
+  \item Куб эмоций
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Результаты работы}
-\begin{itemize}
-  \item Результат 1
-  \item Результат 2
-  \item Результат 3
-  \item Результат 4
-\end{itemize}
-\end{frame}
 
 \begin{frame}
 \begin{center}

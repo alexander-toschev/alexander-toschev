@@ -40,14 +40,13 @@
 \newblock Режим доступа: hhttp://ainlconf.ru/material201303.
 
 \bibitem{ISGZ}
-\selectlanguageifdefined{russian}
+\selectlanguageifdefined{english}
 \BibEmph{Toshchev~A.~Talanov~M.} ARCHITECTURE AND REALIZATION OF INTELLECTUAL
   AGENT FOR AUTOMATIC INCIDENT PROCESSING USING THE ARTIFICIAL INTELLIGENCE AND
   SEMANTIC NETWORKS~// \BibEmph{Ученые записки ИСГЗ
   2078-6980}. ---
 \newblock 2014. ---
-\newblock Т.~2. ---
-\newblock Режим доступа: hhttp://ainlconf.ru/material201303.
+\newblock Vol.~2.
 
 \bibitem{IJSE-1}
 \selectlanguageifdefined{russian}

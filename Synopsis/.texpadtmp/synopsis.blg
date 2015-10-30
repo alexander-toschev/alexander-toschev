@@ -14,6 +14,11 @@ You're missing a field name---line 11 of file ../../biblio/biblio-all.bib
  :   %note = {Режим доступа: http://vestnik.fa.ru/4(28)2003/4.html},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+You're missing a field name---line 42 of file ../../biblio/biblio-all.bib
+ :   
+ :   %note = {Режим доступа: hhttp://ainlconf.ru/material201303},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 You're missing a field name---line 60 of file ../../biblio/biblio-all.bib
  :   
  :   %volume       = {1297},
@@ -47,4 +52,4 @@ Here's how much of BibTeX's memory you used:
  Strings:             691 out of 30000
  Free string pool:   7130 out of 65000
  Wizard functions:   2802 out of 3000
-(There were 12 error messages)
+(There were 13 error messages)

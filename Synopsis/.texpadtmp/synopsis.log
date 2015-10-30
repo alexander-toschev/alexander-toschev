@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  15 OCT 2015 20:59
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  25 OCT 2015 21:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1700,17 +1700,12 @@ Underfull \hbox (badness 2334) in paragraph at lines 36--41
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--51
-[]\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. \EU1/TimesNewRoman(1)/m/n/14.4 ARCHITECTURE AND REALIZATION OF
+Underfull \hbox (badness 1675) in paragraph at lines 44--50
+[]\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. \EU1/TimesNewRoman(1)/m/n/14.4 ARCHITECTURE AND REALIZATION OF IN-
  []
 
 
-Underfull \hbox (badness 1810) in paragraph at lines 44--51
-\EU1/TimesNewRoman(1)/m/n/14.4 INTELLECTUAL AGENT FOR AUTOMATIC INCIDENT PROCESSING
- []
-
-
-Underfull \hbox (badness 7540) in paragraph at lines 54--59
+Underfull \hbox (badness 7540) in paragraph at lines 53--58
 []\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. \EU1/TimesNewRoman(1)/m/n/14.4 Computational emotional thinking and virtual
  []
 
@@ -1729,7 +1724,7 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 19.
 Here is how much of TeX's memory you used:
  26641 strings out of 493706
  487185 string characters out of 6145769
- 553410 words of memory out of 5000000
+ 553277 words of memory out of 5000000
  29603 multiletter control sequences out of 15000+600000
  7200 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
