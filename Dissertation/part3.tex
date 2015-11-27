@@ -1,7 +1,7 @@
 \chapter{Реализация модели TU 1.0 для системы интеллектуальной регистрации и устранения проблемных ситуаций} \label{chapt3}
 
 \section{Архитектура системы} 
-Архитектура системы представляет собой модульную систему. Такой подход был выбран для того, чтобы компоненты можно было удобно заменять. Основными компоненты системы описаны в Таблице \ref{MainComponents}.
+Архитектура системы представляет собой модульную систему. Такой подход был выбран для того, чтобы компоненты можно было удобно заменять \cite{M1}. Основными компоненты системы описаны в Таблице \ref{MainComponents}.
 \begin{longtable}{|p{7cm}|p{8cm}|}
  \caption[Основные компоненты системы ThinkingUnderstanding]{Основные компоненты системы ThinkingUnderstanding}\label{MainComponents} \\ 
  \hline
@@ -100,7 +100,7 @@ ProvideRequest	& Заказчик вводит запрос в систему н
   \caption{Диграма взаимодействия компонентов} 
   \label{img:main_components_collaboration}  
 \end{figure}
-Пользователь взаимодействует с системой посредством компонента WebService \ref{WebService}. Взаимодействие происходит по следующей схеме.
+Пользователь взаимодействует с системой посредством компонента WebService \ref{WebService}. Данный компонент построен на стандарте WS SOAP для универсального использования в различных системах \cite{W1}. Взаимодействие происходит по следующей схеме.
 
 \begin{enumerate}
 	\item WebService получает запрос пользователя. Сохраняет запрос в Базу Знаний (Базу данных) \ref{Glossary}.
@@ -828,6 +828,77 @@ WayToThink также используется как Решение (HowTo) \re
    
   \end{longtable}
 
+\subsection{Описание запросов в рамках TU Knowledge}
+В рамках модели данных TU Knowledge проблема имеет следующие описание:
+\begin{itemize}
+	\item Область (Микронема)
+	\item Дата обращения
+	\item Автор
+	\item Приоритет
+	\item Категория
+	\item Теги
+	\item Описание
+\end{itemize}
+Запрос на обучение включает следующие части:
+\begin{itemize}
+	\item Область (Микронема)
+	\item Дерево обучения
+	\item Ограничения (например, время на решение)
+\end{itemize}
+\textbf{Микронема}
+Данная концепция описывает контекст работы системы. В разрезе человеческого мышления это область работы мозга с нейронами и связями. Сочетание разных микронем может привести к изменению взглядов человека, характера. Например, когда кто-то узнает новую идею и это заменяет его предыдущие представления о том или ином явлении.  
+\subsection{Дерево обучения}
+Дерево обучения базируется на структуре Цель-Подцель. Получение целей происходит из:
+\begin{itemize}
+	\item Из подцелей
+	\item Вручную добавленные при запросе
+\end{itemize}
+
+Во время процедуры обучения возможно, что на одно уровне окажется несколько целей, тогда необходимо провести дополнительное уточнение, если такое невозможно, то будет выбрана первая цель.
+
+
+Во время работы MostProbableWay2Think может использовать несколько WayToThink, в таком случае он возьмет первый (наиболее вероятный путь), если в результате его использования обучение провалиться, то будет выбран менее вероятный.
+
+Пример
+\begin{lstlisting}
+ 1. SubGoal = Resolve incident
+   2. SubGoal = ParseIncidentDescription, Way2Think = ProcessText: KnowingHow, SemanticNetWorkWithKLines =
+{
+nsubj(received-3, User-1)
+aux(received-3, had-2)
+root(ROOT-0, received-3)
+amod(application-5, wrong-4)
+dobj(received-3, application-5)
+
+advmod(received-3, However-1)
+nsubj(received-3, user-2)
+ccomp(received-8, received-3)
+amod(version-5, wrong-4)
+dobj(received-3, version-5)
+nsubj(received-8, user-7)
+root(ROOT-0, received-8)
+nn(Tehcnical-10, Wordfinder-9)
+dobj(received-8, Tehcnical-10)
+advmod(of-12, instead-11)
+prep(Tehcnical-10, of-12)
+nn(Economical-14, Business-13)
+pobj(of-12, Economical-14)
+}
+   2. SubGoal = UnderstandIncidentType, Critics = Deliberative, Type = ProblemDescription with DesiredState
+     3. SubGoal = ModelCurrentSituation using ProjectDomain Model, Way2Think = Simulate, Model =
+{
+User Desired(ordered) Soft(Wordfinder Business Economical)
+Operator Installed Soft(Wordfinder Tehcnical) - wrongly
+}
+     3. SubGoal = FormalizeProblemDescription using ProblemModel(Wrong state, Desired state), Way2Think = Reformulate, Model=
+{
+WrongState = Soft.installed(Wordfinder Tehcnical), Soft.notInstalled(Wordfinder Business Economical)
+DesiredState = Soft.installed(Wordfinder Business Economical), Soft.unInstalled(Wordfinder Tehcnical)
+}
+     3. SubGoal = Find solution, Way2Think = ExtendedSearch, Solution =
+     { Install(Wordfinder Business Economical), UnInstall(Wordfinder Tehcnical)}
+     
+\end{lstlisting}
 \clearpage
 
 \section{Прототип системы}
@@ -871,7 +942,7 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
 Прототип был написан на языке Scala, с применением технологии Akka - параллельного исполнения на множестве ядер. В качестве базы используется Neo4j графовая база данных. 
 \clearpage
 
-\section{Выводы по главе}
+\section{Выводы}
 В данной главе была рассмотрена программная реализация модели TU интеллектуальной системы регистрации и устранения проблемных ситуаций, возникающий в ИТ-инфраструктуре предприятия.
 
 
