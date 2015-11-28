@@ -1,5 +1,5 @@
 \chapter{Реализация модели TU 1.0 для системы интеллектуальной регистрации и устранения проблемных ситуаций} \label{chapt3}
-
+В данной главе рассматривается архитектура системы на основе модели и ее реализация.
 \section{Архитектура системы} 
 Архитектура системы представляет собой модульную систему. Такой подход был выбран для того, чтобы компоненты можно было удобно заменять \cite{M1}. Основными компоненты системы описаны в Таблице \ref{MainComponents}.
 \begin{longtable}{|p{7cm}|p{8cm}|}
@@ -68,7 +68,7 @@ communication:MonitorsSolution  & Специалист технической п
   \centering
   \parbox{15cm}{\caption{Описание ветвей в Варианте использования "Основной режим обучения" }\label{ProductionUseCase}}
 %  \begin{center}
-  \begin{tabular}{| p{7cm} || p{7cm} |}
+  \begin{tabular}{| p{10cm} || p{7cm} |}
   \hline
   \hline
 Ветвь & Описание \\
@@ -138,7 +138,7 @@ ProvideRequest	& Заказчик вводит запрос в систему н
   \hline
   unsubscribe(user:RefObject,subscription:RefObject)   & Убирает подписку пользователя. \\
   \hline
-  updateSubscription(user:RefObject,subscription:Subscription)   & Обновляет подписку пользователя. \\
+  updateSubscription(user:RefObject, subscription:Subscription)   & Обновляет подписку пользователя. \\
   \hline
   getSubscription(subscriptionID:RefObject):List<Request>    & Возвращает подписку. \\
   \hline
@@ -184,7 +184,7 @@ ProvideRequest	& Заказчик вводит запрос в систему н
   \label{img:thinking-life-cycle-cd}  
 \end{figure}
 
-\begin{longtable}{|p{7cm}|p{8cm}|}
+\begin{longtable}{|p{7cm}|p{10cm}|}
  \caption[Описание методов класса (компонента) ThinkingLifeCycle]{Описание методов класса (компонента) ThinkingLifeCycle}\label{TLCCD} \\ 
  \hline
  
@@ -210,7 +210,7 @@ ProvideRequest	& Заказчик вводит запрос в систему н
    \hline
    processWay2Think(inputContext: Context, outputContext: Context): TransFrame & Данный метод запускает обработку WayToThink \ref{Glossary}. Данный метод создает входной контекст (InputContext), заполняет его параметрами, создает выходной контекст OutputContext. Затем он запускает обработку данных во входном контексте. На рисунке \ref{img:thinkinglifecycleprocessWay2ThinkcontextContext} представлена диаграмма действий для этого метода. \\
     \hline
-   processCritic(context: Context):List[SelectorRequestRulePair] & Данный метод запускает обработку Critic \ref{Glossary}. На рисунке \ref{img:thinkinglifecycleactivityprocessCriticcontextContext} представлена диаграмма действий для этого метода. \\
+   processCritic(context: Context): List[SelectorRequestRulePair] & Данный метод запускает обработку Critic \ref{Glossary}. На рисунке \ref{img:thinkinglifecycleactivityprocessCriticcontextContext} представлена диаграмма действий для этого метода. \\
    \hline
    init(): Boolean & Данный метод инициализирует экземпляр класса ThinkingLifeCycle. Во время инициализации происходит Базы Знаний \ref{Glossary}, подключения к Шине данных. На рисунке \ref{img:thinkinglifecycleinitBoolean} представлена диаграмма действий для этого метода. \\
     \hline
@@ -291,7 +291,7 @@ ProvideRequest	& Заказчик вводит запрос в систему н
 \subsubsection{Описание работы компонента}
 \emph{Запуск и остановка} 
 \begin{enumerate}
-	\item Когда приложение стартует оно инициализирует ThinkingLifeCycle, который активирует набор критиков, базируясь на текущей цели системы. Например, цель-классифицировать инцидент, активируется набор критиков: разобрать, проверить, найти категорию.
+	\item Когда приложение стартует, оно инициализирует ThinkingLifeCycle, который активирует набор критиков, базируясь на текущей цели системы. Например, цель-классифицировать инцидент, активируется набор критиков: разобрать, проверить, найти категорию.
 	\item Когда приложение останавливается - оно останавливает все объекты класса и подклассов Actions (Critics, WayToThink), Selectors и ThinkingLifeCycle.
 \end{enumerate}
 Коммуникация происходит посредством сообщений, отправленных через MessageBus (Шину Данных) \ref{Glossary} JMS \cite{JMS}.
@@ -322,8 +322,8 @@ ProvideRequest	& Заказчик вводит запрос в систему н
 %==============================
 \subsection{Компонент CoreService.Selector} \label{Selector}
 Selector (Селектор) это компонент, который ответственен за получение списка действий из Базы знаний, согласно входным параметрам.
-\textbf{Входной критерий}. TLC запускает Selector c параметрами. 
-\textbf{Выходной критерий}. Selector получает список Action: WayToThink или Critic. \\
+\\ \textbf{Входной критерий} \\ TLC запускает Selector c параметрами. 
+\\ \textbf{Выходной критерий} \\ Selector получает список Action: WayToThink или Critic. \\
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {SelectorInterface}
@@ -331,7 +331,7 @@ Selector (Селектор) это компонент, который ответ
   \label{img:SelectorInterface}  
 \end{figure}
 На Рисунке \ref{img:SelectorInterface} показан интерфейс компонента. В Таблице \ref{SelectorMethodsDescription} приведено описание методов компонента.\\
-\begin{longtable}{|p{7cm}|p{8cm}|}
+\begin{longtable}{|p{7cm}|p{10cm}|}
  \caption[Описание методов класса (компонента) Selector]{Описание методов класса (компонента) Selector}\label{SelectorMethodsDescription} \\ 
  \hline
  
@@ -436,7 +436,7 @@ Critic генерирует SelectorRequest \ref{Selector}.
   \label{img:CriticApply}  
 \end{figure}
 
-\begin{longtable}{|p{7cm}|p{8cm}|}
+\begin{longtable}{|p{7cm}|p{10cm}|}
  \caption[Описание основных классов Critic, используемых в системе]{Описание основных классов Critic, используемых в системе}\label{CriticTypesRaw} \\ 
  \hline
  
@@ -454,7 +454,7 @@ Critic генерирует SelectorRequest \ref{Selector}.
 \hline \hline
 \endlastfoot
 \hline
-   Manager & Простой тип критика, который работает как триггер Goal \ref{AppendixC}, чтобы запустить необходимый WayToThink. \\
+   Manager & Простой тип критика, который работает как триггер Goal (см. приложение \ref{AppendixC}), чтобы запустить необходимый WayToThink. \\
    \hline
    Control & контролирующий Critic, который ждет определенного события (срабатывает на определенное событие). Например, заканчивается, отведенное на решение время.\\
    \hline
@@ -462,7 +462,7 @@ Critic генерирует SelectorRequest \ref{Selector}.
  \hline 
 \end{longtable}
 
-\begin{longtable}{|p{7cm}|p{8cm}|}
+\begin{longtable}{|p{8cm}|p{9cm}|}
  \caption[Описание методов класса Critic]{Описание методов компонента Critic}\label{CriticMethods} \\ 
  \hline
  
@@ -484,7 +484,7 @@ Critic генерирует SelectorRequest \ref{Selector}.
    \hline
    include():List[Critic] & Данный метод возвращает список CriticLink, которые при срабатывание данного Critic будут включаться с определенной вероятностью.\\
    \hline
-   apply(currentSituation:SemanticNetwork, domainModel:SemanticNetwork): List[SelectorRequestRulePair] & Данный метод запускает Critic, после чего вернется список Selector \ref{Selector} с определенной веротяностью, после чего TLC \ref{ThinkingLifeCycle} их активирует. \\
+   apply(currentSituation: SemanticNetwork, domainModel:SemanticNetwork): List[SelectorRequestRulePair] & Данный метод запускает Critic, после чего вернется список Selector \ref{Selector} с определенной веротяностью, после чего TLC \ref{ThinkingLifeCycle} их активирует. \\
  \hline 
 \end{longtable}
 \clearpage
@@ -533,7 +533,7 @@ WayToThink завершил работу. На выходе возвращает
   \label{img:Way2ThinkInterface}  
 \end{figure}
 В общем виде компонент описывает последовательность действий. В системе используется два больших класса WaytToThink простой и составной (сложный). Простые WayToThink являются встроенными в систему, остальные являются комбинацией компонентов: Critic \ref{Critic}, Selector \ref{Selector}, WayToThink \ref{WayToThink}. В Таблице \ref{WayToThinkList} приведено описание встроенных в систему WayToThink. В Таблице \ref{WayToThinkMethods} представлено описание методов WayToThink.  \\
-\begin{longtable}{|p{7cm}|p{8cm}|}
+\begin{longtable}{|p{7cm}|p{10cm}|}
  \caption[Описание встроенных в систему WayToThink]{Описание встроенныъ в систему WayToThink}\label{WayToThinkList} \\ 
  \hline
  
@@ -575,7 +575,7 @@ WayToThink завершил работу. На выходе возвращает
  \hline 
 \end{longtable}
 
-\begin{longtable}{|p{7cm}|p{8cm}|}
+\begin{longtable}{|p{7cm}|p{10cm}|}
  \caption[Описание методов компонента WayToThink]{Описание методов компонента WayToThink}\label{WayToThinkMethods} \\ 
  \hline
  
@@ -597,14 +597,14 @@ WayToThink завершил работу. На выходе возвращает
    \hline
    stop() & Остановить обработку, например, если выполнение идет слишком долго.\\
    \hline
-   apply(inputContext:Context):Context & Применить WayToThink. Исполнение начнется только после вызова метода start. \\
+   apply(inputContext:Context): Context & Применить WayToThink. Исполнение начнется только после вызова метода start. \\
     \hline
 \end{longtable}
 
-WayToThink также используется как Решение (HowTo) \ref{AppendixDHowTo} , то есть описывает последовательность действий, необходимых для решения проблемы. 
+WayToThink также используется как Решение (HowTo  Приложение  \ref{AppendixDHowTo}), то есть описывает последовательность действий, необходимых для решения проблемы. 
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.6] {way2thinkHowToActivity}
+  \includegraphics [scale=0.8] {way2thinkHowToActivity}
   \caption{Работа компонента WayToThink в режиме Рецепта решения (HowTo) } 
   \label{img:way2thinkHowToActivity}  
 \end{figure}
@@ -616,11 +616,11 @@ WayToThink также используется как Решение (HowTo) \re
 Данный компонент проводит предварительную подготовку текста: грамматическую и орфографическую коррекцию текста, а также разделение на предложения. На Рисунке \ref{img:PrelimenaryAnnotatorInterface} представлен интерфейс компонента. Компонент также является WayToThink, так как он производит модификацию данных контекста. В Таблице \ref{PrelimenaryAnnotatorMethods} приведено описание методов класса.
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.6] {PrelimenaryAnnotatorInterface}
+  \includegraphics [scale=1.0] {PrelimenaryAnnotatorInterface}
   \caption{Интерфейс компонента PrelimenaryAnnotator} 
   \label{img:PrelimenaryAnnotatorInterface}  
 \end{figure}
-\begin{longtable}{|p{7cm}|p{8cm}|}
+\begin{longtable}{|p{7cm}|p{10cm}|}
  \caption[Описание методов компонента PrelimenaryAnnotator]{Описание методов компонента PrelimenaryAnnotator}\label{PrelimenaryAnnotatorMethods} \\ 
  \hline
  
@@ -638,7 +638,7 @@ WayToThink также используется как Решение (HowTo) \re
 \hline \hline
 \endlastfoot
 \hline
-   apply(incidentDescription:String):Narrative & Данный метод запускает обработку входного текста и его корректировку. \\
+   apply(incidentDescription:String): Narrative & Данный метод запускает обработку входного текста и его корректировку. \\
    \hline
   \end{longtable}
 \clearpage
@@ -647,8 +647,8 @@ WayToThink также используется как Решение (HowTo) \re
 %===================================
 \subsection{Компонент CoreService.KnowledgeBaseAnnotator} \label{KnowledgeBaseAnnotator}
 Данный компонент устанавливает связи между терминами во входной фразе и базой знаний. Данный компонент также является WayToThink \ref{WayToThink}.  \\
-\textbf{Входными критериями} является список фраз. \\
-\textbf{Выходными критериями} является список ссылок на внутренние термины. \\
+\\ \textbf{Входными критериями} \\ является список фраз. \\
+\\ \textbf{Выходными критериями} \\ является список ссылок на внутренние термины. \\
 \textbf{Описание работы компонента:}
 \begin{enumerate}
 	\item Получен Термин
@@ -668,11 +668,11 @@ WayToThink также используется как Решение (HowTo) \re
 Данный компонент отвечает за хранение данных в системе. База знаний построена на графах. На Рисунке \ref{img:KnowledgeBaseServer} представлен интерфейс компонента. В базе знаний используется два типа объектов Object - объект базы знаний, BusiessObject - объект для Web Service (User, Request). BusinessObject является кортежем для интеграции с внешними системами. У объекта есть ID, который уникально удостоверяет его в рамках системы. В Таблице \ref{DataServiceMethods} приведено описание методов компонента. \\
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.6] {KnowledgeBaseServer}
+  \includegraphics [scale=1.0] {KnowledgeBaseServer}
   \caption{Интерфейс компонента KnowledgeBaseServer} 
   \label{img:KnowledgeBaseServer}  
 \end{figure}
-\begin{longtable}{|p{7cm}|p{8cm}|}
+\begin{longtable}{|p{8cm}|p{9cm}|}
  \caption[Описание методов компонента DataService]{Описание методов компонента DataService}\label{DataServiceMethods} \\ 
  \hline
  
@@ -696,7 +696,7 @@ WayToThink также используется как Решение (HowTo) \re
    \hline
    select(obj:Resource): Resource  & Данный метод позволяет выбрать объект. \\
    \hline
-   link(obj:List<Resource>,linkName:String)  & Данный метод позволяет сделать ссылку между 2-мя объектами. \\
+   link(obj:List<Resource>, linkName:String)  & Данный метод позволяет сделать ссылку между 2-мя объектами. \\
    \hline
    selectLinkedObject(obj:Resource, linkName:String): Link<Resource>  & Данный метод позволяет выбрать все объекты, которые имеют связь под названием linkName с объектом obj. \\
    \hline
@@ -725,11 +725,11 @@ WayToThink также используется как Решение (HowTo) \re
 %ReasonerInterface.png 
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.6] {ReasonerInterface}
+  \includegraphics [scale=0.8] {ReasonerInterface}
   \caption{Интерфейс компонента Reasoner} 
   \label{img:ReasonerInterface}  
 \end{figure}
-\begin{longtable}{|p{7cm}|p{8cm}|}
+\begin{longtable}{|p{7cm}|p{10cm}|}
  \caption[Описание методов компонента Reasoner]{Описание методов компонента Reasoner}\label{ReasonerMethods} \\ 
  \hline
  
@@ -747,7 +747,7 @@ WayToThink также используется как Решение (HowTo) \re
 \hline \hline
 \endlastfoot
 \hline
-   apply(request : ReasonerRequestNode) : ReasonerRequestNode  & Данный метод проводит обработку правил и считает вероятность (Probability) и уверенность (Confidence). \\
+   apply(request: ReasonerRequestNode): ReasonerRequestNode  & Данный метод проводит обработку правил и считает вероятность (Probability) и уверенность (Confidence). \\
    \hline
   
   \end{longtable}
@@ -767,7 +767,7 @@ WayToThink также используется как Решение (HowTo) \re
   \label{img:KnowledgeClass}  
 \end{figure}
 
-\begin{longtable}{|p{5cm}|p{10cm}|}
+\begin{longtable}{|p{5cm}|p{12cm}|}
  \caption[Описание классов TUKnowledge]{Описание классов TUKnowledge}\label{TUKnowledge} \\ 
  \hline
  
@@ -829,7 +829,7 @@ WayToThink также используется как Решение (HowTo) \re
   \end{longtable}
 
 \subsection{Описание запросов в рамках TU Knowledge}
-В рамках модели данных TU Knowledge проблема имеет следующие описание:
+В рамках модели данных TU Knowledge проблема имеет следующее описание:
 \begin{itemize}
 	\item Область (Микронема)
 	\item Дата обращения
@@ -845,7 +845,7 @@ WayToThink также используется как Решение (HowTo) \re
 	\item Дерево обучения
 	\item Ограничения (например, время на решение)
 \end{itemize}
-\textbf{Микронема}
+ \textbf{Микронема} \\
 Данная концепция описывает контекст работы системы. В разрезе человеческого мышления это область работы мозга с нейронами и связями. Сочетание разных микронем может привести к изменению взглядов человека, характера. Например, когда кто-то узнает новую идею и это заменяет его предыдущие представления о том или ином явлении.  
 \subsection{Дерево обучения}
 Дерево обучения базируется на структуре Цель-Подцель. Получение целей происходит из:
@@ -925,7 +925,7 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
 	\item Selector выбирает наиболее вероятный путь мышления. В данном случае ExtensiveSearch, который будет находить решения, позволяющие привести систему в необходимое состояние (DesiredState). Если он не сможет, то он иницирует коммуникацию с пользователем. 
 	
 
-	 \end{enumerate}
+	\end{enumerate}
 	 \item Рефлексивный Critic проверяет состояние системы. Если Цель достигнута, то пользователю посылается ответ.
 	 \item Само Сознательные Critic активируется на данном шаге и сохраняют информацию о затратах на решение.
 
@@ -943,7 +943,17 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
 \clearpage
 
 \section{Выводы}
-В данной главе была рассмотрена программная реализация модели TU интеллектуальной системы регистрации и устранения проблемных ситуаций, возникающий в ИТ-инфраструктуре предприятия.
+В данной главе были рассмотрены:
+\begin{itemize}
+	\item Архитектура системы по модели TU
+	\item Модель данных TU Knowledge
+	\item Реализация системы
+	\item Состав прототипа
+	\item Основной поток действий системы
+\end{itemize}
+ 
+Приведены алгоритмы и методы, использованные при создании системы. Рассмотрены технологии, использованные при создании прототипа. Описание было представлено с использованием универсального формата UML 2.0. В главе продемонстрированы основные потоки работы как для каждого компонента, так и для всех компонентов в целом. \\
+По данной архитектуре была выполнена программная реализация с использованием функционального языка Scala. Основной платформой для эксплуатации системы был выбран Debian дистрибутив системы Linux, а точнее Ubuntu 12 (и выше). Связано это прежде всего с тем, что ряд компонентов был написан на С++ и использует библиотеки, доступные только на Linux.    
 
 
 \clearpage

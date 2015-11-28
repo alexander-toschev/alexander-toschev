@@ -112,7 +112,7 @@
 	\item{StanfordParser}\cite{StanfordParser}
 \end {enumerate}
 
-Результат работы вычислялся при помощи метрик, представленных в Таблице\ref{Metrics}. 
+Результат работы подсчитывался при помощи метрик, представленных в Таблице \ref{Metrics}. 
 
 \begin{table} [htbp]
   \centering
@@ -124,32 +124,21 @@
 Метрика & Описание & Формула \\
   \hline
   \hline
-Аккуратность	& Понимание текста обработчиком & 
+Precision	& Точность & 
 $$ 
-Ac=\frac{1-x}{y}
-$$ где x- количество нераспознанныx слов, y количество распознанных \\
+P=\frac{tp}{tp+fp}
+$$ где P - precision, tp -  успешно обработанные, fp - ложно успешные \\
  \hline
-Успешно обработанные	& Успешно обработанные инциденты & 
+Recall	& Чувствительность & 
 $$ 
-P=\frac{x}{100}
-$$ где x успешно обработанные \\
+R=\frac{tp}{tp+fn}
+$$ где R-recall, tp - успешно обработанные, fn - ложно неуспешные \\
  \hline
-Не успешно обработанные	& Неуспешно обработанные инциденты & 
+F	& F-measure (результативность) & 
 $$ 
-N=\frac{y}{100}
-$$ где y неуспешные инциденты \\
+F=\frac{P*R}{P+R}
+$$ Где P - precision, R-recall.   \\
  \hline
-Результативность	& Общая результативность обработчика & 
-$$ 
-R=\frac{P}{N}
-$$  \\
-  \hline
-  Общий бал	& Общая оценка обработчика & 
-$$ 
-T=Ac+R
-$$  \\
-  \hline
-  \hline
   \end{tabular}
 %  \end{center}
 \end{table}
@@ -158,7 +147,7 @@ $$  \\
 
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=1.0] {ParserCompare}
+  \includegraphics [scale=0.8] {ParserCompare}
   \caption{Результаты обработки текстов} 
   \label{img:ParserComp}  
 \end{figure}
@@ -286,7 +275,6 @@ pos(User, noun)
    \hline
    Умение проводить логические рассуждения: генерализацию, специализацию, синонимичный поиск & Нет & Нет & Нет \\
    \hline
-   \textbf{Итоговые очки} & 4 & 3 & 5 \\
-   \hline 
+   
 \end{longtable}
 \clearpage
