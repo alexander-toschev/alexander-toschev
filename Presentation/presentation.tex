@@ -44,6 +44,17 @@
 \maketitle
 
 \begin{frame}
+\frametitle{Термины и обозначения}
+\begin{enumerate}
+    \item ITIL общепринятая методология в области поддержки IT
+    \item Инцидент - проблема, возникшая в результате работы ПО и приведшая к полной или частичной невозможности работы
+    \item TSS1 - системный администратор 3 категории
+    \item TU - инт
+  
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
 \frametitle{Цели и задачи}
 \begin{itemize}
   \item \textbf{Предмет исследования} процесс регистрации и устранения проблемных ситуаций, возникающих в IT-инфраструктуре предприятия 
@@ -99,15 +110,6 @@
 \end{enumerate}
 \end{frame}
 
-\begin{frame}
-\frametitle{Анализ и определение области исследования}
-\begin{figure} [h] 
-  \center
-  \includegraphics [scale=0.7] {ITSMTeamComposition}
-  \label{img:ITSMTeamComposition}  
-\end{figure}
-
-\end{frame}
 
 \begin{frame}
 \frametitle{Категории инцидентов}
@@ -118,9 +120,20 @@
 \end{figure}
 \end{frame}
 
+\begin{frame}
+\frametitle{Анализ и определение области исследования}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.7] {ITSMTeamComposition}
+  \label{img:ITSMTeamComposition}  
+\end{figure}
+
+\end{frame}
+
+
 
 \begin{frame}
-\frametitle{Глава 2. Анализ текущих решений}
+\frametitle{Обзор существуюших решений}
 \begin{table}
 	
 \small
@@ -153,36 +166,27 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Глава 3. Теоретическое обоснование}
+\frametitle{Модель мышления TU}
 	\begin{itemize}
 		\item  Модель мышления 6-ти Марвина Мински.
 	\end{itemize}
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.6] {thinkinglevels}
-  \caption{Иллюстрация концепции Уровней мышления} 
-  \label{img:thinkinglevels}  
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Критик-Селектор-Образ мышления}
-\begin{figure} [h] 
-  \center
   \includegraphics [scale=0.6] {CSW_EX}
   \caption{Критик-Селектор-Путь мышления в разрезе ресурсов} 
-  \label{img:csw_ex}  
+  \label{img:csw_ex} 
 \end{figure}
 \end{frame}
 
+
+
 \begin{frame}
-\frametitle{Глава 4. Результаты работы}
+\frametitle{Реализация модели}
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.6] {workflow}
-  \caption{} 
-  \label{img:workflow}  
+  \includegraphics [scale=0.15] {LifecycleActivity}
+  \caption{Диаграмма действий LifecycleActivity} 
+  \label{img:LifecycleActivity}  
 \end{figure}
 \end{frame}
 
@@ -220,25 +224,45 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Результаты}
-\begin{itemize}
-	\item Целевой дамп 1000 инцидентов
-	\item 67\% успешный разбор
-	\item 93\% успешное решение модельных инцидентов
-\end{itemize}
+\frametitle{Результаты работы}
+\begin{table}
+	
+\small
+\begin{tabular} {|p{8cm}|p{2cm}|}
+
+\hline
+\textbf{Категория} & \textbf{Описание} \\
+\hline
+ Проблема с ПО    & 64\% \\
+ \hline Проблемы во время работы  &  10\% \\
+  \hline Как сделать & 40\% \\
+   \hline
+Проблема с оборудованием  & 0\% \\
+ \hline
+Установить новое ПО       & 100\% \\
+ \hline Проблема с печатью        & 80\% \\
+  \hline Нет доступа               & 100\% \\
+  \hline
+   \end{tabular}
+\end{table}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Перспективы развития проекта}
+\frametitle{Основные результаты работы}
 \begin{itemize}
-  \item Улучшить модель мышления для понимания
-  \item Исследование влияния эмоций на системы
-  \item Модель мозга Cortex3D
-  \item Проект Avatar
-  \item Куб эмоций
+   \item Была создана модель проблемно-ориентированной системы управления, принятия решений в области обслуживания информационной структуры предприятия на основе модели мышления
+  \item Была представлена новая модель данных для модели мышления и оригинальный способ ее хранения, эффективный по сравнению с другими базами данных
+  \item Было выполнено оригинальное исследование моделей мышления в области обслуживания информационной структуры предприятия
+  
 \end{itemize}
 \end{frame}
+
+
+
+
+
 
 
 \begin{frame}
