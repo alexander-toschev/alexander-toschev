@@ -1,7 +1,7 @@
 \chapter{Реализация модели TU 1.0 для системы интеллектуальной регистрации и устранения проблемных ситуаций} \label{chapt3}
-В данной главе рассматривается архитектура системы на основе модели и ее реализация.
+В данной главе рассматривается реализация модели TU: архитектура система, ее реализация. Архитектура была реализована  с учетом принципов проектирования Enterprise \cite{EA} систем.
 \section{Архитектура системы} 
-Архитектура системы представляет собой модульную систему. Такой подход был выбран для того, чтобы компоненты можно было удобно заменять \cite{M1}. Основными компоненты системы описаны в Таблице \ref{MainComponents}.
+Данный раздел описывает основные режимы функционирования системы и концепцию построения системы. Архитектура системы представляет собой модульную систему. Такой подход был выбран для того, чтобы компоненты можно было удобно заменять \cite{M1}. Например, подключать различные обработчики естественного языка. Основные компоненты системы описаны в Таблице \ref{MainComponents}.
 \begin{longtable}{|p{7cm}|p{8cm}|}
  \caption[Основные компоненты системы ThinkingUnderstanding]{Основные компоненты системы ThinkingUnderstanding}\label{MainComponents} \\ 
  \hline
@@ -34,17 +34,24 @@
    \hline 
 \end{longtable}
 
-Система может работать в 2-х режимах: режим обучения и режим запроса. Вариант использования для режима обучения представлен на Рисунке \ref{img:train}. Главными действующими лицами является специалист технической поддержки (TSS), в общем случае это Пользователь (User). Данный вариант использования имеет несколько ветвей, которые представлены в Таблице \ref{TrainUseCaseTable}.
+Система может работать в 2-х режимах: режим обучения и режим запроса. Диаграмма вариантов использования для режима обучения представлена на Рисунке \ref{img:train}. Главными действующими лицами является специалист технической поддержки (TSS), в общем случае это Пользователь (User). Специалист технической поддержки может выполнять следующие действия:
+\begin{itemize}
+	\item Обучать систему
+	\item Предоставить правильное решение, если идет режим обучения
+	\item Ввести запрос, если система функционирует в основном режиме
+	\item Мониторинг применения решения 
+\end{itemize} \par
+Подробное описание представлено в таблице \ref{TrainUseCaseTable}.
 
 \begin{table} [htbp]
-  \centering
+  \center
   \parbox{15cm}{\caption{Описание ветвей в Варианте использования "Режим обучения" }\label{TrainUseCaseTable}}
 %  \begin{center}
-  \begin{tabular}{| p{7cm} || p{7cm} |}
-  \hline
+  \begin{tabular}{| p{7cm} | p{7cm} |}
+  
   \hline
 Ветвь & Описание \\
-  \hline
+  
     \hline
 communication:Train	& Обучение посредством коммуникации с системой специалиста технической поддержки \\
   \hlinecommunication:ProvidesSolution  & В случае коммуникации в режиме обучения специалист технической поддержки должен предоставить не только сам запрос, который будет формализован системой, но также решение данного запроса. Система формализует запрос, формализует решение и создаст между ними связи \\
@@ -59,48 +66,42 @@ communication:MonitorsSolution  & Специалист технической п
 
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.8, angle=90] {UseCaseTrain}
+  \includegraphics [scale=0.6] {UseCaseTrain}
   \caption{Вариант использования. Обучение.} 
   \label{img:train}  
 \end{figure}
-Второй вариант использования это основной кейс. Главными действующими лицами системы является заказчик (Customer), в общем случае это базовый класс Пользователь (User). Он также имеет несколько ветвей, представленных в Таблице \ref{ProductionUseCase}
+Второй вариант использования это основной поток. Главными действующими лицами системы является заказчик (Customer), в общем случае это базовый класс Пользователь (User). Он также имеет несколько ветвей, представленных в таблице \ref{ProductionUseCase}. В данном варианте система функционирует в "боевом режиме", то есть ищет ответ на запросы пользователя. Здесь также есть возможность обучения, если система не знает концепцию, то она задаст вопрос пользователю.
 \begin{table} [htbp]
   \centering
-  \parbox{15cm}{\caption{Описание ветвей в Варианте использования "Основной режим обучения" }\label{ProductionUseCase}}
+  \parbox{15cm}{\caption{Описание ветвей в варианте использования "Основной режим" }\label{ProductionUseCase}}
 %  \begin{center}
   \begin{tabular}{| p{10cm} || p{7cm} |}
+ 
   \hline
-  \hline
-Ветвь & Описание \\
-  \hline
+\textbf{Ветвь} & \textbf{Описание} \\
+ 
     \hline
 ProvideRequest	& Заказчик вводит запрос в систему на естественном языке. Это может быть либо прямая команда (например, Install Firefox, please), либо описание проблемы  \\
   \hlinecommunication:ProvideClarificationResponse  &  В случае, если система не может формализовать запрос, либо нашлось множество решений, то система запрашивает пользователя детали
  \\
   \hlinecommunication:ProvideConfirmationResponse & В случае, когда система нашла решение, она запрашивает пользователя подтверждение о том, что искомое решение решило его проблему
  \\
-  \hline
+
   \hline
   \end{tabular}
 %  \end{center}
 \end{table}
 \clearpage
 \subsection{Компоненты системы}
-На Рисунке \ref{img:detailed_component_overview} представлена диаграмма компонентов системы. 
+На рисунке \ref{img:main_components_collaboration} представлена верхнеуровневое взаимодействие основных компонентов системы. Так как система достаточно обширна, то будет приведено описание основных компонентов. В данном разделе будет дано краткое описание компонентов, последующие разделы будут посвящены отдельным компонентам, где будет представлено их подробное описание. В заключительных главах будет приведен подробный алгоритм взаимодействия всех компонентов системы.
+
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.5, angle=90] {detailed_component_overview}
-  \caption{Диграма компонентов системы} 
-  \label{img:detailed_component_overview}  
-\end{figure}
-Взаимодействие компонентов системы показано на рисунке \ref{img:main_components_collaboration}.
-\begin{figure} [h] 
-  \center
-  \includegraphics [scale=0.7] {main_components_collaboration}
+  \includegraphics [scale=0.6] {main_components_collaboration}
   \caption{Диграма взаимодействия компонентов} 
   \label{img:main_components_collaboration}  
 \end{figure}
-Пользователь взаимодействует с системой посредством компонента WebService \ref{WebService}. Данный компонент построен на стандарте WS SOAP для универсального использования в различных системах \cite{W1}. Взаимодействие происходит по следующей схеме.
+Основной точкой взаимодействия (с позиции внешнего пользователя) с системой является компонент WebService \ref{WebService}. Данный компонент построен на стандарте WS SOAP для универсального использования в различных внешних системах \cite{W1} (иными словами легким предоставлением API). Взаимодействие происходит по следующей схеме.
 
 \begin{enumerate}
 	\item WebService получает запрос пользователя. Сохраняет запрос в Базу Знаний (Базу данных) \ref{Glossary}.
@@ -109,74 +110,93 @@ ProvideRequest	& Заказчик вводит запрос в систему н
 	\item Компонент CoreService обрабатывает запрос и сохраняет результаты в Базу Знаний, затем он отправляет в MessageBus сообщение RequestCompleted и сообщение ActionsToExecute с действиями, которые необходимо исполнить
 	\item WebService получает сообщение RequestCompleted c результатами выполнения запроса и уведомляет подписчиков (конечных пользователей)
 	\item Компонент ClientAgent получает сообщение ActionsToExecute со списком действий, которые необходимо исполнить на целевых машинах
-\end{enumerate}
+\end{enumerate} \par
+Компонент MessageBus~--- это шина данных, которая обрабатывает сообщения и посылает их указанным компонентам. TUWebService компонент взаимодействия с "внешней средой", который предоставляет список функций и типов, посредствам вызова которых можем обработать запрос в системе. DataService~--- отвечает за хранения данных, предоставляет базу заний для приложения. CoreService~--- ядро приложения, управляет основным жизненным циклом системы. ClientTarget~--- клиентский компонент для выполнения команд на машинах клиента. Сюда относятся как и удаленное исполнение посредством WMI и т.п. так и непосредственная установка клиента на машины пользователей. На рисунке \ref{img:detailed_component_overview} представлено детальное описание компонентов с подкомпонентами. \par
+Каждый верхнеуровневый компонент на рисунке \ref{img:detailed_component_overview} включает в себе более мелкие компоненты. Например, CoreService состоит из ThinkingLifeCycle~--- компонента управления жизненным циклом, Selector~--- компонента поиска и выбора ресурсов, Way2Think~--- компонента, описывающего алгоритмы поиска и применения решений и Critic~--- вероятностных триггеров, которые срабатывают на входящие события. Более детальное описание компонентов и механизмов представлено в остальных главах данного раздела. \par
+В этой главе были представлены компоненты и их декомпозиция в разрезе системы. На рисунках видна крупноблочная структура системы, а также детальная в разрезе общих блоков. Кроме того описано взаимодействие с системой с точки зрения конечного пользователя, а также взаимодействия со стороны других систем. Дано описание крупноблочных компонентов, а также детальное описание одного из основных компонентов.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.5, angle=90] {detailed_component_overview}
+  \caption{Детальная диаграмма компонентов системы} 
+  \label{img:detailed_component_overview}  
+\end{figure}
+
 \clearpage
 \subsection{Компонент WebService} \label{WebService}
-Данный компонент обрабатывает запросы пользователей. Запрос пользователя представляется объектом Request, который содержит информацию о пользователя, а также ссылку на метод, который будет вызван, когда запрос будет обработан. Вся работа происходит в компоненте CoreService.
-На Рисунке \ref{img:web-service-interface} представлен интерфейс компонента.
-В Таблице \ref{WebServiceDescription} представлено описание методов.  
+Данный компонент обрабатывает запросы пользователей, а также внешних систем. Запрос пользователя представляется посредством объекта Request, который содержит информацию о пользователя, а также ссылку на сервис пользователя, который будет вызван, когда запрос будет обработан. Вся работа происходит в компоненте CoreService.
+На рисунке \ref{img:web-service-interface} представлен интерфейс компонента.
+В таблице \ref{WebServiceDescription} представлено описание методов.  
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {web-service-interface}
   \caption{Интерфейс компонента WebService} 
   \label{img:web-service-interface}  
 \end{figure}
+Подробное описание классов представлено в приложении \ref{AppendixA}. Основной поток работы компонента состоит из следующих шагов:
+\begin{enumerate}
+	\item Пользователь создает запрос, используя метод WebService.createRequest
+	\item Система сохраняет запрос в Базу Знаний и начинает его обработку
+	\item Когда изменяется статус запрос request.state система оповещает подписчиков путем вызова ссылки на сервис пользователя, которая хранится в объекте Request
+\end{enumerate} \par
+В общем виде данный компонент представляет фасад системы, ее внешнюю часть. Задача данного компонента обеспечить легкое взаимодействия с системой и инкапсулировать от пользователя основную логику системы. Методы были созданы так, чтобы внешним системам не нужно было реализовывать модель данных системы, а использовать базовые облегченные объекты для приема и передачи информации. Данный подход подробно описан в книге Мартина Фаулера "Архитектура приложений" \cite{Patterns} и имеет название Data Transfer Object. В данном компоненте также широко исользуется подход Фасад, который также описан в книге. Архитектура компонента была проверена на предмет наличие антипаттернов проектирования, описанных в книге Вильяма Брауна "Антипаттерны проектирования" \cite{AntiPatterns}. \par
+В данной главе был описан компонент взаимодействия с пользователям и внешними системами. Описана архитектура компонента, основные методы, а также приведен пример основного потока.
+
 
 \begin{table} [htbp]
-   \centering
+   \center
    \parbox{15cm}{\caption{Описание методов компонента WebService}\label{WebServiceDescription}}
-%  \begin{center}
-  \begin{tabular}{| p{12cm} ||p{5cm} |}
-  \hline
-  \hline
-Метод & Описание \\
-  \hline
-  createRequest(request:Request):[RefObject] & Создает запрос от пользователя. В качестве параметра в метод передается SubscriptionID, по которому идет проверка запроса. \\
+  \begin{tabular}{| p{8cm} |p{7cm} |}
   
   \hline
-  subscribe(user:User,subscription:Subscription)  & Создает подписку для пользователя. \\
+\textbf{Метод} & \textbf{Описание} \\
   \hline
-  unsubscribe(user:RefObject,subscription:RefObject)   & Убирает подписку пользователя. \\
+  createRequest(request:Request): [RefObject] & Создает запрос от пользователя. В качестве параметра в метод передается SubscriptionID, по которому идет проверка запроса. \\
+  
+  \hline
+  subscribe(user:User, subscription:Subscription)  & Создает подписку для пользователя. \\
+  \hline
+  unsubscribe(user:RefObject, subscription:RefObject)   & Убирает подписку пользователя. \\
   \hline
   updateSubscription(user:RefObject, subscription:Subscription)   & Обновляет подписку пользователя. \\
   \hline
-  getSubscription(subscriptionID:RefObject):List<Request>    & Возвращает подписку. \\
+  getSubscription(subscriptionID: RefObject): List<Request>    & Возвращает подписку. \\
   \hline
   findRequests(user:RefObject)     & Возвращает запросы пользователя. \\
   \hline
-  createUser(user:User):RefObject     & Создает пользователя. \\
+  createUser(user:User): RefObject     & Создает пользователя. \\
   \hline
   updateUser(user:User)     & Обновляет информацию о пользователе. \\ 
   \hline
   removeUser(user:RefObject)     & Удаляет информацию о пользователе. \\ 
   \hline
-  findRequest(request:RefObject):Request     & Возвращает запрос по ссылке. \\ 
-  \hline
+  findRequest(request:RefObject): Request     & Возвращает запрос по ссылке. \\ 
+ 
   \hline
 \end{tabular}
-%  \end{center}
+
 \end{table}
-Подробное описание классов представлено в \ref{AppendixA}. Основной алгоритм работы компонента:
-\begin{enumerate}
-	\item Пользователь создает запрос, используя метод WebService.createRequest
-	\item Система сохраняет запрос в Базу Знаний и начинает его обработку
-	\item Когда изменяется статус запрос request.state система оповещает подписчиков на этот запрос
-\end{enumerate}
 \clearpage
 \subsection{Компонент CoreService.ThinkingLifeCycle} \label{ThinkingLifeCycle}
-Это основной компонент системы, ответственный непосредственно за выполнение запросов. Данный компонент управляет потоками, событиями приложения. Он запускает исполнение Критиков (Critic), Селекторов (Selector), Путей мышления (WayToThink), осуществляет обмен данных между компонентами. Компонент построен на фреймворке Akka Concurrency, который позволяет разрабатывать приложения, которые могут работать параллельно \cite{AkkaConcurrency}. \\
+Данный компонент системы отвечает за управление жизненным циклом системы: потоками, событиями приложения. Он запускает исполнение критиков (Critic), селекторов (Selector), образов мышления (WayToThink), осуществляет обмен данных между компонентами. Компонент построен на фреймворке Akka Concurrency, который позволяет разрабатывать приложения, работающие параллельно \cite{AkkaConcurrency}. Архитектура модуля построена с учетом модели TU. \par
 В данном компоненте реализовано шесть уровней мышления.
 \begin{enumerate}
-	\item Instinctive - Инстинктивный уровень
-	\item Learned - Уровень обученных реакций
-	\item Deliberative - Уровень рассуждений
-	\item Reflective - Рефлексивный уровень
-	\item Self-Reflective Thinking - Саморефлексивный уровень
-	\item Self-Conscious Reflection - Самосознательный уровень
+	\item Instinctive - инстинктивный уровень
+	\item Learned - уровень обученных реакций
+	\item Deliberative - уровень рассуждений
+	\item Reflective - рефлексивный уровень
+	\item Self-Reflective Thinking - саморефлексивный уровень
+	\item Self-Conscious Reflection - самосознательный уровень
 \end{enumerate}
 
 На уровне Instinctive идет обработка сгенерированных по шаблону инцидентов.
-Объект, который используется для обработки использует паттерн Akka \cite{AkkaConcurrency}. На рисунке \ref{img:thinking-life-cycle-cd} представлена диаграма классов компонента.  В таблице \ref{TLCCD} представлено описание методов компонента.
+Объект, который используется для обработки использует паттерн Akka \cite{AkkaConcurrency}. На рисунке \ref{img:thinking-life-cycle-cd} представлена диаграмма классов компонента.  В таблице \ref{TLCCD} представлено описание методов компонента. \par
+На уровне Learned работают Критики классификации проблемы, они анализируют тип инцидента и активируют необходимые ресурсы. Более подробное описание работы Критиков приводится в следующих главах. \par
+На уровне Deliverative работает постановщик целей (который также является Критиком), который задает основные цели системы, тем самым запускаю работу. Например, главная цель системы~--- решить проблему пользователя. Она активирует подцели, которые способствуют ее достижению. \par
+На уровне Reflective работает Критик контроля времени, которые отслеживает время выполнения запроса пользователя. \par
+На уровне Self-Reflective Thinking осуществляется коммуникация с пользователем для уточнения запросов, проверки и применения найденного решения. \par
+На уровне Self-Conscious работает критик эмоционального состояния системы, который контролирует общее состояние системы и ее ресурсы. Критик контроля времени также обращается к этому критику для запроса ресурсов. \par
+Данное расположение компонентов не случайно, оно реализует модель TU в привязке в различным уровням мышления. Проводя аналогию, можно сказать что на более низких уровнях идет решение простых тактических задач, а на более высоких выстраивается общая стратегия поведения системы.
+ 
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0,angle=90] {thinking-life-cycle-cd}
@@ -244,7 +264,7 @@ ProvideRequest	& Заказчик вводит запрос в систему н
 
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=1.0] {thinkinglifecycleapplyrequestRequestListAction}
+  \includegraphics [scale=0.7] {thinkinglifecycleapplyrequestRequestListAction}
   \caption{Диаграмма действий метода apply компонента ThinkingLifeCycle} 
   \label{img:thinkinglifecycleapplyrequestRequestListAction}  
 \end{figure}
@@ -276,61 +296,65 @@ ProvideRequest	& Заказчик вводит запрос в систему н
 
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=1.0] {thinkinglifecycleinitBoolean}
+  \includegraphics [scale=0.8] {thinkinglifecycleinitBoolean}
   \caption{Диаграмма действий метода init компонента ThinkingLifeCycle} 
   \label{img:thinkinglifecycleinitBoolean}  
 \end{figure}
 
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=1.0] {thinkinglifecyclestopprocessLevelLevelListProcess}
+  \includegraphics [scale=0.8] {thinkinglifecyclestopprocessLevelLevelListProcess}
   \caption{Диаграмма действий метода stop компонента ThinkingLifeCycle} 
   \label{img:thinkinglifecyclestopprocessLevelLevelListProcess}  
 \end{figure}
 \clearpage
-\subsubsection{Описание работы компонента}
-\emph{Запуск и остановка} 
+\textbf{Описание работы компонента} \par
+Чтобы понять работу компонента далее приводится описание основного потока работы с примерами. \par
+\emph{Запуск и остановка} \par
 \begin{enumerate}
 	\item Когда приложение стартует, оно инициализирует ThinkingLifeCycle, который активирует набор критиков, базируясь на текущей цели системы. Например, цель-классифицировать инцидент, активируется набор критиков: разобрать, проверить, найти категорию.
 	\item Когда приложение останавливается - оно останавливает все объекты класса и подклассов Actions (Critics, WayToThink), Selectors и ThinkingLifeCycle.
-\end{enumerate}
-Коммуникация происходит посредством сообщений, отправленных через MessageBus (Шину Данных) \ref{Glossary} JMS \cite{JMS}.
-\emph{Взаимодействие компонента с другими компонентами} \\
+\end{enumerate} \par
+Коммуникация происходит посредством сообщений, отправленных через MessageBus (Шину Данных) (см. таблицу \ref{Glossary}) JMS \cite{JMS}. \par
+\emph{Интеграция компонента с остальной системой} \\
 \begin{enumerate}
 	\item Критик возвращает список Селекторов (SelectorRequestRule)
 	\begin{enumerate}
 	\item ThinkingLifeCycle запускает обработку компонента Selector
-	\item Selector возвращает список Action \ref{AppendixB} из базы знаний
+	\item Selector возвращает список Action (см. приложение \ref{AppendixB}) из базы знаний
 	\item ThinkingLifecycle параллельно запускает возвращенные Action
 	\begin{enumerate}
 	\item Если Action это Critic
-	\item ThinkingLifeCycle создает InputContext (входной контекст приложения) и копирует туда все данные из Context (контекста) инцидента
-	\item Если Action это Critic с ссылками ReturnToSameSelector ThinkingLifeCycle ждет результаты и отправляет список SelectorRequestRule, возвращенные Critic новому Selector. Иными словами Critic может вернуть новый Selector. В данном случае нам нужно провести операцию Join для всех потоков \cite{JavaConcurrency}. В иных же случаях все Action запускаются в параллельных потоках.
+	\item ThinkingLifeCycle создает InputContext (входной контекст приложения) и копирует туда все данные из Context (контекста) инцидента, созданного пользователем
+	\item Если Action это Critic с ссылками ReturnToSameSelector, то ThinkingLifeCycle \textbf{ждет} результаты и отправляет список SelectorRequestRule, которые были возвращены в качестве результата работы Critic, новому Selector. Иными словами Critic может вернуть новый Selector. В данном случае нам нужно провести операцию Join для всех потоков \cite{JavaConcurrency}. В иных же случаях все Action запускаются в параллельных потоках.
 	\end{enumerate} 
 	\begin{enumerate}
 	\item Если Action это WayToThink
 	\item ThinkingLifeCycle создает InputContext (входной контекст приложения) и копирует туда все данные из Context (контекста) возвращенный Selector
-	\item TLC \ref{Glossary} запускает WayToThink
+	\item TLC (см. таблицу \ref{Glossary}) запускает WayToThink
 	\item TLC сохраняет параметры в OutputContext
 	\item TLC сохраняет итоговый результат работы и возвращает его 
 	\end{enumerate} 
 	\end{enumerate}
-\end{enumerate}
+\end{enumerate} \par
+В данной главе было приведено описание основного цикла приложения с примерами работы. В следующих главах идет подробное описание работы каждого компонента на более низком уровне. В конце раздела приведено развернутое описание стандартного цикла приложения, а также диаграмма расположения компонентов в разрезе уровней мышления.
 \clearpage
 %==============================
 %==========Selector============
 %==============================
 \subsection{Компонент CoreService.Selector} \label{Selector}
-Selector (Селектор) это компонент, который ответственен за получение списка действий из Базы знаний, согласно входным параметрам.
-\\ \textbf{Входной критерий} \\ TLC запускает Selector c параметрами. 
-\\ \textbf{Выходной критерий} \\ Selector получает список Action: WayToThink или Critic. \\
+Selector (Селектор) это компонент, который ответственен за получение списка действий и ресурсов из базы знаний, согласно входным параметрам. \par
+\textbf{Входной критерий} \par
+TLC запускает Selector c параметрами в виде контекста инцидента, который создал пользователь.  \par
+\textbf{Выходной критерий} \par
+Selector получает список Action: WayToThink или Critic. \par
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {SelectorInterface}
   \caption{Интерфейс компонента Selector} 
   \label{img:SelectorInterface}  
-\end{figure}
-На Рисунке \ref{img:SelectorInterface} показан интерфейс компонента. В Таблице \ref{SelectorMethodsDescription} приведено описание методов компонента.\\
+\end{figure} \par
+На Рисунке \ref{img:SelectorInterface} показан интерфейс компонента. В Таблице \ref{SelectorMethodsDescription} приведено описание методов компонента, показанных на интерфейсе.\\
 \begin{longtable}{|p{7cm}|p{10cm}|}
  \caption[Описание методов класса (компонента) Selector]{Описание методов класса (компонента) Selector}\label{SelectorMethodsDescription} \\ 
  \hline
@@ -367,71 +391,66 @@ Selector (Селектор) это компонент, который ответ
 
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=1.0] {applygoalGoalActionActivity}
+  \includegraphics [scale=0.6] {applygoalGoalActionActivity}
   \caption{Диаграмма действий метода Selector.apply(goal: Goal) компонента Selector} 
   \label{img:applygoalGoalActionActivity}  
 \end{figure}
 
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=1.0] {applycriticResultActionProbabilityRulePairActionActivity}
+  \includegraphics [scale=0.9] {applycriticResultActionProbabilityRulePairActionActivity}
   \caption{Диаграмма действий метода Selector.apply(criticResult : ActionProbabilityRule) компонента Selector} 
   \label{img:applycriticResultActionProbabilityRulePairActionActivity}  
-\end{figure}
+\end{figure} \par
+Чтобы лучше понять работу компонента и его назначение далее будут рассмотрены сценарии его использования и взаимодействия с остальными компонентами. \par
 
-\subsubsection{Описание работы компонента}
-\textbf{Действия при классификации инцидента}
+
+\textbf{Действия при классификации инцидента} \par
 \begin{enumerate}
 	\item TLC \ref{ThinkingLifeCycle} запускает входящие Critic \ref{Critic} параллельно 
 	\item Когда Critic возвращает результат работы в виде ActionProbabilityRuleTriple, TLC запускает Selector с этим параметром
 	\item Selector запускает GetMostProbableWay2Think, который возвращает наиболее вероятный WayToThink
-	\item В некоторых случаях Selector может вернуть менее вероятный вариант, если на Refelective уровне мышления сработал Critic, который посчитал, что данное решение некорректно или же пользователь признал его таким
-\end{enumerate}
-На Рисунке \ref{img:startRequestProcessingActivity} представлена диаграмма действий выбора наиболее вероятного WayToThink.
-\begin{figure} [h] 
-  \center
-  \includegraphics [scale=0.5] {startRequestProcessingActivity}
-  \caption{Диаграмма действий выбора WayToThink} 
-  \label{img:startRequestProcessingActivity}  
-\end{figure}
-На Рисунке \ref{img:classifyIncidentActivity} представлена диаграмма действий классификации инцидента. TLC \ref{ThinkingLifeCycle} получает цель Классифицировать инцидент, затем Selector по этой цели возвращает необходимые Critic. Затем TLC запускает обработку Critic в разных потоках (параллельно). В данном случае рассматривает 3 Critic.
+	\item В некоторых случаях Selector может вернуть менее вероятный вариант, если на Reflective уровне мышления сработал Critic, который посчитал, что данное решение некорректно или же пользователь признал его таким
+\end{enumerate} \par
+На рисунке \ref{img:classifyIncidentActivity} представлена диаграмма действий классификации инцидента. TLC \ref{ThinkingLifeCycle} получает цель классифицировать инцидент, затем Selector по этой цели возвращает необходимые Critic. Затем TLC запускает обработку Critic в разных потоках (параллельно). В данном случае рассматривается три Critic. \par
 \begin{itemize}
 	\item DirectInstruction - прямые инструкции, данный Critic возвращает WayToThink Simulate \ref{WayToThink}, который ищет связь между концепциями в запросе и концепциями в Базе Знаний.
 	\item ProblemWithDesiredState - проблема с ожидаемым результатом, данный Critic возвращает Simulate+Reformulate WayToThink, которые ищут сопоставление концепциями в Базе Знаний и пытается преобразовать запрос к DirectInstruction запросу (прямым инструкциям).
 	\item ProblemWithoutDesiredState - проблема без ожидаемого резульата. Данный Critic возвращает Simulate+Reformulate+InferDesiredState, который пытается преобразовать проблему к ProblemWithDesiredState.
-\end{itemize}
-Затем TLC собирает результаты выполнения всех Critic и запускает их по новой, пока не будет достигнута изначальная цель.\\
+\end{itemize} \par
+После работы компонента TLC \ref{ThinkingLifeCycle} собирает результаты выполнения всех Critic и запускает их, пока не будет достигнута изначальная цель. \par
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.6] {classifyIncidentActivity}
   \caption{Диаграмма действий классификации инцидента} 
   \label{img:classifyIncidentActivity}  
 \end{figure}
+В данном разделе была описана работа компонента Selector, с примерами работы и демонстрацией интеграции с остальными компонентами. Данный компонент тесно связан с компонентом TLC \ref{ThinkingLifeCycle}. Особенностью работы данного компонента является то, что список ресурсов, который он возвращает можно задавать динамически, он также может формироваться во время работы системы. 
 \clearpage
 %============================================
 %===============Critic=======================
 %============================================
 \subsection{Компонент CoreService.Critics} \label{Critic}
-Critic является основным компонентом для анализа в триплете Critic->Selector->WayToTHink. Critic используется для классификации входной информации, рефлексии, само-анализа и т.д. и служит определенным вероятностным триггером.\\
-\textbf{Входной критерий}\\
-TLC \ref{ThinkingLifeCycle} запускает Critic согласно Goal \ref{AppendixC} (Цель) или Request. \\
-\textbf{Выходной критерий}\\
+Critic является основным компонентом для анализа в триплете Critic-Selector-WayToThink. Critic используется для классификации входной информации, рефлексии, само-анализа и т.д. и служит определенным вероятностным триггером. Например, контроль времени, контроль эмоционального состояния системы также являются  Critic. \par
+\textbf{Входной критерий} \par
+TLC \ref{ThinkingLifeCycle} запускает Critic согласно Goal (Цель) (см. Приложение \ref{AppendixC})  или входящему запросу от пользователя. \par
+\textbf{Выходной критерий}\par
 Critic генерирует SelectorRequest \ref{Selector}. 
 На входе Critic принимает: 
 \begin{itemize}
 	\item Загруженные из базы правила для работы Critic (CriticRules)
 	\item DomainModel:SemanticNetwork - доменная модель, представляющая собой семантическую сеть
-	\item Описание инцидента, представляющая собой семантическую сеть
-\end{itemize}
+	\item Описание инцидента, представляющее собой семантическую сеть
+\end{itemize} \par
 На выходе Critic предоставляет следующую информацию:
 \begin{itemize}
 	\item SelectorRequest \ref{Selector} - запрос на выбор Selector из базы знаний
-	\item CriticRules - правило, которое сработало для активации. Данное правило является логическим предикатом
-\end{itemize}
-На Рисунку \ref{img:CriticApply} представлена диаграмма действий Critic. В Таблице \ref{CriticTypesRaw} приведено описание основных классов Critic. В Таблице \ref{CriticMethods} представлено описание методов компонента Critic.
+	\item CriticRule - правило, которое сработало для активации. Данное правило является логическим предикатом. То есть содержит в себе определенную формулу для вычисления вероятности
+\end{itemize} \par
+На рисунке \ref{img:CriticApply} представлена диаграмма действий Critic. В Таблице \ref{CriticTypesRaw} приведено описание основных классов Critic. В таблице \ref{CriticMethods} представлено описание методов компонента Critic.
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.6] {CriticApply}
+  \includegraphics [scale=1.0] {CriticApply}
   \caption{Диаграмма действий компонента Critic} 
   \label{img:CriticApply}  
 \end{figure}
@@ -454,16 +473,16 @@ Critic генерирует SelectorRequest \ref{Selector}.
 \hline \hline
 \endlastfoot
 \hline
-   Manager & Простой тип критика, который работает как триггер Goal (см. приложение \ref{AppendixC}), чтобы запустить необходимый WayToThink. \\
+   Manager & простой тип критика, который работает как триггер, например, Goal (см. приложение \ref{AppendixC}), который запускает необходимый WayToThink. \\
    \hline
-   Control & контролирующий Critic, который ждет определенного события (срабатывает на определенное событие). Например, заканчивается, отведенное на решение время.\\
+   Control & контролирующий Critic, который ждет определенного события (срабатывает на определенное событие). Например, заканчивается отведенное на решение время.\\
    \hline
-   Analyser & Анализатор, обрабатывает и выявляет тип инцидента. Например, прямые инструкции, проблема с желаемым состоянием, наиболее вероятное действие. \\
+   Analyser & анализатор, обрабатывает и выявляет тип инцидента. Например, прямые инструкции, проблема с желаемым состоянием, выбор наиболее вероятного действия. \\
  \hline 
 \end{longtable}
 
 \begin{longtable}{|p{8cm}|p{9cm}|}
- \caption[Описание методов класса Critic]{Описание методов компонента Critic}\label{CriticMethods} \\ 
+ \caption[Описание методов компонента Critic]{Описание методов компонента Critic}\label{CriticMethods} \\ 
  \hline
  
  \multicolumn{1}{|c|}{\textbf{Метод}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
@@ -480,15 +499,15 @@ Critic генерирует SelectorRequest \ref{Selector}.
 \hline \hline
 \endlastfoot
 \hline
-   exclude():List[CriticLink] & Данный метод возвращает список CriticLink, которые при срабатывание данного Critic будут игнорироваться с определенной вероятностью. После срабатывания Critic, будет посчитана суммарная вероятность активации. После чего система решит, какой Critic был в действительности активирован. \\
+   exclude():List[CriticLink] & Данный метод возвращает список CriticLink, которые при срабатывание данного Critic будут игнорироваться с определенной вероятностью. После срабатывания Critic будет посчитана суммарная вероятность активации. После чего система решит, какой Critic был вероятнее всего активирован. \\
    \hline
    include():List[Critic] & Данный метод возвращает список CriticLink, которые при срабатывание данного Critic будут включаться с определенной вероятностью.\\
    \hline
    apply(currentSituation: SemanticNetwork, domainModel:SemanticNetwork): List[SelectorRequestRulePair] & Данный метод запускает Critic, после чего вернется список Selector \ref{Selector} с определенной веротяностью, после чего TLC \ref{ThinkingLifeCycle} их активирует. \\
  \hline 
-\end{longtable}
-\clearpage
-Основные примеры Critic с привязкой к уровням мышления:
+\end{longtable} 
+
+В списке ниже приведено описание примеров реализации Critic с привязкой к уровням мышления.
 \begin{enumerate}
 	\item Уровень обученных реакций
 	\begin{enumerate}
@@ -514,18 +533,20 @@ Critic генерирует SelectorRequest \ref{Selector}.
 	\begin{enumerate}
 		\item EmotionalStateManager - контроль общего состояния системы
 	\end{enumerate} 
-\end{enumerate}
+\end{enumerate} \par
+Основным примером работы компонента может служить классификация инцидентов. Например, у нас есть Critic для прямых инструкций DirectInstruction, есть для ситуации с желаемым состоянием DesiredState. Пусть на входе у нас будет запрос вида: install antivirus. DesiredState найдет здесь действие~--- install, но не найдет желаемого состояния, то есть его вероятность будет 60\%. DirectInstruction будет искать действие и объект, которые присутствуют в запросе, то есть его вероятность будет 100\%, его TLC \ref{ThinkingLifeCycle} и активируют как наиболее вероятный. \par
+Это был простой пример работы компонента, на самом деле механизм работы гораздо гибче: он поддерживает включения, исключения, составные правила и логику. Компонент также является динамически формируемым. \par
+В данной главе был описан важный компонент системы, который определяет алгоритм ее работы, в этом компоненте скрыта основная возможность системы думать и решать, согласно набором правил и внешним обстоятельствам. 
 \clearpage
 %=================================
 %===========WayToThink============
 %=================================
 \subsection{Компонент CoreService.WayToThink} \label{WayToThink}
-WayToThink является основным операционным компонентом триплета Critic->Selector->WayToThink. Основными задачами данного компонента являются: обновление, преобразование, сохранение данных и коммуникация с пользователем. \\
-\textbf{Входной критерий}\\
-Запуска из компонента ThinkingLufeCycle \ref{ThinkingLifeCycle}. Входными данными является InputContext, который содержит параметры WayToThink.\\
-\textbf{Выходной критерий}\\
-WayToThink завершил работу. На выходе возвращается измененные данные в ходе работе.\\
-На Рисунке \ref{img:Way2ThinkInterface} представлен интерфейс компонента. \\
+WayToThink является основным операционным компонентом триплета Critic-Selector-WayToThink. Основными задачами данного компонента являются: обновление, преобразование, сохранение данных и коммуникация с пользователем. Иными словами все, что в той или иной форме изменяет операционный контекст данных системы, а также общий контекст. \par
+\textbf{Входной критерий}\par
+Запуск из компонента ThinkingLufeCycle \ref{ThinkingLifeCycle}. Входными данными является InputContext, который содержит параметры WayToThink.\par
+\textbf{Выходной критерий}\par
+WayToThink завершил работу. На выходе возвращается измененные в ходе работы данные. На Рисунке \ref{img:Way2ThinkInterface} представлен интерфейс компонента. \\
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {Way2ThinkInterface}
@@ -534,7 +555,7 @@ WayToThink завершил работу. На выходе возвращает
 \end{figure}
 В общем виде компонент описывает последовательность действий. В системе используется два больших класса WaytToThink простой и составной (сложный). Простые WayToThink являются встроенными в систему, остальные являются комбинацией компонентов: Critic \ref{Critic}, Selector \ref{Selector}, WayToThink \ref{WayToThink}. В Таблице \ref{WayToThinkList} приведено описание встроенных в систему WayToThink. В Таблице \ref{WayToThinkMethods} представлено описание методов WayToThink.  \\
 \begin{longtable}{|p{7cm}|p{10cm}|}
- \caption[Описание встроенных в систему WayToThink]{Описание встроенныъ в систему WayToThink}\label{WayToThinkList} \\ 
+ \caption[Описание встроенных в систему WayToThink]{Описание встроенных в систему WayToThink}\label{WayToThinkList} \\ 
  \hline
  
  \multicolumn{1}{|c|}{\textbf{WayToThink}} & \multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
@@ -601,11 +622,13 @@ WayToThink завершил работу. На выходе возвращает
     \hline
 \end{longtable}
 
-WayToThink также используется как Решение (HowTo  Приложение  \ref{AppendixDHowTo}), то есть описывает последовательность действий, необходимых для решения проблемы. 
+WayToThink также используется как описание решение проблемы (HowTo  см. приложение  \ref{AppendixDHowTo}), то есть описывает последовательность действий, необходимых для устранения проблемной ситуации. \par
+В зависимости от типа WayToThink активируется та или иная последовательность действий. В общем виде последовательность имеет следующий вид: получить данные, обработать, вернуть данные. В случае, например, WayToThink Simulate второй шаг имеет вид найти связь между текущим контекстом и проблемами уже сохраненными в базе знаний. Если же WayToThink является описанием решения, то второй шаг может быть набором вызова системных утилит с параметрами из первого шага. \par
+В данной главе был описан основной компонент модификации данных WayToThink. Нужно отметить, что данный компонент также является важной частью модели TU. Проектировался он для универсального применения во всех случаях, когда необходимо действие над данными. Например, если нужно взять скрипт, который был написан на языке интерпретации Bash и ввести его в систему, можно разбить каждый шаг и вызов на отдельную часть и сделать сложный WayToThink с ветвлениями и циклами. \par
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.8] {way2thinkHowToActivity}
-  \caption{Работа компонента WayToThink в режиме Рецепта решения (HowTo) } 
+  \includegraphics [scale=1.0] {way2thinkHowToActivity}
+  \caption{Работа компонента WayToThink в режиме описания решения проблемы (HowTo) } 
   \label{img:way2thinkHowToActivity}  
 \end{figure}
 %===================================
@@ -641,15 +664,18 @@ WayToThink также используется как Решение (HowTo  П�
    apply(incidentDescription:String): Narrative & Данный метод запускает обработку входного текста и его корректировку. \\
    \hline
   \end{longtable}
-\clearpage
+С точки зрения корректировки текст подвергается обработке средствами проверки языка, например, открытый комплекс After the deadline \cite{AfterTheDeadline}, а также Google API. В части разбиения текста на слова используется алгоритм из открытого комплекса Link Grammar \cite{LinkGrammar}. В целом компонент содержит в себе также составную системы разбора, что отличает его от прямого использования алгоритма. Он манипулирует результатом из нескольких подсистем, для увеличения степени точности. \par
+Одной из особенностью компонента является использования внутренней базы знаний для предобработки текста, чтобы убрать неточности, которые будут мешать работе средств NLP. Например, часто средства NLP не понимают концепцию слова please, поэтому в базе изначально хранится эта концепция с правильным значением. Таким образом, на вход средствам NLP поступает уже аннотированный текст, что позволяет на 20\% (согласно экспериментальным данным) увеличить точность обработки.
 %===================================
 %===========KnowledgeBaseAnnotator==
 %===================================
 \subsection{Компонент CoreService.KnowledgeBaseAnnotator} \label{KnowledgeBaseAnnotator}
-Данный компонент устанавливает связи между терминами во входной фразе и базой знаний. Данный компонент также является WayToThink \ref{WayToThink}.  \\
-\\ \textbf{Входными критериями} \\ является список фраз. \\
-\\ \textbf{Выходными критериями} \\ является список ссылок на внутренние термины. \\
-\textbf{Описание работы компонента:}
+Данный компонент устанавливает связи между терминами во входной фразе и базой знаний. Данный компонент также является WayToThink \ref{WayToThink}.  \par
+ \textbf{Входные критерии} \par
+Список подготовленных фраз в виде объектов. \par
+\textbf{Выходные критерии} \par
+Список ссылок на внутренние знания. \par
+\textbf{Описание работы компонента.} \par
 \begin{enumerate}
 	\item Получен Термин
 	\item Поиск в локальной базе знаний
@@ -658,14 +684,14 @@ WayToThink также используется как Решение (HowTo  П�
 	\item Компонент ищет по синонимам во внутренний базе знаний
 	\item Если поиск успешен, то создается связь между входящем термином, синонимом и концепцией в базе знаний
 \end{enumerate}
-Например, входящий запрос содержит термин 'program', База знаний содержит термин 'computer software'. Идет запрос во внешние базы знаний, найдено computer software, program. Будет добавлена аналогия в база знаний program->computer software. 
+Например, входящий запрос содержит термин 'program', База знаний содержит термин 'computer software'. Идет запрос во внешние базы знаний, найдено computer software, program. Будет добавлена аналогия в база знаний program-computer software. 
 
 \clearpage
 %===================================
 %===========DataService==
 %===================================
 \subsection{Компонент DataService} \label{data service}
-Данный компонент отвечает за хранение данных в системе. База знаний построена на графах. На Рисунке \ref{img:KnowledgeBaseServer} представлен интерфейс компонента. В базе знаний используется два типа объектов Object - объект базы знаний, BusiessObject - объект для Web Service (User, Request). BusinessObject является кортежем для интеграции с внешними системами. У объекта есть ID, который уникально удостоверяет его в рамках системы. В Таблице \ref{DataServiceMethods} приведено описание методов компонента. \\
+Данный компонент отвечает за хранение данных в системе. База знаний построена на графах. На Рисунке \ref{img:KnowledgeBaseServer} представлен интерфейс компонента. В базе знаний используется два типа объектов Object - объект базы знаний, BusiessObject - объект для Web Service (User, Request). BusinessObject является кортежем для интеграции с внешними системами. У объекта есть ID, который уникально удостоверяет его в рамках системы. В Таблице \ref{DataServiceMethods} приведено описание методов компонента. \par
 \begin{figure} [h] 
   \center
   \includegraphics [scale=1.0] {KnowledgeBaseServer}
@@ -711,12 +737,7 @@ WayToThink также используется как Решение (HowTo  П�
    selectBusinessObject(obj:RefObject): RefObject  & Данный метод позволяет полуить объект из Базы Знаний. \\
    \hline
   \end{longtable}
-%=================================
-%===========ClientAgent===========
-%=================================
-\subsection{Компонент ClientAgent} \label{client agent}
-Данный компонент предназначен для выполнения решений на конечной машине. Данный компонент должен поддерживать обработку (см. Приложение \ref{AppendixDHowTo}). В случае проблем компонент также должен обращаться за помощью к специалисту.
-\clearpage
+
 %=================================
 %===========Reasoner===========
 %=================================
@@ -751,15 +772,14 @@ WayToThink также используется как Решение (HowTo  П�
    \hline
   
   \end{longtable}
-На данный момент в качестве реализации в системе используется два движка логический вычисление PLN \cite{PLN} и NARS \cite{NARS}.
+На данный момент в качестве реализации в системе используется два движка логический вычисление PLN \cite{PLN} и NARS \cite{NARS}. Основным применением данного компонента является правила для Critic. Логика правил обрабатывается при помощи этого компонента. Этот результат используется для определения вероятности активации данного Critic. Подобное использование дает гибкость в построении свода правил. 
   
 \clearpage
 %=================================
 %===========Knowledge=============
 %=================================
 \section{Модель данных TU Knowledge} 
-
-Для работы системы была разработана уникальная схема данных - TU Knowledge, которая сочетает в себе OWL и графовую базу данных. Язык OWL, родившейся для структурирования информации Web \cite{OWL} обрел широкое использование во многих схемах данных, так как давал возможность дополнительного расширенного описания взаимосвязи между данными. На Рисунке \ref{img:KnowledgeClass} представлена схема данных TU Knowledge. В Таблице \ref{TUKnowledge} представлено описание схемы TU Knowledge.
+Одной из важных частей системы является реализация хранения данных на основе модели TU. Для работы системы была разработана уникальная схема данных - TU Knowledge, которая сочетает в себе OWL и графовую базу данных. Язык OWL, родившейся для структурирования информации Web \cite{OWL} обрел широкое использование во многих схемах данных, так как давал возможность дополнительного расширенного описания взаимосвязи между данными. На Рисунке \ref{img:KnowledgeClass} представлена схема данных TU Knowledge. В Таблице \ref{TUKnowledge} представлено описание схемы TU Knowledge.
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.33] {KnowledgeClass}
@@ -902,7 +922,7 @@ DesiredState = Soft.installed(Wordfinder Business Economical), Soft.unInstalled(
 \clearpage
 
 \section{Прототип системы}
-В прототипе были реализованы 4 уровня мышления. Основной рабочий поток приложения описан следующим алгоритмом:
+В прототипе были реализованы 4 уровня мышления. Ниже описан стандартный поток системы, который дает возможность понять основной принцип работы.
 \begin{enumerate}
 	\item Поступает запрос от пользователя \\
 	User had received wrong application.
@@ -912,8 +932,8 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
 	\item Активируется набор Critic, привязанный к данной цели
 	\item PreliminaryAnnorator разбирает фразу
 	\item KnowledgeBaseAnnotator создает семантическую сеть и ссылки на нее
-	\item Critic на Рефликсивном уровне запускает WayToThink ProblemSolving с целью: ResolveIncident
-	\item Critic на Рефликсивном уровне выбирает WayToThink KnowingHow
+	\item Critic на Рефлексивном уровне запускает WayToThink ProblemSolving с целью: ResolveIncident
+	\item Critic на Рефлексивном уровне выбирает WayToThink KnowingHow
 	\begin{enumerate}
 	\item Запускаются параллельно все Critic, которые привязаны к IncidentClassification Critic, который привязан к ResolveIncident цели, в данном случае это DirectInstruction, ProblemWithDesiredState, ProblemWithoutDesiredState \ref{ThinkingLifeCycle}
 	\item Selector выбирает наиболее вероятный результат работы среди всех результатов компонентов. В данном случае будет результат работы Problem Description with desired state.
@@ -922,7 +942,7 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
 	\item Reformulation WayToThink, используя результаты предыдущего шага синтезирует артефакты, которых не хватает, чтобы получить CurrentState и DesiredState. DesiredState не указан явно. WayToThink запускает Critic размышления, чтобы найти корень проблемы. Critic размышления находит CurrentState- Wordfinder Tehcnical, DesiredState-Wordfinder Business Economical
 	\item Рефлексивные Critic оценивают состояние системы - на каком шаге она находится, и если цель не достигнута, то запускают другой WayToThink, который был возвращен, например, DirectInstruction. 
 	\item Critic генерации решения запускает KnowingHow \ref{AppendixDHowTo} WayToThink, ExtensiveSearch.
-	\item Selector выбирает наиболее вероятный путь мышления. В данном случае ExtensiveSearch, который будет находить решения, позволяющие привести систему в необходимое состояние (DesiredState). Если он не сможет, то он иницирует коммуникацию с пользователем. 
+	\item Selector выбирает наиболее вероятный путь мышления. В данном случае ExtensiveSearch, который будет находить решения, позволяющие привести систему в необходимое состояние (DesiredState). Если он не сможет, то он инициирует коммуникацию с пользователем. 
 	
 
 	\end{enumerate}
@@ -931,16 +951,14 @@ However she received wrong version, she received Wordfinder Tehcnical instead of
 
 \end{enumerate}
 \subsection{UML диаграмма действий приложения} \label{LifecycleActivity}
-На Рисунке \ref{img:LifecycleActivity} представлена UML диаграмма действий системы.
+На Рисунке \ref{img:LifecycleActivity} представлена UML диаграмма действий системы, согласно алгоритму, описанному выше и с привязкой к уровням мышления.
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.18] {LifecycleActivity}
   \caption{Диаграмма действий LifecycleActivity} 
   \label{img:LifecycleActivity}  
 \end{figure}
-\subsection{Технологии прототипа} \label{PrototypeTechnology}
-Прототип был написан на языке Scala, с применением технологии Akka - параллельного исполнения на множестве ядер. В качестве базы используется Neo4j графовая база данных. 
-\clearpage
+
 
 \section{Выводы}
 В данной главе были рассмотрены:
