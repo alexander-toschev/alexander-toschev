@@ -1,12 +1,12 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.9.25)  28 NOV 2015 20:10
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2016.1.10)  18 JAN 2016 09:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **synopsis.tex
 (./synopsis.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
 (/usr/local/texlive/2015/texmf-dist/tex/latex/extsizes/size14.clo
@@ -31,13 +31,6 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen103
-) (./setup.tex (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\c@bibliosel=\count87
-\c@tabcap=\count88
-\c@tablaba=\count89
-\c@tabtita=\count90
 ) (../common/packages.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2013/04/04 v0.2 Provides if(tex) conditional for PDFTeX, XeTeX, and LuaTeX
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/pdflscape.sty
@@ -76,9 +69,9 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-\Gm@cnth=\count91
-\Gm@cntv=\count92
-\c@Gm@tempcnt=\count93
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
 \Gm@bindingoffset=\dimen104
 \Gm@wd@mp=\dimen105
 \Gm@odd@mp=\dimen106
@@ -123,13 +116,13 @@ Package: amsbsy 1999/11/29 v1.2d
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count94
+\inf@bad=\count90
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count95
-\leftroot@=\count96
+\uproot@=\count91
+\leftroot@=\count92
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count97
-\DOTSCASE@=\count98
+\classnum@=\count93
+\DOTSCASE@=\count94
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -138,15 +131,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen114
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count99
-\c@MaxMatrixCols=\count100
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
 \dotsspace@=\muskip10
-\c@parentequation=\count101
-\dspbrk@lvl=\count102
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
 \tag@help=\toks24
-\row@=\count103
-\column@=\count104
-\maxfields@=\count105
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
 \andhelp@=\toks25
 \eqnshift@=\dimen115
 \alignsep@=\dimen116
@@ -169,18 +162,18 @@ Package: amscd 1999/11/29 v2.0
 \bigaw@=\dimen122
 \minCDarrowwidth=\dimen123
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2015/06/17 v1.17 mathematical typesetting tools
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
  (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count106
-\calc@Bcount=\count107
+\calc@Acount=\count102
+\calc@Bcount=\count103
 \calc@Adimen=\dimen124
 \calc@Bdimen=\dimen125
 \calc@Askip=\skip49
 \calc@Bskip=\skip50
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count108
+\calc@Ccount=\count104
 \calc@Cskip=\skip51
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
@@ -189,7 +182,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count109
+\g_MT_multlinerow_int=\count105
 \l_MT_multwidth_dim=\dimen126
 \origjot=\skip52
 \l_MT_shortvdotswithinadjustabove_dim=\dimen127
@@ -205,7 +198,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 Package: polyglossia 2015/08/06 v1.42.0 Alternative to Babel for XeLaTeX and LuaLaTeX
  (/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count110
+\etb@tempcnta=\count106
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/makecmds/makecmds.sty
 Package: makecmds 2009/09/03 v1.0a extra command making commands
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/xkeyval/xkeyval.sty
@@ -214,40 +207,40 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks29
 \XKV@tempa@toks=\toks30
 )
-\XKV@depth=\count111
+\XKV@depth=\count107
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/local/texlive/2015/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2015/09/24 v2.4e Font selection for XeLaTeX and LuaLaTeX
  (/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2015/10/14 v6210 L3 programming layer (loader) 
+Package: expl3 2016/01/03 v6358 L3 programming layer (loader) 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2015/10/14 v6210 L3 programming layer (code) 
-L3 Module: l3bootstrap 2015/09/30 v6139 L3 Bootstrap code
-L3 Module: l3names 2015/10/10 v6209 L3 Namespace for primitives
-L3 Module: l3basics 2015/09/22 v6033 L3 Basic definitions
+Package: expl3 2016/01/03 v6358 L3 programming layer (code)
+L3 Module: l3bootstrap 2016/01/01 v6339 L3 Bootstrap code
+L3 Module: l3names 2015/12/21 v6328 L3 Namespace for primitives
+L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
 L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
 L3 Module: l3tl 2015/09/29 v6121 L3 Token lists
-L3 Module: l3str 2015/09/20 v6021 L3 Strings
+L3 Module: l3str 2016/01/03 v6357 L3 Strings
 L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
 L3 Module: l3int 2015/09/25 v6089 L3 Integers
-\c_max_int=\count112
-\l_tmpa_int=\count113
-\l_tmpb_int=\count114
-\g_tmpa_int=\count115
-\g_tmpb_int=\count116
+\c_max_int=\count108
+\l_tmpa_int=\count109
+\l_tmpb_int=\count110
+\g_tmpa_int=\count111
+\g_tmpb_int=\count112
 L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
-L3 Module: l3prg 2015/10/09 v6208 L3 Control structures
-\g__prg_map_int=\count117
+L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
+\g__prg_map_int=\count113
 L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
-L3 Module: l3token 2015/09/28 v6114 L3 Experimental token manipulation
+L3 Module: l3token 2015/11/11 v6249 L3 Experimental token manipulation
 L3 Module: l3prop 2015/08/05 v5777 L3 Property lists
 L3 Module: l3msg 2015/09/28 v6113 L3 Messages
-L3 Module: l3file 2015/09/23 v6037 L3 File and I/O operations
-\l_iow_line_count_int=\count118
-\l__iow_target_count_int=\count119
-\l__iow_current_line_int=\count120
-\l__iow_current_word_int=\count121
-\l__iow_current_indentation_int=\count122
+L3 Module: l3file 2015/12/03 v6317 L3 File and I/O operations
+\l_iow_line_count_int=\count114
+\l__iow_target_count_int=\count115
+\l__iow_current_line_int=\count116
+\l__iow_current_word_int=\count117
+\l__iow_current_indentation_int=\count118
 L3 Module: l3skip 2015/09/25 v6089 L3 Dimensions and skips
 \c_zero_dim=\dimen133
 \c_max_dim=\dimen134
@@ -267,19 +260,19 @@ L3 Module: l3skip 2015/09/25 v6089 L3 Dimensions and skips
 \l_tmpb_muskip=\muskip14
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
-L3 Module: l3keys 2015/09/23 v6037 L3 Key-value interfaces
-\g__keyval_level_int=\count123
-\l_keys_choice_int=\count124
+L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
+\g__keyval_level_int=\count119
+\l_keys_choice_int=\count120
 L3 Module: l3fp 2015/08/25 v5890 L3 Floating points
-\c__fp_leading_shift_int=\count125
-\c__fp_middle_shift_int=\count126
-\c__fp_trailing_shift_int=\count127
-\c__fp_big_leading_shift_int=\count128
-\c__fp_big_middle_shift_int=\count129
-\c__fp_big_trailing_shift_int=\count130
-\c__fp_Bigg_leading_shift_int=\count131
-\c__fp_Bigg_middle_shift_int=\count132
-\c__fp_Bigg_trailing_shift_int=\count133
+\c__fp_leading_shift_int=\count121
+\c__fp_middle_shift_int=\count122
+\c__fp_trailing_shift_int=\count123
+\c__fp_big_leading_shift_int=\count124
+\c__fp_big_middle_shift_int=\count125
+\c__fp_big_trailing_shift_int=\count126
+\c__fp_Bigg_leading_shift_int=\count127
+\c__fp_Bigg_middle_shift_int=\count128
+\c__fp_Bigg_trailing_shift_int=\count129
 L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
 \c_empty_box=\box28
 \l_tmpa_box=\box29
@@ -307,7 +300,7 @@ L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
 \l__coffin_display_x_dim=\dimen147
 \l__coffin_display_y_dim=\dimen148
 L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
-L3 Module: l3candidates 2015/10/09 v6208 L3 Experimental additions to l3kernel
+L3 Module: l3candidates 2015/12/20 v6325 L3 Experimental additions to l3kernel
 \l__box_top_dim=\dimen149
 \l__box_bottom_dim=\dimen150
 \l__box_left_dim=\dimen151
@@ -325,22 +318,20 @@ L3 Module: l3candidates 2015/10/09 v6208 L3 Experimental additions to l3kernel
 \l__coffin_scaled_total_height_dim=\dimen162
 \l__coffin_scaled_width_dim=\dimen163
 L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
-L3 Module: l3luatex 2015/09/10 v5983 L3 Experimental LuaTeX-specific functions
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
-File: l3unicode-data.def 2015/07/20 v5676 L3 Unicode data
+L3 Module: l3luatex 2015/11/11 v6250 L3 Experimental LuaTeX-specific functions
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
-File: l3xdvidpfmx.def 2015/09/10 v5983 L3 Experimental driver: xdvipdfmx
+File: l3xdvidpfmx.def 2015/11/11 v6250 L3 Experimental driver: xdvipdfmx
 )) (/usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2015/10/14 v6210 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count134
-\l__xparse_m_args_int=\count135
-\l__xparse_mandatory_args_int=\count136
-\l__xparse_processor_int=\count137
-\l__xparse_v_nesting_int=\count138
+Package: xparse 2015/12/20 v6326 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count130
+\l__xparse_m_args_int=\count131
+\l__xparse_mandatory_args_int=\count132
+\l__xparse_processor_int=\count133
+\l__xparse_v_nesting_int=\count134
 )
-\l_fontspec_script_int=\count139
-\l_fontspec_language_int=\count140
-\l_fontspec_strnum_int=\count141
+\l_fontspec_script_int=\count135
+\l_fontspec_language_int=\count136
+\l_fontspec_strnum_int=\count137
 \l__fontspec_tmpa_dim=\dimen164
 \l__fontspec_tmpb_dim=\dimen165
 \l__fontspec_tmpc_dim=\dimen166
@@ -377,11 +368,10 @@ LaTeX Font Info:    Try loading font information for EU1+lmss on input line 357.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/euenc/eu1lmss.fd
 File: eu1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
-\tipaTiiicode=\count142
+\tipaTiiicode=\count138
 \tipasavetokens=\toks31
 \tipachecktokens=\toks32
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen167
 \Gin@req@width=\dimen168
@@ -491,7 +481,7 @@ Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 . 
 . Defining command \DeclareFontsExtensions with sig. 'm' on line 318.
 .................................................
-\l__fontspec_tmp_int=\count143
+\l__fontspec_tmp_int=\count139
 LaTeX Info: Redefining \itshape on input line 2227.
 LaTeX Info: Redefining \slshape on input line 2232.
 LaTeX Info: Redefining \scshape on input line 2237.
@@ -529,23 +519,23 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip65
 \LTpre=\skip66
 \LTpost=\skip67
-\LTchunksize=\count144
+\LTchunksize=\count140
 \LTcapwidth=\dimen171
 \LT@head=\box43
 \LT@firsthead=\box44
 \LT@foot=\box45
 \LT@lastfoot=\box46
-\LT@cols=\count145
-\LT@rows=\count146
-\c@LT@tables=\count147
-\c@LT@chunks=\count148
+\LT@cols=\count141
+\LT@rows=\count142
+\c@LT@tables=\count143
+\c@LT@chunks=\count144
 \LT@p@ftn=\toks35
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen172
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen173
-\c@nlinenum=\count149
+\c@nlinenum=\count145
 \TeXr@lab=\toks36
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
@@ -559,12 +549,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen181
 \cmidrulekern=\dimen182
 \defaultaddspace=\dimen183
-\@cmidla=\count150
-\@cmidlb=\count151
+\@cmidla=\count146
+\@cmidlb=\count147
 \@aboverulesep=\dimen184
 \@belowrulesep=\dimen185
-\@thisruleclass=\count152
-\@lastruleclass=\count153
+\@thisruleclass=\count148
+\@lastruleclass=\count149
 \@thisrulewidth=\dimen186
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/soulutf8.sty
 Package: soulutf8 2007/09/09 v1.0 Permit use of UTF-8 characters in soul (HO)
@@ -628,12 +618,12 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen190
-\Hy@linkcounter=\count154
-\Hy@pagecounter=\count155
+\Hy@linkcounter=\count150
+\Hy@pagecounter=\count151
  (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count156
+\Hy@SavedSpaceFactor=\count152
  (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
@@ -644,14 +634,14 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count157
+\c@Hy@tempcnt=\count153
  (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen191
-\Fld@menulength=\count158
+\Fld@menulength=\count154
 \Field@Width=\dimen192
 \Fld@charsize=\dimen193
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -663,9 +653,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count159
-\c@Item=\count160
-\c@Hfootnote=\count161
+\Hy@abspage=\count155
+\c@Item=\count156
+\c@Hfootnote=\count157
 )
 
 Package hyperref Message: Driver (autodetected): hxetex.
@@ -678,10 +668,10 @@ File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
 Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO)
 )
 \pdfm@box=\box47
-\c@Hy@AnnotLevel=\count162
-\HyField@AnnotCount=\count163
-\Fld@listcount=\count164
-\c@bookmark@seq@number=\count165
+\c@Hy@AnnotLevel=\count158
+\HyField@AnnotCount=\count159
+\Fld@listcount=\count160
+\c@bookmark@seq@number=\count161
  (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
@@ -696,7 +686,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen194
 \enit@toks=\toks42
 \enit@inbox=\box48
-\enitdp@description=\count166
+\enitdp@description=\count162
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
  (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
@@ -707,31 +697,38 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionwidth=\dimen197
 \caption@tempdima=\dimen198
 \caption@indent=\dimen199
-\caption@parindent=\dimen200
-\caption@hangindent=\dimen201
+\caption@parindent=\dimen256
+\caption@hangindent=\dimen257
 )
-\c@ContinuedFloat=\count167
+\c@ContinuedFloat=\count163
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )) (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2015/09/15 v1.1-100 Sub-captions (AR)
-\c@subfigure=\count168
-\c@subtable=\count169
+\c@subfigure=\count164
+\c@subtable=\count165
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/totalcount.sty
 Package: totalcount 2013/05/12 v1.0-92 Total values of counters (AR)
-\c@totalcount@figure=\count170
-\c@totalcount@table=\count171
+\c@totalcount@figure=\count166
+\c@totalcount@table=\count167
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/totcount/totcount.sty
 Package: totcount 2011/01/25 v1.2 package for gettingthe total value of LaTeX counters
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/totpages/totpages.sty
 Package: totpages 2005/09/19 v2.00 Totpages Package (muewi)
  (/usr/local/texlive/2015/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))) (./synpackages.tex) (./userpackages.tex) (../common/styles.tex (/usr/local/texlive/2015/texmf-dist/tex/latex/polyglossia/gloss-russian.ldf
+))) (./synpackages.tex) (./userpackages.tex) (../common/newnames.tex) (./setup.tex (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@bibliosel=\count168
+\c@tabcap=\count169
+\c@tablaba=\count170
+\c@tabtita=\count171
+) (../common/data.tex) (../common/styles.tex (/usr/local/texlive/2015/texmf-dist/tex/latex/polyglossia/gloss-russian.ldf
 File: gloss-russian.ldf polyglossia: module for russian
  (/usr/local/texlive/2015/texmf-dist/tex/latex/polyglossia/babelsh.def
 File: babelsh.def 2013/04/30 Babel common definitions for shorthands
@@ -1024,33 +1021,33 @@ Package: cite 2015/02/27  v 5.5
 )
 \c@citenum=\count175
 \c@citenum@totc=\count176
-)) (../common/data.tex) (/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.aux)
+)) (/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.aux)
 \openout1 = `synopsis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 14.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 15.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 15.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 \AtBeginShipoutBox=\box49
 
 *geometry* driver: auto-detecting
@@ -1094,57 +1091,57 @@ LaTeX Font Info:    ... okay on input line 14.
 .................................................
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 14.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 14.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 14.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 14.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 14.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 14.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 14.
-LaTeX Font Info:    Redeclaring math accent \check on input line 14.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 14.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 14.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 14.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 14.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 15.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 15.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 15.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 15.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 15.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 15.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 15.
+LaTeX Font Info:    Redeclaring math accent \check on input line 15.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 15.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 15.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 15.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 15.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 14.
+(Font)              `operators' in the math version `normal' on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/TimesNewRoman(0)/m/n on input line 14.
+(Font)                  OT1/cmr/m/n --> EU1/TimesNewRoman(0)/m/n on input line 15.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 14.
+(Font)              `operators' in the math version `bold' on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/TimesNewRoman(0)/m/n on input line 14.
+(Font)                  OT1/cmr/bx/n --> EU1/TimesNewRoman(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/TimesNewRoman(0)/m/n --> EU1/TimesNewRoman(0)/m/n on input line 14.
+(Font)                  EU1/TimesNewRoman(0)/m/n --> EU1/TimesNewRoman(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/TimesNewRoman(0)/m/it on input line 14.
+(Font)                  OT1/cmr/m/it --> EU1/TimesNewRoman(0)/m/it on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/TimesNewRoman(0)/bx/n on input line 14.
+(Font)                  OT1/cmr/bx/n --> EU1/TimesNewRoman(0)/bx/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/Arial(0)/m/n on input line 14.
+(Font)                  OT1/cmss/m/n --> EU1/Arial(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/CourierNew(0)/m/n on input line 14.
+(Font)                  OT1/cmtt/m/n --> EU1/CourierNew(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/TimesNewRoman(0)/m/n --> EU1/TimesNewRoman(0)/bx/n on input line 14.
+(Font)                  EU1/TimesNewRoman(0)/m/n --> EU1/TimesNewRoman(0)/bx/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/TimesNewRoman(0)/bx/it on input line 14.
+(Font)                  OT1/cmr/bx/it --> EU1/TimesNewRoman(0)/bx/it on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/Arial(0)/bx/n on input line 14.
+(Font)                  OT1/cmss/bx/n --> EU1/Arial(0)/bx/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/CourierNew(0)/bx/n on input line 14.
-Package hyperref Info: Link coloring ON on input line 14.
+(Font)                  OT1/cmtt/m/n --> EU1/CourierNew(0)/bx/n on input line 15.
+Package hyperref Info: Link coloring ON on input line 15.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1152,9 +1149,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count177
 )
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
-LaTeX Info: Redefining \nameref on input line 14.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
  (/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.out) (/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.out)
 \@outlinefile=\write3
 \openout3 = `synopsis.out'.
@@ -1176,6 +1173,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 39.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \hbox (badness 2173) in paragraph at lines 54--55
+[]|[]\EU1/TimesNewRoman(1)/m/n/14 Федеральное государственное бюджетное образо-
+ []
+
+
 Overfull \hbox (4.5555pt too wide) in paragraph at lines 38--57
 [] 
  []
@@ -1192,18 +1194,23 @@ Overfull \hbox (0.63196pt too wide) in paragraph at lines 70--89
  []
 
 [2.2]) (./content.tex (../common/characteristic.tex
-Underfull \hbox (badness 4132) in paragraph at lines 2--5
-[]$[]$ \EU1/TimesNewRoman(1)/m/n/14.4 данной работы является разработка интеллектуальной си-
- []
-
-
-Underfull \hbox (badness 5460) in paragraph at lines 2--5
-\EU1/TimesNewRoman(1)/m/n/14.4 стемы повышения эффективности деятельности IT-службы предприятия.
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
 []\EU1/TimesNewRoman(1)/m/n/14.4 На основе выбранной модели мышления разработать модель
+ []
+
+
+Underfull \hbox (badness 5533) in paragraph at lines 11--12
+\EU1/TimesNewRoman(1)/m/n/14.4 проблемно-ориентированной системы управления, принятия ре-
+ []
+
+
+Underfull \hbox (badness 1824) in paragraph at lines 11--12
+\EU1/TimesNewRoman(1)/m/n/14.4 шений и оптимизации процесса принятия, анализа и обработки
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 11--12
+\EU1/TimesNewRoman(1)/m/n/14.4 запросов пользователя в области обслуживания информационной
  []
 
 
@@ -1211,141 +1218,201 @@ Underfull \hbox (badness 6608) in paragraph at lines 19--20
 []\EU1/TimesNewRoman(1)/m/n/14.4 Теоретико-множественный и теоретико-информационный анализ
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-[]\EU1/TimesNewRoman(1)/m/n/14.4 Прототип программной реализации модели проблемно-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-\EU1/TimesNewRoman(1)/m/n/14.4 ориентированной системы управления, принятия решений и
- []
-
 [3.3]
-Underfull \hbox (badness 1226) in paragraph at lines 61--61
+Underfull \hbox (badness 1152) in paragraph at lines 37--38
+[]\EU1/TimesNewRoman(1)/m/n/14.4 Исследования, проведенные в диссертации, соответствуют паспорту
+ []
+
+
+Underfull \hbox (badness 1226) in paragraph at lines 55--55
 \EU1/TimesNewRoman(1)/m/n/14.4 сти решения задач системного
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 61--62
+Underfull \hbox (badness 1259) in paragraph at lines 55--56
 \EU1/TimesNewRoman(1)/m/n/14.4 дель системы принятия решения и об-
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 61--62
+Underfull \hbox (badness 1270) in paragraph at lines 55--56
 \EU1/TimesNewRoman(1)/m/n/14.4 запросов пользователя на естественном
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Разработка проблемно-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
 \EU1/TimesNewRoman(1)/m/n/14.4 ориентированных систем
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
 \EU1/TimesNewRoman(1)/m/n/14.4 и оптимизации технических
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 63--64
+Underfull \hbox (badness 2600) in paragraph at lines 57--58
 []|\EU1/TimesNewRoman(1)/m/n/14.4 По модели, разработанной в предыду-
  []
 
 
-Underfull \hbox (badness 3826) in paragraph at lines 63--64
+Underfull \hbox (badness 3826) in paragraph at lines 57--58
 \EU1/TimesNewRoman(1)/m/n/14.4 щем пункте был разработан прототип
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
-\EU1/TimesNewRoman(1)/m/n/14.4 системы принятия решения Thinking-
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+\EU1/TimesNewRoman(1)/m/n/14.4 системы принятия решения Thinking
  []
 
 
-Underfull \hbox (badness 2503) in paragraph at lines 65--65
+Underfull \hbox (badness 2503) in paragraph at lines 59--59
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Методы получения, анализа и
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 67--67
+Underfull \hbox (badness 1158) in paragraph at lines 61--61
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Разработка специального мате-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Теоретико-множественный и
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
 \EU1/TimesNewRoman(1)/m/n/14.4 теоретико-информационный
  []
 
 
-Underfull \hbox (badness 5274) in paragraph at lines 69--70
+Underfull \hbox (badness 5274) in paragraph at lines 63--64
 []|\EU1/TimesNewRoman(1)/m/n/14.4 В рамках работы был проведен ком-
  []
 
 
-Underfull \hbox (badness 6725) in paragraph at lines 73--73
+Underfull \hbox (badness 6725) in paragraph at lines 67--67
 \EU1/TimesNewRoman(1)/m/n/14.4 анализ информации на осно-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Представлена наглядная визуализация
  []
 
-
-Underfull \vbox (badness 10000) detected at line 75
+[4.4]
+Underfull \vbox (badness 10000) detected at line 69
  []
 
-[4.4] [5.5])
-Underfull \hbox (badness 1867) in paragraph at lines 25--29
-[]\EU1/TimesNewRoman(1)/m/n/14.4 Во $[]$ обосновывается актуальность исследования, проводи-
- []
-
-
-Underfull \hbox (badness 1394) in paragraph at lines 25--29
-\EU1/TimesNewRoman(1)/m/n/14.4 ка работы. Проводится обзор области и производится постановка задачи.
- []
-
-[6.6]
-Underfull \hbox (badness 6236) in paragraph at lines 49--50
-\EU1/TimesNewRoman(1)/m/n/14.4 где P - precision, tp
+[5.5] [6.6])
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+\EU1/TimesNewRoman(1)/m/n/14.4 где P — precision,
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 49--50
-\EU1/TimesNewRoman(1)/m/n/14.4 - успешно обработан-
+Underfull \hbox (badness 3849) in paragraph at lines 43--44
+\EU1/TimesNewRoman(1)/m/n/14.4 танные, fp — ложно
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 F-measure (результа-
+Underfull \hbox (badness 1122) in paragraph at lines 48--49
+\EU1/TimesNewRoman(1)/m/n/14.4 где R — recall, tp —
  []
 
 
-Underfull \hbox (badness 3386) in paragraph at lines 59--60
-\EU1/TimesNewRoman(1)/m/n/14.4 Где P - precision, R-
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+\EU1/TimesNewRoman(1)/m/n/14.4 успешно обработан-
  []
 
 
-LaTeX Warning: Reference `img:ParserComp' on page 7 undefined on input line 65.
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+\EU1/TimesNewRoman(1)/m/n/14.4 ные, fn — ложно
+ []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 85--85
+LaTeX Warning: Reference `img:ParserComp' on page 7 undefined on input line 59.
+
+
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 77--77
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 85--85
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 77--77
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+ []
+
+
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 77--78
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+ []
+
+
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 79--79
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+ []
+
+
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 79--79
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+ []
+
+
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 79--80
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+ []
+
+
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 81--81
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+ []
+
+
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 81--81
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
+ []
+
+
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 81--82
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
+ []
+
+
+Underfull \hbox (badness 4492) in paragraph at lines 83--83
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Создание цепи обработки
+ []
+
+
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 83--83
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+ []
+
+
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 83--83
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+ []
+
+
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 83--84
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
+ []
+
+
+Underfull \hbox (badness 6575) in paragraph at lines 85--85
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Понимания и формализа-
+ []
+
+
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 85--85
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
+ []
+
+
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 85--85
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
@@ -1354,13 +1421,13 @@ Overfull \hbox (1.98769pt too wide) in paragraph at lines 85--86
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 87--87
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 87--87
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 87--87
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 87--87
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
@@ -1369,8 +1436,8 @@ Overfull \hbox (1.98769pt too wide) in paragraph at lines 87--88
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 89--89
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 89--89
+[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
@@ -1384,395 +1451,281 @@ Overfull \hbox (8.85722pt too wide) in paragraph at lines 89--90
  []
 
 
-Underfull \hbox (badness 4492) in paragraph at lines 91--91
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Создание цепи обработки
- []
-
-
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 91--91
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
- []
-
-
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 91--91
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
- []
-
-
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 91--92
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
- []
-
-
-Underfull \hbox (badness 6575) in paragraph at lines 93--93
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Понимания и формализа-
- []
-
-
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 93--93
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
- []
-
-
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 93--93
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
- []
-
-
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 93--94
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
- []
-
-
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 95--95
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
- []
-
-
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 95--95
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
- []
-
-
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 95--96
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
- []
-
-
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 97--97
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
- []
-
-
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 97--97
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
- []
-
-
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 97--98
-[]|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
- []
-
-
-Underfull \hbox (badness 2726) in paragraph at lines 99--99
+Underfull \hbox (badness 2726) in paragraph at lines 91--91
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Обучение решению инци-
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 99--99
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 91--91
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 99--99
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 91--91
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (1.98769pt too wide) in paragraph at lines 99--100
+Overfull \hbox (1.98769pt too wide) in paragraph at lines 91--92
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Да| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Умение проводить ло-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 \EU1/TimesNewRoman(1)/m/n/14.4 гические рассуждения:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 \EU1/TimesNewRoman(1)/m/n/14.4 генерализацию, специа-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 \EU1/TimesNewRoman(1)/m/n/14.4 лизацию, синонимичный
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 101--101
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 93--93
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 101--101
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 93--93
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Overfull \hbox (8.85722pt too wide) in paragraph at lines 101--102
+Overfull \hbox (8.85722pt too wide) in paragraph at lines 93--94
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Нет| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 104
+Underfull \vbox (badness 10000) detected at line 96
  []
 
-[7.7] [8.8] [9.9
-
-]
+[7.7] [8.8] [9.9]
 File: ../assets/CSW.png Graphic file (type QTm)
  <use  "../assets/CSW.png" >
+Underfull \hbox (badness 10000) in paragraph at lines 131--139
+[]\EU1/TimesNewRoman(1)/m/n/14.4 Одним из основных компонентов системы является
+ []
+
+
+Underfull \hbox (badness 6741) in paragraph at lines 131--139
+[]$\EU1/TimesNewRoman(1)/m/n/14.4 . На Рисунке [][]1[][] представлена схема-
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 177--180
-\EU1/TimesNewRoman(1)/m/n/14.4 роваться несколько критиков. Например, человек решает сложную задачу.
- []
-
-
-Underfull \hbox (badness 1460) in paragraph at lines 177--180
-\EU1/TimesNewRoman(1)/m/n/14.4 Идет активация множество критиков: считать, технические детали, кроме
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--180
-
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+[]$[]$ \EU1/TimesNewRoman(1)/m/n/14.4 представляет собой определенный переключатель:
  []
 
 [10.10]
 File: ../assets/CSW_EX.png Graphic file (type QTm)
  <use  "../assets/CSW_EX.png" >
-Overfull \hbox (31.92622pt too wide) in paragraph at lines 185--186
+Overfull \hbox (31.92622pt too wide) in paragraph at lines 149--150
  [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--201
+[11.11]
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Инстинктивный уро-
  []
 
 
-Underfull \hbox (badness 6893) in paragraph at lines 201--202
+Underfull \hbox (badness 6893) in paragraph at lines 165--166
 []|\EU1/TimesNewRoman(1)/m/n/14.4 На данном уровне происходят инстинктивные
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 201--202
+Underfull \hbox (badness 1005) in paragraph at lines 165--166
 \EU1/TimesNewRoman(1)/m/n/14.4 реакции (врожденные). Например, коленный ре-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--213
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Саморефлексивный
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--215
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Самосознательный
  []
 
-
-Underfull \hbox (badness 1292) in paragraph at lines 181--221
-[]\EU1/TimesNewRoman(1)/m/n/14.4 На рисунке [][]2[][] представления расширенная модель работы триплета
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11.11] [12.12]
-
-LaTeX Warning: Citation `SECR' on page 13 undefined on input line 235.
-
-[13.13] [14.14]
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+[12.12] [13.13]
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Основной компонент взаимодей-
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 268--269
+Underfull \hbox (badness 1226) in paragraph at lines 216--217
 []|\EU1/TimesNewRoman(1)/m/n/14.4 Ядро системы, содержит основные
  []
 
 
-Underfull \vbox (badness 10000) detected at line 278
+Underfull \vbox (badness 10000) detected at line 226
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 281--285
+Underfull \hbox (badness 1715) in paragraph at lines 229--233
 \EU1/TimesNewRoman(1)/m/n/14.4 User had received wrong application. User has ordered Wordfinder
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+[14.14]
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 []\EU1/TimesNewRoman(1)/m/n/14.4 Запускаются параллельно все Critic, которые при-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 \EU1/TimesNewRoman(1)/m/n/14.4 вязаны к IncidentClassification Critic, который
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 \EU1/TimesNewRoman(1)/m/n/14.4 привязан к ResolveIncident цели, в данном слу-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 \EU1/TimesNewRoman(1)/m/n/14.4 чае это DirectInstruction, ProblemWithDesiredState,
  []
 
-[15.15
 
-]
-Underfull \hbox (badness 5345) in paragraph at lines 295--296
+Underfull \hbox (badness 5345) in paragraph at lines 243--244
 []\EU1/TimesNewRoman(1)/m/n/14.4 Simulation WayToThink с параметрами ”Создать мо-
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 295--296
+Underfull \hbox (badness 1005) in paragraph at lines 243--244
 \EU1/TimesNewRoman(1)/m/n/14.4 дель текущий ситуации”создает: CurrentSituation, User,
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 296--297
+Underfull \hbox (badness 1087) in paragraph at lines 244--245
 \EU1/TimesNewRoman(1)/m/n/14.4 дущего шага синтезирует артефакты, которых не хва-
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 296--297
+Underfull \hbox (badness 1331) in paragraph at lines 244--245
 \EU1/TimesNewRoman(1)/m/n/14.4 тает, чтобы получить из CurrentState DesiredState, так
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 296--297
+Underfull \hbox (badness 3009) in paragraph at lines 244--245
 \EU1/TimesNewRoman(1)/m/n/14.4 как он не указан явно. WayToThink запускает Critic
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 296--297
+Underfull \hbox (badness 1466) in paragraph at lines 244--245
 \EU1/TimesNewRoman(1)/m/n/14.4 размышления, чтобы найти корень проблемы. Он на-
  []
 
 
-Underfull \hbox (badness 3029) in paragraph at lines 296--297
+Underfull \hbox (badness 3029) in paragraph at lines 244--245
 \EU1/TimesNewRoman(1)/m/n/14.4 ходит CurrentState- Wordfinder Tehcnical, DesiredState-
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 297--298
+Underfull \hbox (badness 3271) in paragraph at lines 245--246
 []\EU1/TimesNewRoman(1)/m/n/14.4 Рефлексивные Critic оценивают состояние системы -
  []
 
 
-Underfull \hbox (badness 4441) in paragraph at lines 297--298
+Underfull \hbox (badness 4441) in paragraph at lines 245--246
 \EU1/TimesNewRoman(1)/m/n/14.4 на каком шаге она находится, и если цель не до-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 []\EU1/TimesNewRoman(1)/m/n/14.4 Critic генерации решения запускает KnowingHow
  []
 
+[15.15]
 File: ../assets/KnowledgeClass.png Graphic file (type QTm)
-<use  "../assets/KnowledgeClass.png" >
-Overfull \hbox (10.87038pt too wide) in paragraph at lines 308--309
+ <use  "../assets/KnowledgeClass.png" >
+Overfull \hbox (10.87038pt too wide) in paragraph at lines 256--257
  [] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16.16] [17.17]
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
-[]\EU1/TimesNewRoman(1)/m/n/14.4 Теоретико-множественный и теоретико-информационный анализ
- []
-
-
-Overfull \hbox (17.75102pt too wide) in alignment at lines 324--329
+[16.16]
+Overfull \hbox (17.75102pt too wide) in alignment at lines 266--271
  [] [] [] 
  []
 
 
-Overfull \hbox (17.75102pt too wide) in alignment at lines 329--333
+Overfull \hbox (17.75102pt too wide) in alignment at lines 271--275
  [] [] [] 
  []
 
 
-Overfull \hbox (17.75102pt too wide) in alignment at lines 333--336
+Overfull \hbox (17.75102pt too wide) in alignment at lines 275--277
  [] [] [] 
  []
 
 
-Overfull \hbox (17.75102pt too wide) in alignment at lines 336--339
+Overfull \hbox (17.75102pt too wide) in alignment at lines 277--280
  [] [] [] 
  []
 
 
-Overfull \hbox (17.75102pt too wide) in alignment at lines 339--362
+Overfull \hbox (17.75102pt too wide) in alignment at lines 280--303
  [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 362
+Underfull \vbox (badness 10000) detected at line 303
  []
 
-[18.18
+(../common/concl.tex [17.17
 
-] (../common/concl.tex [19.19]) (/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.bbl
-Underfull \hbox (badness 2103) in paragraph at lines 25--33
-[]\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. Krehov A. Khasianov A. \EU1/TimesNewRoman(1)/m/n/14.4 Thinking-Understanding
- []
-
-
-Underfull \hbox (badness 1728) in paragraph at lines 25--33
-\EU1/TimesNewRoman(1)/m/n/14.4 —  2013. —  Т. 3. —  Режим доступа: http://www.world-education-
- []
-
-
-Underfull \hbox (badness 3884) in paragraph at lines 36--41
+]) (/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.bbl [18.18]
+Underfull \hbox (badness 3884) in paragraph at lines 35--42
 []\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. \EU1/TimesNewRoman(1)/m/n/14.4 Thinking model and machine understanding of
  []
 
 
-Underfull \hbox (badness 5771) in paragraph at lines 36--41
+Underfull \hbox (badness 5771) in paragraph at lines 35--42
 \EU1/TimesNewRoman(1)/m/n/14.4 English primitive texts and it’s application in Infrastructure as Service
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 36--41
-\EU1/TimesNewRoman(1)/m/n/14.4 domain // \EU1/TimesNewRoman(1)/m/it/14.4 Proceedings of AINL-2013\EU1/TimesNewRoman(1)/m/n/14.4 . —  2013. —  Режим доступа:
+Underfull \hbox (badness 3907) in paragraph at lines 35--42
+\EU1/TimesNewRoman(1)/m/n/14.4 domain // \EU1/TimesNewRoman(1)/m/it/14.4 Proceedings of conference ”Artificial Intelligence and natural
  []
 
-
-Underfull \hbox (badness 1675) in paragraph at lines 44--50
-[]\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. \EU1/TimesNewRoman(1)/m/n/14.4 ARCHITECTURE AND REALIZATION OF IN-
- []
-
-
-Underfull \hbox (badness 7540) in paragraph at lines 53--58
-[]\EU1/TimesNewRoman(1)/m/it/14.4 Toshchev A. Talanov M. \EU1/TimesNewRoman(1)/m/n/14.4 Computational emotional thinking and virtual
- []
-
-[20.20]))
+))
 
 Package caption Warning: Unused \captionsetup[subfigure] on input line 95.
 See the caption package documentation for explanation.
 
-[21.21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 19.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 19.
+[19.19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 20.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 20.
  (/Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 19.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 19.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 20.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 20.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 26812 strings out of 493706
- 489635 string characters out of 6145769
- 555481 words of memory out of 5000000
- 29776 multiletter control sequences out of 15000+600000
+ 27006 strings out of 493668
+ 491588 string characters out of 6145663
+ 552660 words of memory out of 5000000
+ 30006 multiletter control sequences out of 15000+600000
  7200 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 55i,18n,92p,10482b,588s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,18n,92p,10482b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.pdf (21 pages).
+Output written on /Users/toschev/Documents/alexander-toschev/Synopsis/.texpadtmp/synopsis.pdf (19 pages).
