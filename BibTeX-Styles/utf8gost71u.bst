@@ -350,7 +350,7 @@ FUNCTION {bbl.vvolume} %  { "\bblVolume{}" }
 
 FUNCTION {bbl.vvol}    %  { "\bblVol{}" }
 {  curlanguage "english" =
-    {"Vol."}
+    {"V."}
     { curlanguage "ukrainian" = curlanguage "russian" = or
            {"Т."}
            {"language is not defined: " language  "Vol." * * warning$ "Vol."}
@@ -492,10 +492,10 @@ FUNCTION {bbl.page}   %   { "\bblp."
 
 FUNCTION {bbl.ppages}%    { "\bblPp." }
 {  curlanguage "english" =
-    {"Pp."}
+    {"P."}
     { curlanguage "ukrainian" = curlanguage "russian" = or
            {"{С.}"}
-           {"language is not defined: " language  "Pp." * * warning$ "Pp."}
+           {"language is not defined: " language  "Pp." * * warning$ "P."}
       if$}
   if$
 }
