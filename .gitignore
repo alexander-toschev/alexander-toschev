@@ -1,9 +1,5 @@
-Dissertation/.texpadtmp/*
-Synopsis/.texpadtmp/*
-Synopsis/.texpadtmp/synopsis.aux
-
-Synopsis/.texpadtmp/synopsis.log
-
+*.DS_Store
+*.texpadtmp*
 *.aux
 
 *.aux
@@ -12,11 +8,9 @@ Synopsis/.texpadtmp/synopsis.log
 
 *.gz
 
-common/~$graphs.xlsx
+*~$graphs.xlsx
 
-Synopsis/.texpadtmp/synopsis.log
-
-Synopsis/.texpadtmp/synopsis.synctex.gz
+*.texpadtmp*
 
 *.log
 
