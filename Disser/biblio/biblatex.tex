@@ -50,17 +50,17 @@ sortcites=true,% сортировать номера затекстовых сс
             final]
         }
         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
-            \perdatasource{../biblio/authorpapersVAK.bib}
-            \perdatasource{../biblio/authorpapers.bib}
-            \perdatasource{../biblio/authorconferences.bib}
+            \perdatasource{./biblio/authorpapersVAK.bib}
+            \perdatasource{./biblio/authorpapers.bib}
+            \perdatasource{./biblio/authorconferences.bib}
             \step[fieldset=keywords, fieldvalue={biblioauthor}]
         }
         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
-            \perdatasource{../biblio/othercites.bib}
+            \perdatasource{./biblio/biblio.bib}
             \step[fieldset=keywords, fieldvalue={biblioother,bibliofull}]
         }
         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
-            \perdatasource{../biblio/othercites.bib}
+            \perdatasource{./biblio/biblio.bib}
             \step[fieldset=keywords, fieldvalue={biblioother,bibliofull}]
         }
     }
@@ -74,10 +74,10 @@ sortcites=true,% сортировать номера затекстовых сс
 %\DeclareFieldFormat{journaltitle}{\usebibmacro{string+doi}{#1}} % ссылка на doi с названия журнала
 
 %%% Подключение файлов bib %%%
-\addbibresource{../biblio/othercites.bib}
-\addbibresource{../biblio/authorpapersVAK.bib}
-\addbibresource{../biblio/authorpapers.bib}
-\addbibresource{../biblio/authorconferences.bib}
+\addbibresource{./biblio/othercites.bib}
+\addbibresource{./biblio/authorpapersVAK.bib}
+\addbibresource{./biblio/authorpapers.bib}
+\addbibresource{./biblio/authorconferences.bib}
 
 
 %% Счётчик использованных ссылок на литературу, обрабатывающий с учётом неоднократных ссылок
