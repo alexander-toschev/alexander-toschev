@@ -26,7 +26,7 @@
       <fontname>SansSerif</fontname>
       <fontsize>14</fontsize>
       <defaultstereotypeview>0</defaultstereotypeview>
-      <activediagram>Reasoner Interface</activediagram>
+      <activediagram>Action Class</activediagram>
     </settings>
     <searchpath href="PROJECT_DIR" />
     <members>
@@ -282,7 +282,7 @@
 			CodeGeneration
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Mon Feb 22 18:19:28 MSK 2016'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Mon Feb 22 18:24:31 MSK 2016'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -56645,7 +56645,7 @@ apply=&gt;ProcessManager
       name="Action Class"
 >
   <group name="Fig0"
-       description="org.argouml.uml.diagram.static_structure.ui.FigInterface[264, 464, 737, 109]pathVisible=true;stereotypeView=0;operationsVisible=true;operationsVisible=true"
+       description="org.argouml.uml.diagram.static_structure.ui.FigInterface[0, 464, 737, 109]pathVisible=true;stereotypeView=0;operationsVisible=true;operationsVisible=true"
        href="-64--88-121--124-26c86835:135197be9da:-8000:0000000000000C30"
        fill="1"
        fillcolor="white"
@@ -56656,7 +56656,7 @@ apply=&gt;ProcessManager
     </private>
     
     <rectangle name="Fig0.0"
-      x="264"
+      x="0"
       y="464"
       width="737"
       height="109"
@@ -56666,7 +56666,7 @@ apply=&gt;ProcessManager
       strokecolor="black"
     />
     <text name="Fig0.1"
-      x="265"
+      x="1"
       y="465"
       width="735"
       height="45"
@@ -56682,7 +56682,7 @@ apply=&gt;ProcessManager
       justification="Center"
     >coreservice::action::critic::Critic</text>
     <group name="Fig0.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[265, 465, 735, 21]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[1, 465, 735, 21]"
          href="-64--88-121--124-26c86835:135197be9da:-8000:0000000000000C30"
          fill="0"
          fillcolor="white"
@@ -56693,7 +56693,7 @@ apply=&gt;ProcessManager
       </private>
       
       <rectangle name="Fig0.2.0"
-        x="265"
+        x="1"
         y="465"
         width="735"
         height="21"
@@ -56703,7 +56703,7 @@ apply=&gt;ProcessManager
         strokecolor="black"
       />
       <text name="Fig0.2.1"
-        x="265"
+        x="1"
         y="465"
         width="735"
         height="19"
@@ -56720,7 +56720,7 @@ apply=&gt;ProcessManager
       >&lt;&lt;interface&gt;&gt;</text>
     </group>
     <rectangle name="Fig0.3"
-      x="264"
+      x="0"
       y="510"
       width="737"
       height="1"
@@ -56730,7 +56730,7 @@ apply=&gt;ProcessManager
       strokecolor="black"
     />
     <group name="Fig0.4"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[265, 511, 735, 62]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[1, 511, 735, 62]"
          href="-64--88-121--124-26c86835:135197be9da:-8000:0000000000000C30"
          fill="0"
          fillcolor="white"
@@ -56741,7 +56741,7 @@ apply=&gt;ProcessManager
       </private>
       
       <rectangle name="Fig0.4.0"
-        x="265"
+        x="1"
         y="511"
         width="735"
         height="62"
@@ -56751,7 +56751,7 @@ apply=&gt;ProcessManager
         strokecolor="black"
       />
       <text name="Fig0.4.1"
-        x="265"
+        x="1"
         y="511"
         width="735"
         height="18"
@@ -56767,7 +56767,7 @@ apply=&gt;ProcessManager
         justification="Left"
       >excude() : List[CriticLink]</text>
       <text name="Fig0.4.2"
-        x="265"
+        x="1"
         y="529"
         width="735"
         height="18"
@@ -56783,7 +56783,7 @@ apply=&gt;ProcessManager
         justification="Left"
       >include() : List[CriticLink]</text>
       <text name="Fig0.4.3"
-        x="265"
+        x="1"
         y="547"
         width="735"
         height="24"
