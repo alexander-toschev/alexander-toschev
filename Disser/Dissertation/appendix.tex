@@ -157,189 +157,84 @@ launch:howto{
 %=======================
 \clearpage
 \chapter{Экспериментальные данные}\label{AppendixE}
-Здесь приведена лишь часть экспериментальных данных (Общая длина файла примерно 10000 инцидентов). Каждый сегмент, отделенный двумя слешами, описывает проблему пользователя.
-\begin{lstlisting}
-	
+Здесь приведена лишь часть экспериментальных данных (Общая длина файла примерно 10000 инцидентов). 
+\begin{longtable}{|p{5cm}|p{6cm}|p{5cm}|}
+ \caption[Описание экспериментальных данных]{Описание экспериментальных данных}\label{ExpData} \\ 
+ \hline
+ 
+ \multicolumn{1}{|c|}{\textbf{Класс проблемы}}& \multicolumn{1}{c|}{\textbf{
+ Описание проблемы}} & \multicolumn{1}{c|}{\textbf{
+ \% успешных}}  \\ \hline 
+\endfirsthead
+\multicolumn{2}{c}%
+{{\bfseries \tablename\ \thetable{} -- продолжение}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Входное предложение}} &
+\multicolumn{1}{c|}{\textbf{Описание}}  \\ \hline 
+\endhead
 
-EUROPE DOMAIN NEW SERVER Request Form
-*(M)* unable to connect remotely to other machine 
-Quota limit on the personal file store exceeded Europemuk176 
-TCP/IP Address Management Request 
-Quota limit exceeded 
-EUROPED007 caiW2kOs:w2kLVolInst C: is now Critical at 03:16:10 \\
-EUROPEM116 caiW2kOs:w2kProcInst DRWTSN32,*,* is now Critical at 11:51:03 \\
-2011-04-29 20:16:50 EUROPEM239 LogWatcher BABBACKUP 2011-04-30 06:05:55 EUROPEMUK212 LogWatcher NetBDBMgr File SYSTEM_LOG \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at 
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a \\
-CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached CRITICAL utilisation at \\
-CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume D: has reached CRITICAL utilisation at \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at \\
-CSAPP01 Possible hardware problem detected - Please investigate with HP Insight Manager \\
-CSAPP02 Possible hardware problem detected - Please investigate with HP Insight Manager \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at\\
-EUROPEM218 CA Backup - Backup_Operation_Failed at 23:20, 30/04/11
-FMSDTS02 The NSM/TNG Win2k System Agent reports Logical Volume D: has reached CRITICAL utilisation\\
-FMSDTS02 The NSM/TNG Win2k System Agent reports Logical Volume D: has reached WARNING state at 23:4\\
-EUROPEVUK140 caiW2kOs:w2kMemPhys Physical Memory is now Warning at 00:05:25
-2011-05-01 00:27:37 EUROPEMUK236 LogWatcher CA_Backup_F Backup_Operation_Failed File \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at\\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a\\
-2011-05-01 00:51:37 EUROPEMUK236 LogWatcher CA_Backup_F Backup_Operation_Failed File \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at \\
-2011-05-01 01:33:37 EUROPEMUK236 LogWatcher CA_Backup_W Check_Device_Group File \\
-EUROPEVUK232 WinA3_CPUTotal:TotalLoad CPUTotal is now Critical at 01:50:42 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at 
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at 
-FLETCHER The NSM/TNG Win2k System Agent reports Logical Volume C: has reached WARNING state at 02:4 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEVUK232 WinA3_CPUTotal:TotalLoad CPUTotal is now Warning at 04:56:43 \\ 
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Critical a
-EUROPEMUK521 WinA3_NetInst Intel[R] 82567LF-3 Gigabit Network Connection is now Critical at 05:40:5 
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 09:46:20 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a
-EUROPEVUK216 caiW2kOs:w2kNetTotal Net Total is now Critical at 11:02:05 \\
-EUROPEM218 CA Backup - Backup_Operation_Failed at 11:54, 01/05/11 \\
-EUROPEVUK140 caiW2kOs:w2kMemPhys Physical Memory is now Warning at 12:35:25 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network  \\Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\Connection is now Warning at
-EUROPEMUK541 caiLogA2 caiLogA2 is now DOWN at 13:49:20 \\
-EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 13:49:31 \\
-UKM145 caiW2kOs:w2kCpuInst CPU 0 is now Warning at 14:53:24 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 17:47:51 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\Connection is now Warning at
-EUROPEVUK232 WinA3_CPUTotal:TotalLoad CPUTotal is now Critical at 18:52:43 \\
-EUROPEVUK039 Mib-II:IP_Interface 172.19.12.218 is now Broken at 19:06:42 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\Connection is now Warning at
-EUROPEVUK039 caiW2kOs:w2kSrvcInst CASUniversalAgent is now Critical at 19:24:53 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\Connection is now Critical a
-EUROPEVUK050A Mib-II:IP_Interface 172.19.244.7 is now Broken at 19:52:07 \\
-EDISON Mib-II:IP_Interface 172.19.244.76 is now Broken at 19:54:02 \\
-EUROPEVUK053A Mib-II:IP_Interface 172.19.244.8 is now Broken at 19:54:59 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached \\ CRITICAL utilisation at
-2011-05-01 22:05:36 EUROPEMUK236 LogWatcher CA_Backup_F Unable_To_Find_Any_Media File  \\
-2011-05-01 22:05:36 EUROPEMUK236 LogWatcher CA_Backup_F   Backup_Operation_Failed File \\
-2011-05-01 22:07:36 EUROPEMUK236 LogWatcher CA_Backup_F Backup_Operation_Failed File \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at \\
-CSAPP02 Possible hardware problem detected - Please investigate with HP Insight Manager \\
-CSAPP01 Possible hardware problem detected - Please investigate with HP Insight Manager \\
-EUROPEVUK232 WinA3_CPUTotal:TotalLoad CPUTotal is now Warning at 00:32:44 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Critical a
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Critical a
-EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 01:50:22
-EUROPEMUK541 caiLogA2 caiLogA2 is now DOWN at 01:50:24 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEM116 caiW2kOs:w2kCpuInst CPU 0 is now Warning at 03:25:03
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EDISON Mib-II:IP_Interface 172.19.244.76 is now Broken at 19:54:02 \\
-2011-05-02 05:01:47 EUROPEMUK212 LogWatcher NetBDBMgr File SYSTEM_LOGapplication MatchPattern FILE \\
-2011-05-02 05:13:47 EUROPEMUK212 LogWatcher NetBDBMgr File SYSTEM_LOGapplication MatchPattern FILE \\
-EUROPEM116 caiW2kOs:w2kCpuInst CPU 0 is now Warning at 05:25:03
-CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached WARNING state at 05:26, \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a
-EUROPEMUK529 WinA3_NetInst:InBytes Intel[R] 82578DM Gigabit Network Connection is now Warning at 05 \\
-EUROPEMUK521 WinA3_NetInst Intel[R] 82567LF-3 Gigabit Network Connection is now Critical at 05:40:5 \\
-EUROPEMUK541 caiLogA2 caiLogA2 is now DOWN at 05:48:16 \\
-EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 05:48:52 \\
-CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached WARNING state at 06:08, \\
-UKM145 caiW2kOs:w2kCpuInst CPU 0 is now Warning at 06:57:22 \\
-UKM145 caiW2kOs:w2kCpuInst CPU 1 is now Warning at 06:57:22 \\
-2011-05-02 07:01:17 UKM205 LogWatcher BABBACKUP is now Critical \\
-2011-05-02 07:39:36 EUROPEMUK236 LogWatcher CA_Backup_I Media_Error File D:Program Files CABright \\
-EUROPEVUK053A caiW2kOs:w2kProcInst DRWTSN32,*,* is now Critical at 09:44:01 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Critical a
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EDISON Mib-II:IP_Interface 172.19.244.76 is now Broken at 19:54:02 \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-LUCAS caiW2kOs:w2kCpuInst CPU 0 is now Critical at 14:27:59 \\
-LUCAS caiW2kOs:w2kCpuTotal CPU Total is now Critical at 14:27:59 \\
-UKM145 caiW2kOs:w2kCpuInst CPU 0 is now Warning at 14:55:21 \\
-UKM145 caiW2kOs:w2kCpuInst CPU 1 is now Warning at 14:57:21 \\
-2011-05-02 15:01:17 UKM205 LogWatcher BABBACKUP is now Critical \\
-2011-05-02 17:01:59 EUROPEMUK268 LogWatcher BABbackup File\\ 
-2011-05-02 17:06:50 EUROPEMUK176 LogWatcher BABBACKUP File \\ 
-2011-05-02 20:17:01 EUROPEM239 LogWatcher BABBACKUP File \\ 
- caiLogA2 caiLogA2 is now DOWN at 21:48:52 \\
-CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached \\ CRITICAL utilisation at
-CSAPP01 Possible hardware problem detected - Please investigate with HP  \\ Insight Manager
-CSAPP02 Possible hardware problem detected - Please investigate with HP \\ Insight Manager
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network \\ Connection is now Critical a
-2011-05-02 23:32:02 EUROPEMUK177 LogWatcher BABBACKUP File \\
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-2011-05-03 05:01:46 EUROPEMUK212 LogWatcher NetBDBMgr File SYSTEM_LOG\application MatchPattern FILE
-2011-05-03 05:13:46 EUROPEMUK212 LogWatcher NetBDBMgr File SYSTEM_LOG\application MatchPattern FILE
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-CSDTS02 The NSM/TNG NT4 System Agent reports Logical Volume C: has reached WARNING state at 05:30,
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a
-EUROPEMUK521 WinA3_NetInst Intel[R] 82567LF-3 Gigabit Network Connection is now Critical at 05:40:5
-EUROPEMUK541 caiLogA2 caiLogA2 is now DOWN at 05:50:00
-EUROPEMUK541 caiWinA3 caiWinA3 is now DOWN at 05:50:08
-2011-05-03 06:23:35 EUROPEMUK236 LogWatcher CA_Backup_I Media_Error File D:\Program Files\CA\Bright
-2011-05-03 06:31:35 EUROPEMUK236 LogWatcher CA_Backup_I Media_Error File D:\Program Files\CA\Bright
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-FLETCHER The NSM/TNG Win2k System Agent reports Logical Volume C: has reached WARNING state at 07:5
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a
-2011-05-03 09:02:02 EUROPEMUK177 LogWatcher BABBACKUP File C:\Program Files\CA\ARCserve Backup\LOG\
- D: drive on Europemde011 is in warning state.
-EUROPE DOMAIN NEW SERVER Request Form Submitted via 7799 Web Site
- drive on Europemde011 is in warning state.
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Critical a
-LUCAS caiW2kOs:w2kCpuInst CPU 0 is now Critical at 14:27:59
-LUCAS caiW2kOs:w2kCpuTotal CPU Total is now Critical at 14:27:59
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPE DOMAIN NEW SERVER
-EUROPE DOMAIN NEW SERVER
-EUROPE DOMAIN NEW SERVER
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK529 WinA3_NetInst:OutPkts Intel[R] 82578DM Gigabit Network Connection is now Warning at 13
-EUROPEMUK529 WinA3_NetInst:OutPkts Intel[R] 82578DM Gigabit Network Connection is now Warning at 13
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEVUK083 caiW2kOs:w2kCpuInst CPU 0 is now Critical at 13:25:27
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-2011-05-03 14:26:27 EUROPEM240 LogWatcher BABHOLD File C:\Program Files\CA\ARCserve Backup\LOG\Back
-2011-05-03 14:28:02 EUROPEMUK177 LogWatcher BABHOLD File C:\Program Files\CA\ARCserve Backup\LOG\Ba
-2011-05-03 14:28:50 EUROPEMUK176 LogWatcher BABHOLD File C:\Program Files\CA\ARCserve Backup\LOG\Ba
-2011-05-03 14:30:14 EUROPEMUK178 LogWatcher BABHOLD File C:\Program Files\CA\ARCserve Backup\LOG\Ba
-2011-05-03 14:47:47 EUROPEMUK177 LogWatcher BABHOLD is now Critical
-2011-05-03 14:56:27 EUROPEM240 LogWatcher BABHOLD File C:\Program Files\CA\ARCserve Backup\LOG\Back
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-EUROPEMUK521 WinA3_NetInst:InErrors Intel[R] 82567LF-3 Gigabit Network Connection is now Warning at
-TCP/IP Address Management Request Form
-\end{lstlisting}
+\endfoot
+
+\hline \hline
+\endlastfoot
+\hline
+
+Проблема с ПО   &  & 64\% \\
+ \hline Проблемы во время работы &  &  10\% \\
+  \hline Как сделать&  & 10\% \\
+    \hline         &    Hi NAS Admin,Please connect following groups to the shared disk listed below and configure security permissions.    &  Разрешена, уточнены выявлены концепции: connect, following groups, shared disks.  \\
+     \hline         &    Failed LOT OrderReciever.   &  Не решено, не достаточно информации.  \\
+      \hline         &    Delivery of request VCC395244Service: Network Services - LAN - LAN Order of AliasService manager.   &   Не разрешено, не выявлено ключевых концепций проблемы, например, failed, error.  \\
+       \hline         &    User needs latest version of Catia v5 Teamcenter.reinstalled installed.He has been instructed by the design support to ask for an installation.   &  Разрешена, выявлены концепции: user, needs, Catia v5.  \\
+        \hline         &    User should have gotten WordFinder(9, En-Sv/ v-En Affärsekonomisk) and WordFinder(9, Ne-Sv Sv-Ne, Nederländska) installed but that is not the case. please install the applciation for the userName: DELVA.   &  Не разрешено, непонятно, что делать с первым пользователем.  \\
+         \hline         &    What do you want to do?: Add new aliasHost name on host that alias is wanted to.   &  Разрешена, выявлены концепции: add, aliashost.  \\
+   \hline
+   \hline     ...    &   ...   & ... \\
+Проблема с оборудованием &  & 0\% \\
+ \hline         &    VCC ParamServicesFailingService         The status of the lcfd service is Degraded.     Critical.   &  Не разрешено, проблема с аппаратной частью.  \\
+\hline         &    HeartBeat EndpointUnreachable   Tivoli lcf endpoint is unreachable.   &  Не разрешено, проблема с аппаратной частью.  \\
+\hline         &    TMW ProcessorBusy.   &  Не разрешено, не достаточное описание проблемы.  \\
+\hline     ...    &   ...   & ... \\
+ \hline
+Установить новое ПО    &    & 100\% \\
+\hline         &    HyperionFM SmartView 9.3.3I need a new version of a software. HyperionFM SmartView 9.3.3 is the new version I need..   &  Разрешено, выявлены концепции: i, need, SmartView 9.3.3.  \\
+
+\hline         &    User requsts internet explorer 8 to be installed.   &  Разрешено, выявлены концепции: user, requests, internet explorer 8.  \\
+\hline         &    The installation of Winrar that I got this afternoon did go wrong. During installation nothing else was running. When I tried to start Winrar I got the fault message that is attached here.   &  Разрешено, выявлены концепции: winrar, installation, did wrong. Решение~--- переустановить. \\
+
+\hline         &    User got wrong homepage. He want to have vcc-intranet as homepage, but got something other "email-related".   &  Разрешено, выявлены концепции: user, got wrong, homepage, he, want, vcc-intranet.  \\
+\hline     ...    &   ...   & ... \\
 
 
+
+ \hline Проблема с печатью    &     & 80\% \\
+ 
+ \hline         &    User is not able to print from TIE. He is using compability view in IE8Name.   &  Разрешено, выявлены концепции: user, not able, print, TIE, compability, IE8.  \\
+ 
+  \hline         &    User is not able to print with PDF995. he gets a error saying Could not load.   &  Разрешено, выявлены концепции: user, not able, print, PDF995.  \\
+ 
+ \hline         &    According to IM3548717 user couldt print from SAP, now she can print from SAP, but other programs such as Outlook and excel wont work, getting errormessage "unable to connect.   &  Разрешено, выявлены концепции: user, getting, error message, unable, connect.  \\
+ 
+ \hline         &    User is trying to print to PR40378 from Adobe Reader and Powerpoint but gets "printing failed - no pages selected".   &  Не разрешено, выявлены концепции: user, trying, print, Adobe Reader, PowerPoint, printing, failed. Неоднозначность запроса для системы.  \\
+
+ 
+\hline     ...    &   ...   & ... \\
+  \hline Нет доступа         &       & 100\% \\
+  
+   \hline         &    User gets Invalid Login when trying to logon to Teamcenter. He has got a new password and changed it on the new CDSID page but it still does not work.    &  Разрешено, создан новый логин. \\
+
+   \hline         &   Problems with 3G modems after migration: "Mobile connection not possible. Ensure that no other programs are using your selected device, and try again in a short while" The user is a agent working at the UK.    & Разрешено, система уточнила проблему в диалоге с пользователем. \\
+
+   \hline         &    User had received wrong application. User has ordered Wordfinder Business Economical. However she received wrong version, she received Wordfinder Tehcnical instead of Business Economical.   &  Разрешена, уточнены выявлены концепции: Wordfinder Tehcnical,  Business Economical  \\
+  \hline         &    User needs to have pdf 995 re-installed please.    & Разрешено. Выявлены концепции pdf, need и install. \\
+  \hline         &    User dosn't have the Intel proset wireless application installed on his computer.    & Разрешено, выявлены концепции: doesn't have,  Intel proset. \\
+  \hline         &    "Teamcenter \& tc vis" have been uninstalled somehow from users clientPlease reinstall.    &  Разрешено, выявлены концепции: reinstall, users, "Teamcenter \& tc vis"\\
+  \hline         &    User can no longer access any wireless networksproblem with user profile, needs to be reconfigured, installed.    & Разрешено. Найдены концепции:  wireless networksproblem, user, user profile, reconfigured.\\
+\hline     ...    &   ...   & ... \\
+
+ 
+  \hline
+  \end{longtable}
+  
 
 %=======================
 %======APPENDIX F=======
