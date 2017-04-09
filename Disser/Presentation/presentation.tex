@@ -62,30 +62,32 @@
 \end{enumerate}
 \end{frame}
 
-\begin{frame}
-\frametitle{Содержание доклада}
-\begin{itemize}
-  \item Цели и задачи; 
-  \item Структура диссертации;
-  \item Теория;
-  \item Архитектура;
-  \item Прототип.
-\end{itemize}\end{frame}
 
+  \begin{frame}
+   \frametitle{Содержание доклада}
+    \tableofcontents
+   \end{frame}
+
+
+\AtBeginSection[] % Do nothing for \subsection*
+{
 \begin{frame}
-\frametitle{Цели и задачи}
-\begin{itemize}
-    \item \textbf{Предмет исследования}: процесс регистрации и устранения проблемных ситуаций, возникающих в IT-инфраструктуре предприятия;
-    \item \textbf{Цель исследования}: разработка интеллектуальной системы повышения эффективности деятельности ИТ~--службы предприятия (ИТ~-- информационные технологии.
-\end{itemize}
+\frametitle{}
+\tableofcontents[current]
+	
 \end{frame}
+}
+% 
+%    INTRODUCTION
+%
+\section[Введение]{Введение}
 
 \begin{frame}
 \frametitle{Цели и задачи}
 \begin{itemize}
-  \item \textbf{Предмет исследования} процесс регистрации и устранения проблемных ситуаций, возникающих в IT-инфраструктуре предприятия 
-  \item \textbf{Цель исследования}  разработка интеллектуальной системы повышения эффективности деятельности IT-службы предприятия
-  \item \textbf{Актуальность} определяется потребностью предприятий IT-отрасли в интеллектуальных системах, повышающих эффективность служб, поддерживающих IT-инфраструктуру этих предприятий
+  \item \textbf{Предмет исследования} процесс регистрации и устранения проблемных ситуаций, возникающих в IT-инфраструктуре предприятия;
+  \item \textbf{Цель исследования} разработка интеллектуальной системы повышения эффективности деятельности IT-службы предприятия;
+  \item \textbf{Актуальность} определяется потребностью предприятий IT-отрасли в интеллектуальных системах, повышающих эффективность служб, поддерживающих IT-инфраструктуру этих предприятий.
 \end{itemize}
 \end{frame}
 
@@ -98,26 +100,12 @@
 \begin{frame}
 \frametitle{Структура диссертации}
 \begin{enumerate}
-  \item \textbf{Глава 1. Обзор существуюших решений}
+  \item \textbf{Глава 1. Интеллектуальные системы регистрации и анализа проблемных ситуаций, возникающих в ИТ-инфраструктуре предприятия}
   \begin{itemize}
-    \item Сравнительный анализ систем
-    \item Необходимые критерии системы
-    \item Сравнительный анализ средств NLP
-    \item Выводы
-  \end{itemize}
-  \item \textbf{Глава 2. Создание модели системы}
-  \begin{itemize}
-    \item Модель Menta 0.1
-    \item Модель Menta 0.3
-    \item Модель TU 1.0
-    \item Выводы
-  \end{itemize}
-  \item \textbf{Глава 3. Реализация модели системы}
-  \begin{itemize}
-    \item Архитектура системы
-    \item Модель данных TU Knowledge
-    \item Прототип системы
-    \item Выводы
+    \item Обзор исследований в области интеллектуальных систем регистрации и анализа проблемных ситуаций;
+    \item Сравнительный анализ систем регистрации и устранения проблемных ситуаций;
+    \item Сравнительный анализ методов и комплексов обработки текстов на естественном языке;
+    \item Выводы по главе 1.
   \end{itemize}
  \end{enumerate}
 \end{frame}
@@ -125,11 +113,32 @@
 \begin{frame}
 \frametitle{Структура диссертации}
 \begin{enumerate}
- \item \textbf{Глава 4. Экспериментальные исследования}
+  \item \textbf{Глава 2. Модель интеллектуальной системы принятия решений для регистрации и анализа проблемных ситуаций в ИТ-инфраструктуре предприятия}
   \begin{itemize}
-    \item Экспериментальные данные
-    \item Оценка эффективности
-    \item Результаты экспериментов
+    \item Построение модели Menta 0.1 с использованием деревьев принятия решений;
+    \item Модель Menta 0.3, построенная с использованием генетических алгоритмов;
+    \item Модель TU 1.0, основанная на модели мышления Марвина Мински;
+    \item Выводы по главе 2.
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Структура диссертации}
+\begin{enumerate}
+  \item \textbf{Глава 3. Реализация модели TU 1.0 для системы интеллектуальной регистрации и устранения проблемных ситуаций}
+  \begin{itemize}
+    \item Архитектура системы;
+    \item Модель данных TU Knowledge;
+    \item Прототип системы;
+    \item Выводы по главе 3.
+  \end{itemize}
+   \item \textbf{Глава 4. Экспериментальные исследования эффективности работы модели TU}
+  \begin{itemize}
+    \item Экспериментальные данные;
+    \item Оценка эффективности;
+    \item Результаты экспериментов;
+    \item Выводы по главе 4.
   \end{itemize}
 
 \end{enumerate}
@@ -137,64 +146,220 @@
 
 
 \begin{frame}
-\frametitle{Категории инцидентов}
-\begin{figure} [h] 
-  \center
-  \includegraphics [scale=0.6] {EngineerTasks}
-  \label{img:EngineerTasks}  
-\end{figure}
+\frametitle{Методы исследования}
+\begin{enumerate}
+  \item \textbf{Теоретические методы}
+  \begin{itemize}
+    \item Имитационное моделирование;
+    \item Теория баз знаний в области искусственного интеллекта.
+  \end{itemize}
+   \item \textbf{Специальные методы}
+  \begin{itemize}
+    \item Экспериментальное моделирование;
+    \item Cистемное моделирование.
+  \end{itemize}
+  
+   \item \textbf{Экспериментальные методы}
+  \begin{itemize}
+    \item Метод наблюдений;
+    \item Метод проведения экспериментов.
+  \end{itemize}
+
+\end{enumerate}
 \end{frame}
 
-\begin{frame}
-\frametitle{Анализ и определение области исследования}
-\begin{figure} [h] 
-  \center
-  \includegraphics [scale=0.7] {ITSMTeamComposition}
-  \label{img:ITSMTeamComposition}  
-\end{figure}
-
-\end{frame}
-
 
 
 \begin{frame}
-\frametitle{Обзор существуюших решений}
+\frametitle{Соответствие паспорту специальности}
+
 \begin{table}
 	
 \small
-\begin{tabular} {|p{5cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+
+\begin{tabular} {|p{5cm}|p{5cm}|}
+
+
+ \hline
+\textbf{Направление исследования} & Результат работы\\
 
 \hline
-\textbf{Пункт} & HP Open View & Service NOW & IBM Watson & TU\\
+   Языки программирования и системы программирования, семантика программ & Разработана семантическая модель организации хранения знаний \\
+   \hline
+  Системы управления базами данных и знаний & Разработан прототип Thinking Understanding (TU) системы хранения знаний и принятия решений в сфере поддержки ИТ-инфраструктуры предприятия, который был испытан на модельных данных\\
+   \hline
+    \end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Соответствие паспорту специальности}
+
+\begin{table}
+	
+\small
+
+\begin{tabular} {|p{5cm}|p{5cm}|}
+
+
+ \hline
+\textbf{Направление исследования} & Результат работы\\
+
+ \hline
+   Модели и методы создания программ и программных систем для параллельной и распределенной обработки данных, языки и инструментальные средства параллельного программирования & Разработан метод параллельной обработки экспертной информации c возможностью обучения при помощи прототипа TU \\
+   \hline
+ \end{tabular}
+\end{table}
+\end{frame}
+
+%
+%					CHAPTER 1
+%
+\section[Глава 1]{Глава 1. Интеллектуальные системы регистрации и анализа проблемных ситуаций, возникающих в ИТ-инфраструктуре предприятия}
+\begin{frame}
+\frametitle{Исходные данные и постановка задачи}
+\begin{enumerate}
+  \item Проект поддержки информационный структуры предприятия;
+  \item Задача: удаленная помощь пользователям;
+  \item Диапазон исследования: 1 месяц;
+  \item Количество инцидентов: 10000;
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Классификация заявок}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.7] {EngineerTasks}
+  \label{img:EngineerTasks}  
+\end{figure}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Проблемы автоматизации}
+\begin{enumerate}
+ \item Неоднозначные запросы;
+	\begin{enumerate}
+ 		\item The installation of Winrar that I got this afternoon did go wrong. During installation nothing else was running. When I tried to start Winrar I got the fault message that is attached here.;
+ 		\item Before i went to vacation i got LOT234, please check if it installed.
+	\end{enumerate}
+ \item Грамматические ошибки;
+  \begin{enumerate}
+ 		\item The installation of Winrar that I got this afternoon did go wrong. During installation nothing else was running. When I tried to start Winrar I got the fault message that is attached here.;
+ 
+	\end{enumerate}
+	
+  \item Запросы на естественном языке.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Имитационная модель целевой области}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.5] {mass_service}
+  \label{img:mass_service}  
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Характеристики модели}
+\begin{enumerate}
+ \item $\lambda$ --- интенсивность входящего потока;
+    \item $\alpha$ --- доля заявок, для которых время в очереди превышает $max(T_q)$;       
+    \item $\mu$ --- величина, обратная среднему времени нахождения заявки у агента;
+	\item  $n$ --- число агентов;
+	\item $T_q$ --- время нахождение заявки в очереди в часах;
+	\item SLA --- уровень обслуживания (1-$\alpha$), доля заявок, для которых время в очереди не превышает $max(T_q)$. $T_p$ --- время удовлетворения заявки;
+ 	
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Характеристики модели}
+\begin{enumerate}
+ \item $\alpha_n$ --- количество заявок;
+ \item	$T_{qp}=T_q+T_p$ --- время прохождения заявки через систему;
+ \item	$S(\mu)= \frac{R_p}{\mu} $ --- средняя стоимость выполнения одной заявки;
+ \item $R_p$ --- средняя стоимость часа работы специалиста (выводится далее);
+ \item \textbf{Исходные данные:} $T_{qp}=47,9$ при $n=6$; $SLA=0,82$; $\alpha=0,18$;  $\alpha_n=2920$. 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Обзор области}
+\begin{enumerate}
+ \item Институт Чиная (Индия) - Е. Джубилсон и П. Дханавантини;
+ \item Институт Гановера (Германия) – Р. Брунс и Дж. Данкель;
+ \item СПбГУ (Россия) - В.И. Золотарев;
+ \item Сингапур – С. Фу и П. Леонг;
+ \item IBM Watson (IBM) - А. Гоэль;
+ \item GATE3 (Университет Шеффилда (Великобритания)) – Г. Каллаган;
+ \item OpenCog (США) –  Б. Герцель;
+ \item NARS (Китай) – П. Вонг.
+\end{enumerate}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Обзор существующих решений}
+\begin{table}
+	
+\small
+\begin{tabular} {|p{5cm}|p{1cm}|p{1.5cm}|p{1.5cm}|}
+
 \hline
-   Мониторинг & Да & Да & Да & Нет \\
+\textbf{Сравнительный Пункт} & HP Open View & Service NOW & IBM Watson\\
+\hline
+   Мониторинг & Да & Да & Да  \\
    \hline
-   Регистрация инцидентов & Да & Да & Да & Нет\\
+   Регистрация инцидентов & Да & Да & Да \\
    \hline
-   Управление системами & Да & Нет & Нет & Нет \\
+   Управление системами & Да & Нет & Нет  \\
    \hline 
-   Создание цепи обработки & Да & Да & Нет & Да \\
+   Создание цепи обработки & Да & Да & Нет \\
    \hline 
-   Запросы на естественном языке & Нет & Нет & Да & Да\\
+   Запросы на естественном языке & Нет & Нет & Да \\
    \hline 
-   Поиск решений & Нет & Нет & Да & Да\\
+   Поиск решений & Нет & Нет & Да \\
    \hline 
-   Применение решений & Нет & Нет & Нет & Да \\
+   Применение решений & Нет & Нет & Нет  \\
    \hline
-   Обучение & Нет & Нет & Нет & Да \\
+   Обучение & Нет & Нет & Нет \\
    \hline
-   Логические рассуждения & Нет & Нет & Нет & Да \\
+   Логические рассуждения & Нет & Нет & Нет  \\
    \hline
   
 \end{tabular}
 \end{table}
 \end{frame}
 
+
+%
+%					CHAPTER 2
+%
+\section[Глава 2]{Глава 2. Модель интеллектуальной системы принятия решений}
 \begin{frame}
-\frametitle{Модель мышления TU}
-	\begin{itemize}
-		\item  Модель мышления 6-ти Марвина Мински.
-	\end{itemize}
+\frametitle{Рассмотренные модели}
+\begin{enumerate}
+	\item Menta 0.1;
+	\item Menta 0.3;
+	\item TU 1.0.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Концепция $T^3$}
 \begin{figure} [h] 
   \center
   \includegraphics [scale=0.6] {CSW_EX}
@@ -203,17 +368,94 @@
 \end{figure}
 \end{frame}
 
+\begin{frame}
+\frametitle{6 уровней мышления}
+\begin{enumerate}
+	\item Самосознательный уровень;
+	\item Саморефлексивный уровень;
+	\item Рефлексивные размышления;
+	\item Уровень рассуждений;
+	\item Уровень обученных реакций;
+	\item Инстинктивный.
+\end{enumerate}
+\end{frame}
+
+
+%
+%					CHAPTER 3
+%
+\section[Глава 3]{Глава 3. Реализация модель TU 1.0}
+
 
 
 \begin{frame}
-\frametitle{Реализация модели}
+\frametitle{Основные компоненты системы}
+\begin{enumerate}
+	\item TU Webservice;
+	\item CoreService;
+	\item DataService;
+	\item Reasoner;
+	\item ClientAgent.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Общая диаграмма действий}
 \begin{figure} [h] 
   \center
-  \includegraphics [scale=0.15] {LifecycleActivity}
-  \caption{Диаграмма действий LifecycleActivity} 
+  \includegraphics [scale=0.35] {ShortLefecycle}
+  \label{img:ShortLefecycle}  
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Полная диаграмма действий}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.05] {LifecycleActivity}
   \label{img:LifecycleActivity}  
 \end{figure}
 \end{frame}
+
+\begin{frame}
+\frametitle{База знаний}
+\begin{enumerate}
+	\item Resource;
+	\item Semantic Network;
+	\item Rule;
+	\item KLine;
+	\item Neo4j.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Диаграмма состояний объектов}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.35] {ObjectState}
+  \label{img:ObjectState}  
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Особенности системы}
+\begin{enumerate}
+	\item Представление большинства объектов в Базе Знаний;
+	\item Расширяемость;
+	\item Масштабируемость за счет Scala Akka;
+	\item Концепция ShortTermMemory и LongTermMemory;
+	\item Самоконтроль системы над ее состоянием.
+\end{enumerate}
+\end{frame}
+
+
+%
+%					CHAPTER 4
+%
+\section[Глава 4]{Глава 4. Экспериментальные исследования эффективности работы модели TU}
+
+
 
 \begin{frame}
 \frametitle{Результаты работы}
@@ -260,7 +502,7 @@
 \hline
  Проблема с ПО    & 64\% \\
  \hline Проблемы во время работы  &  10\% \\
-  \hline Как сделать & 40\% \\
+  \hline Как сделать & 10\% \\
    \hline
 Проблема с оборудованием  & 0\% \\
  \hline
@@ -273,21 +515,65 @@
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Характеристики модели}
+\begin{enumerate}
+ \item \textbf{Исходные данные:} $T_{qp}=47,9$ при $n=6$; $SLA=0,82$; $\alpha=0,18$;  $\alpha_n=2920$;
+ \item \textbf{Итоговые данные:} $T_{qp}=32,9$ при $n=8$; $SLA=0,96$; $\alpha=0,04$;  $\alpha_n=2920$.
+\end{enumerate}
+\end{frame}
+
+
+%
+%					Conclusions
+%
+\section[Заключение]{Заключение}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Основные результаты работы}
 \begin{itemize}
-   \item Была создана модель проблемно-ориентированной системы управления, принятия решений в области обслуживания информационной структуры предприятия на основе модели мышления
-  \item Была представлена новая модель данных для модели мышления и оригинальный способ ее хранения, эффективный по сравнению с другими базами данных
-  \item Было выполнено оригинальное исследование моделей мышления в области обслуживания информационной структуры предприятия
+   \item Создана модель проблемно-ориентированной системы управления знаниями в области обслуживания информационной инфраструктуры предприятия на основе обобщения модели мышления;
+  \item Представлены новая модель данных для модели мышления и оригинальный способ их хранения, более эффективный по сравнению с классическими базами данных, использующими реляционный подход;
+  \item  Выполнено оригинальное исследование моделей мышления в области обслуживания информационной инфраструктуры предприятия;
   
 \end{itemize}
 \end{frame}
 
 
+\begin{frame}
+\frametitle{Основные результаты работы}
+\begin{itemize}
+   \item На основе модели, разработанной в диссертации, созданы архитектура системы и ее прототип; 
+   \item Представлена визуализация структуры области удаленной поддержки инфраструктуры.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Свидетельство о регистрации ПО}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.05] {RegistrationStatement}
+  \label{img:RegistrationStatement}  
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Акт о внедрении ПО}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.05] {ActVnedr} 
+  \label{img:ActVnedr}  
+\end{figure}
 
 
 
+\end{frame}
 
 
 \begin{frame}
