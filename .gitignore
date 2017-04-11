@@ -1,4 +1,4 @@
-*.DS_Store
+﻿*.DS_Store
 *.texpadtmp*
 *.aux
 
@@ -33,3 +33,10 @@
 *.tmp
 Disser/Documents/KFU/part2/~$отокол_принятия_к_защите_Тощев.docx
 Disser/Documents/KFU/part2.delivery/~$исок_рассылки_Тощев.docx
+**/*.out
+
+**/*.toc
+
+**/*.nav
+
+**/*.snm
