@@ -463,17 +463,10 @@
 \end{figure}
 \end{frame}
 
-\begin{frame}
-\frametitle{6 уровней мышления}
-\begin{enumerate}
-	\item Самосознательный уровень;
-	\item Саморефлексивный уровень;
-	\item Рефлексивные размышления;
-	\item Уровень рассуждений;
-	\item Уровень обученных реакций;
-	\item Инстинктивный.
-\end{enumerate}
-\end{frame}
+
+
+
+
 
 
 %
@@ -481,6 +474,16 @@
 %
 \section[Глава 3]{Глава 3. Реализация модель TU 1.0}
 
+
+\begin{frame}
+\frametitle{Формальное описание системы}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.6] {SystemOverview.png}
+  \caption{Формальное описание системы} 
+  \label{img:SystemOverview.png} 
+\end{figure}
+\end{frame}
 
 
 \begin{frame}
@@ -494,7 +497,6 @@
 \end{enumerate}
 \end{frame}
 
-
 \begin{frame}
 \frametitle{Общая диаграмма действий}
 \begin{figure} [h] 
@@ -506,20 +508,102 @@
 
 
 \begin{frame}
-\frametitle{Обработка запроса}
+\frametitle{Пример запроса Please install Firefox}
+\begin{enumerate}
+	\item Приходит инцидент от пользователя;
+	\item TLC выставляет цель ProcessIncident. К каждой цели привязан набор критиков (каждый критик действует как отдельная вероятностная машина);
+	\item Запускается машина PreliminarySplitter, затем в RelationExtractorKB, где подвергается обработки LinkGrammar NLP, который преобразует данное предложение в граф, результат лексического и синтаксического разбора, на выходе получается следующий граф.
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Лексический разбор}
+\begin{table}
+	
+\small
+\begin{tabular} {|p{5cm}|p{5cm}|}
+
+\hline
+ 
+\_advmod(install, please)\_obj(install, Firefox)pos(install, verb)inflection-TAG(install, .v)tense(install, imperative)pos(please, adv) & 
+inflection-TAG(please, .e)pos(., punctuation)noun\_number(Firefox, singulardefinite\-FLAG(Firefox, T)pos(Firefox, noun) 
+    \\
+   \hline
+     
+\end{tabular}
+\end{table}
+
 \begin{figure} [h] 
-	\center
-	\includegraphics [scale=0.7] {RequestProcesssing}
-	\label{img:RequestProcesssing}  
+  \center
+  \includegraphics [scale=0.5] {LexicalGraph1}
+  \label{img:LexicalGraph1}  
+\end{figure}
+\end{frame}
+
+%Модуль содержит ограничение на количество предложений и количество слов. Длина предложения не более 1024 символов.
+%Модуль содержит ограничение на количество предложений и количество слов. Длина предложения не более 1024 символов.%1.	Граф, изображенный на Рисунке 1, подвергается разбору и преобразуется во фразы, которые группируются в предложения. В исходном примере нет идиом, но если такие встречаются, то они также будут составлять одну фразу. Отношения, начинающиеся с подчеркивания, – это связи между нодами графа, остальное – это описания конкретного слова. Ссылка может идти также не на лист, а на нод дерева, для этого алгоритм построен рекурсивно. У каждого нода графа есть именованные ссылки, в нашем случае мы берем только ссылки вида: "_subj" (подлежащие); "_obj" (дополнение); "_iobj" (косвенное дополнение); "_advmod" (наречие); "of" (принадлежность). На выходе мы получаем граф, перефразированный в рамках объектов приложения, – AnnotatedPhrase. Кроме того, будут отфильтрованы лишнее связи, также копируются свойства pos (часть речи), tense (время);
+
+\begin{frame}
+\frametitle{Предложение в виде графа после обработки}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.5] {LexicalGraph2}
+  \label{img:LexicalGraph2}  
+\end{figure}
+Используются только "\_subj" (подлежащие); "\_obj" (дополнение); "\_iobj" (косвенное дополнение); "\_advmod" (наречие); "of" (принадлежность).
+\end{frame}
+
+
+%1.	Результат передается в LinkParser, который ищет соответствие между словами, выявленными в разборе, и базой знаний. Например, install уже есть в базе и он получит ссылку на концепцию в базе. Каждая концепция в базе поддерживает свойства generalization, specialization. Рассмотрим концепцию install;
+
+\begin{frame}
+\frametitle{Связь с уже известными концепциями}
+Результат передается в LinkParser, который ищет соответствие между словами, выявленными в разборе, и базой знаний. Например, install уже есть в базе и он получит ссылку на концепцию в базе. Каждая концепция в базе поддерживает свойства generalization, specialization. Рассмотрим концепцию install.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.5] {Generalisation1}
+  \label{img:Generalisation1}  
+\end{figure}
+\end{frame}
+
+
+%1.	TLC Выставляет цель ClassifyIncident, и запускаются машины классификации, например, машина DirectInstrutctionAnalyser. Первым этапом он смотрит, есть ли действие в запросе. Во фразе оно есть, значит, итоговая вероятность не уменьшается (по умолчанию итоговая вероятность 1), иначе взвешенный результат будет меньше, так как данный критик нацелен только на действие и объект, над которым нужно его совершить. Далее ищется объект в количестве 1 и прилинкованная к действию. Если они найдены, то итоговая вероятность не уменьшается. %Для достижения подсчета итоговой вероятности критик содержит в себе набор правил, который обрабатывается логической машиной PLN. На вход подается граф, изображенный на Рисунке 2, на выходе получается вероятность соответствия графа правилам. Например, правила вида «Граф содержит концепцию подлежащего» или «У нода графа действия есть связь с нодом типа дополнение». В интерпретаторе правил есть поддержка прямой логики ”forward chaining”: конъюнкция, дизъюнкция, отрицания, равно, меньше;
+
+
+%1.	TLC выставляет цель SearchSolution; так как решения еще нет в базе, то начинается поиск решения путем сравнения графа исходной проблемы и хранящегося в базе знаний решений. Во время поиска идет сравнение изоморфизма графов исходной проблемы и решения, хранящегося в базе знаний. В результате подсчитывается коэффициент удаленности графов – d. Если d = 0, то графы идентичны. Во время подсчета учитывается ссылка на обобщенные концепции. Например, если есть две концепции Winrar и Archive, обе ссылаются на базовую концепцию Software, то соответствие данной вершины будет 0.5, в зависимости от отдаление базовой концепции соответствие будет падать: 0,75; 0,865 и т.д.; 
+
+
+
+\begin{frame}
+\frametitle{Поиск решения}
+%Во время поиска идет сравнение изоморфизма графов исходной проблемы и решения, хранящегося в базе знаний. В результате подсчитывается коэффициент удаленности графов – d. Если d = 0, то графы идентичны. Во время подсчета учитывается ссылка на обобщенные концепции. Например, если есть две концепции Winrar и Archive, обе ссылаются на базовую концепцию Software, то соответствие данной вершины будет 0.5, в зависимости от отдаление базовой концепции соответствие будет падать: 0,75; 0,865 и т.д.; 
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.5] {SolutionSearch1}
+  \label{img:SolutionSearch1}  
 \end{figure}
 \end{frame}
 
 \begin{frame}
-\frametitle{Обработка запроса}
+\frametitle{Запрос 2}
+The installation of Winrar that I got this afternoon did go wrong. During installation nothing else was running. When I tried to start Winrar I got the fault message that is attached here.
 \begin{figure} [h] 
-	\center
-	\includegraphics [scale=0.7] {RequestProcesssing2}
-	\label{img:RequestProcesssing2}  
+  \center
+  \includegraphics [scale=0.5] {Request2}
+  \label{img:Request2}  
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Запрос 3}
+I have Office 2010 installed, but I need office 2016.
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.5] {Request3}
+  \label{img:Request3}  
 \end{figure}
 \end{frame}
 
@@ -534,6 +618,14 @@
 \end{frame}
 
 \begin{frame}
+\frametitle{Ограничения системы}
+\begin{enumerate}
+	\item Система содержит ограничение на количество предложений и количество слов. Длина предложения не более 1024 символов;
+	\item Система не может обработать семантически противоречащие запросы.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
 \frametitle{База знаний}
 \begin{enumerate}
 	\item Resource;
@@ -542,15 +634,6 @@
 	\item KLine;
 	\item Neo4j.
 \end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{Диаграмма состояний объектов}
-\begin{figure} [h] 
-  \center
-  \includegraphics [scale=0.35] {ObjectState}
-  \label{img:ObjectState}  
-\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -695,6 +778,49 @@
 \begin{center}
 Спасибо за внимание!
 \end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%additional
+
+\begin{frame}
+\frametitle{6 уровней мышления}
+\begin{enumerate}
+	\item Самосознательный уровень;
+	\item Саморефлексивный уровень;
+	\item Рефлексивные размышления;
+	\item Уровень рассуждений;
+	\item Уровень обученных реакций;
+	\item Инстинктивный.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Обработка запроса}
+\begin{figure} [h] 
+	\center
+	\includegraphics [scale=0.7] {RequestProcesssing}
+	\label{img:RequestProcesssing}  
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Обработка запроса}
+\begin{figure} [h] 
+	\center
+	\includegraphics [scale=0.7] {RequestProcesssing2}
+	\label{img:RequestProcesssing2}  
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Диаграмма состояний объектов}
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.35] {ObjectState}
+  \label{img:ObjectState}  
+\end{figure}
 \end{frame}
 
 \end{document} 
