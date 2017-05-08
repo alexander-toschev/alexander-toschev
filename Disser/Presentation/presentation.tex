@@ -487,13 +487,19 @@
 
 
 \begin{frame}
-\frametitle{Основные компоненты системы}
+\frametitle{Принцип фукнционирования}
 \begin{enumerate}
-	\item TU Webservice;
-	\item CoreService;
-	\item DataService;
-	\item Reasoner;
-	\item ClientAgent.
+	\item Процессы:
+\begin{enumerate}
+	\item Слабосвязанные;
+	\item Короткоживущие.
+\end{enumerate}
+\item Вероятностные состояния;
+\item Примеры процессов;
+\begin{enumerate}
+	\item Лексико-семантический анализ;
+	\item Классификация.
+\end{enumerate}
 \end{enumerate}
 \end{frame}
 
@@ -621,7 +627,9 @@ I have Office 2010 installed, but I need office 2016.
 \frametitle{Ограничения системы}
 \begin{enumerate}
 	\item Система содержит ограничение на количество предложений и количество слов. Длина предложения не более 1024 символов;
-	\item Система не может обработать семантически противоречащие запросы.
+	\item Система не может обработать семантически противоречащие запросы;
+	\item Используется только 5 лексических связей.
+
 \end{enumerate}
 \end{frame}
 
